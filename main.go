@@ -25,5 +25,12 @@ func main() {
 		log.Fatal(err)
 	}
 
-	logger.Printf("Cluster created successfully: %+v\n", c)
+	if err := c.Start(); err != nil {
+		log.Fatal(err)
+	}
+
+	time.Sleep(5 * time.Second)
+	c.Stop()
+
+	logger.Println("simulation finished")
 }
