@@ -168,6 +168,7 @@ func (n *Node) probePeer(nodeID string, ctx context.Context, logger *log.Logger)
 		CorrelationID: n.newCorrelationID(),
 		SentAt:        time.Now(),
 		Updates:       piggybackUpdates,
+		Updates:       piggybackUpdates,
 	}
 
 	logf(logger, "[%s] probing %s (%s)", n.id, peer, msg.CorrelationID)
@@ -178,7 +179,9 @@ func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *
 	switch msg.Type {
 	case protocol.MessagePing:
 		// sender is alive, mark in table and do nothing . data will get populated when it randomly pings someother node
+		// sender is alive, mark in table and do nothing . data will get populated when it randomly pings someother node
 		logf(logger, "[%s] received PING from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.table.MarkAlive(msg.From, msg.SentAt)
 		n.table.MarkAlive(msg.From, msg.SentAt)
 		n.sendAck(ctx, msg, logger)
 	case protocol.MessageAck:
