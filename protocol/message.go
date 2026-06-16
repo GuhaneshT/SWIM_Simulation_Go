@@ -22,8 +22,7 @@ const(
 	MessageAlive MessageType = "ALIVE"
 	MessageSuspect MessageType = "SUSPECT"
 	MessageConfirm MessageType = "CONFIRM"
-	MessageJoin MessageType = "JOIN"
-	MessageLeave MessageType = "LEAVE"
+	MessageDead MessageType = "DEAD"
 )
 
 type Update struct{
