@@ -202,14 +202,14 @@ func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *lo
 		n.table.MarkAlive(msg.Target, time.Now())
 	}
 	
-	if innnitiator == n.id{
+	if innitiator == n.id{
 		
 		return
 	}
 
 
 
-	msg := protocol.Message{
+	send_msg := protocol.Message{
 		Type: protocol.MessageAlive,
 		From: n.id,
 		To: innitiator,
@@ -217,7 +217,7 @@ func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *lo
 		Target: msg.Target,
 		SentAt: time.Now(),
 	}
-	n.send(ctx, msg)
+	n.send(ctx, send_msg)
 
 }
 func (n *Node) handleSuspect(suspectID string,ctx context.Context, logger *log.Logger) {
