@@ -57,7 +57,11 @@ func NewTable(selfID string, knownNodes []string) *Table{
 func (t *Table) setStatus(nodeID string, status protocol.MemberStatus, observedAt time.Time) Record{
 	t.mu.Lock()
 	defer t.mu.Unlock()
-	record:= t.entries[nodeID]
+	record, exists := t.entries[nodeID]
+	if !exists {
+		record = Record{NodeID: nodeID}
+	}
+	
 	record.Status = status
 	record.UpdatedAt = observedAt
 	t.entries[nodeID] = record
@@ -130,7 +134,16 @@ func (t *Table) Merge(update protocol.Update) bool{
 		return true
 	}
 	if (incarnation == record.Incarnation){
-	if statusRank(status) > statusRank(record.Status){
+		if update.Status == protocol.StatusAlive && record.Status == protocol.StatusSuspect {
+			t.entries[update.NodeID] = Record{
+				NodeID:      update.NodeID,
+				Status:      update.Status,
+				Incarnation: update.Incarnation,
+				UpdatedAt:   update.ObservedAt,
+			}
+			return true
+		}
+		if statusRank(status) > statusRank(record.Status){
 		t.entries[update.NodeID] = Record{
 			NodeID: update.NodeID,
 			Status: status,
