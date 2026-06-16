@@ -113,18 +113,61 @@ func (n *Node) Run(ctx context.Context, logger *log.Logger) {
 	}
 }
 
+func (n *Node) handleSuspectQuery(ctx context.Context, suspecteeID string,correlationID string) {
+	
+	msg := protocol.Message{
+		Type: protocol.MessageAlive,
+		From: n.id,
+		To: suspecteeID,
+		CorrelationID: correlationID,
+	}
+	n.send(ctx, msg)
+}
+
+func (n *Node) probeSuspectedNode(ctx context.Context, suspectID string, correlationID string){
+	msg := protocol.Message{
+		Type: protocol.MessageSuspect,
+		From: n.id,
+		To: suspectID,
+		CorrelationID: correlationID,
+	}
+	n.send(ctx, msg)
+}
+
 func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 	if len(n.peers) == 0 {
 		return
 	}
 
 	peer := n.peers[n.rng.Intn(len(n.peers))]
+	piggybackUpdates := n.table.Updates()
 	msg := protocol.Message{
 		Type:          protocol.MessagePing,
 		From:          n.id,
 		To:            peer,
 		CorrelationID: n.newCorrelationID(),
 		SentAt:        time.Now(),
+		Updates:       piggybackUpdates,
+	}
+
+	logf(logger, "[%s] probing %s (%s)", n.id, peer, msg.CorrelationID)
+	n.send(ctx, msg)
+}
+
+func (n *Node) probePeer(nodeID string, ctx context.Context, logger *log.Logger) {
+	if len(n.peers) == 0 {
+		return
+	}
+
+	peer := n.peers[n.rng.Intn(len(n.peers))]
+	piggybackUpdates := n.table.Updates()
+	msg := protocol.Message{
+		Type:          protocol.MessagePing,
+		From:          n.id,
+		To:            peer,
+		CorrelationID: n.newCorrelationID(),
+		SentAt:        time.Now(),
+		Updates:       piggybackUpdates,
 	}
 
 	logf(logger, "[%s] probing %s (%s)", n.id, peer, msg.CorrelationID)
@@ -134,12 +177,81 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *log.Logger) {
 	switch msg.Type {
 	case protocol.MessagePing:
+		// sender is alive, mark in table and do nothing . data will get populated when it randomly pings someother node
 		logf(logger, "[%s] received PING from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.table.MarkAlive(msg.From, msg.SentAt)
 		n.sendAck(ctx, msg, logger)
 	case protocol.MessageAck:
 		logf(logger, "[%s] received ACK from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.table.MarkAlive(msg.From, msg.SentAt)
+	case protocol.MessagePingReq:
+		logf(logger, "[%s] received PING-REQ from %s to ping %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
+		n.probeSuspectedNode(ctx,msg.Target,msg.CorrelationID)
+	case protocol.MessageSuspect:
+		logf(logger, "[%s] received SUSPECT from %s about %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
+		// tell them, as you can see i am not dead yet, wakanda forever
+		n.handleSuspectQuery(ctx,msg.From,msg.CorrelationID)
+	case protocol.MessageAlive:
+		logf(logger, "[%s] received ALIVE from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.table.MarkAlive(msg.From, msg.SentAt)
+		
+		
+
+
 	default:
+		// node might be down. ask a subset of peers to ping and report back
+		n.handleSuspect(msg.From,ctx,logger)
 		logf(logger, "[%s] ignored %s from %s (%s)", n.id, msg.Type, msg.From, msg.CorrelationID)
+	}
+}
+
+func (n *Node) handleSuspect(suspectID string,ctx context.Context, logger *log.Logger) {
+	randomPeers := n.selectRandomPeers(3, suspectID)
+	if randomPeers == nil{
+		logf(logger,"[%s] no peers available to ping %s", n.id, suspectID)
+	}
+	for _, peer := range randomPeers{
+		msg := protocol.Message{
+			Type: protocol.MessagePingReq,
+			From: n.id,
+			To: peer,
+			Target: suspectID,
+			CorrelationID: n.newCorrelationID(),
+		}
+		n.send(ctx, msg)
+	}
+	
+}
+
+
+func (n *Node) selectRandomPeers(nPeers int, excludeID string) []string {
+	peers := make([]string, 0, len(n.peers))
+	for _, peer := range n.peers {
+		if peer != excludeID {
+			peers = append(peers, peer)
+		}
+	}
+
+	if len(peers) == 0 {
+		return nil
+	}
+
+	if nPeers > len(peers) {
+		nPeers = len(peers)
+	}
+
+	for i := 0; i < nPeers; i++ {
+		j := n.rng.Intn(len(peers))
+		peers[i], peers[j] = peers[j], peers[i]
+	}
+
+	return peers[:nPeers]
+}
+
+func (n *Node) handleUpdates(updates []protocol.Update, observedBy string) {
+	fmt.Println("merging updates for node ", n.id, " observed by ", observedBy)
+	for _, update := range updates {
+		n.table.Merge(update)
 	}
 }
 

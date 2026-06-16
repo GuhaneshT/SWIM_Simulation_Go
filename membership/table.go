@@ -19,6 +19,7 @@ type Record struct{
 type Table struct{
 	mu sync.RWMutex
 	entries map[string]Record
+	lastUpdate time.Time
 
 }
 
@@ -77,6 +78,27 @@ func(t * Table) MarkFailed(nodeID string, observedAt time.Time) Record{
 }
 func(t * Table) MarkLeft(nodeID string, observedAt time.Time) Record{
 	return t.setStatus(nodeID, protocol.StatusLeft, observedAt)
+}
+
+func (t *Table) Updates() []protocol.Update{
+	t.mu.Lock()
+	defer t.mu.Unlock()
+
+	updates := make([]protocol.Update, 0, len(t.entries))
+	cutoff := time.Now()
+	for _, record := range t.entries {
+		if lastUpdate := t.lastUpdate; !record.UpdatedAt.After(lastUpdate) {
+			continue
+		}
+		updates = append(updates, protocol.Update{
+			NodeID: record.NodeID,
+			Status: record.Status,
+			Incarnation: record.Incarnation,
+			ObservedAt: record.UpdatedAt,
+		})
+	}
+	t.lastUpdate = cutoff
+	return updates
 }
 
 func (t *Table) Get(nodeID string)(Record,bool){
