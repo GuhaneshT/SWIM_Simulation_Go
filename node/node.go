@@ -119,12 +119,14 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 	}
 
 	peer := n.peers[n.rng.Intn(len(n.peers))]
+	piggybackUpdates := n.table.Updates()
 	msg := protocol.Message{
 		Type:          protocol.MessagePing,
 		From:          n.id,
 		To:            peer,
 		CorrelationID: n.newCorrelationID(),
 		SentAt:        time.Now(),
+		Updates:       piggybackUpdates,
 	}
 
 	logf(logger, "[%s] probing %s (%s)", n.id, peer, msg.CorrelationID)
@@ -134,12 +136,22 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *log.Logger) {
 	switch msg.Type {
 	case protocol.MessagePing:
+		// sender is alive, mark in table and do nothing . data will get populated when it randomly pings someother node
 		logf(logger, "[%s] received PING from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.table.MarkAlive(msg.From, msg.SentAt)
 		n.sendAck(ctx, msg, logger)
 	case protocol.MessageAck:
 		logf(logger, "[%s] received ACK from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.table.MarkAlive(msg.From, msg.SentAt)
 	default:
+		// node might be down. ask a subset of peers to ping and report back
 		logf(logger, "[%s] ignored %s from %s (%s)", n.id, msg.Type, msg.From, msg.CorrelationID)
+	}
+}
+func (n *Node) handleUpdates(updates []protocol.Update, observedBy string) {
+	fmt.Println("merging updates for node ", n.id, " observed by ", observedBy)
+	for _, update := range updates {
+		n.table.Merge(update)
 	}
 }
 
