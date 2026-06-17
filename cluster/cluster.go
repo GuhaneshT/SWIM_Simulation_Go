@@ -13,12 +13,12 @@ import (
 )
 
 type Config struct {
-	NodeCount      int
-	ProbeInterval  time.Duration
-	AckTimeout     time.Duration
-	BaseLatency    time.Duration
-	LatencyJitter  time.Duration
-	DropRate       float64
+	NodeCount     int
+	ProbeInterval time.Duration
+	AckTimeout    time.Duration
+	BaseLatency   time.Duration
+	LatencyJitter time.Duration
+	DropRate      float64
 }
 
 type Cluster struct {
@@ -135,6 +135,10 @@ func (c *Cluster) routeMessages(ctx context.Context, source *node.Node) {
 }
 
 func (c *Cluster) deliver(ctx context.Context, msg protocol.Message) {
+	if msg.To == "node-3" || msg.From == "node-3" {
+		c.log.Printf("[router] dropping %s from %s to %s becasue node 3 is ded", msg.Type, msg.To, msg.From)
+		return
+	}
 	target, exists := c.nodes[msg.To]
 	if !exists {
 		c.log.Printf("[router] dropping %s from %s to unknown target %s", msg.Type, msg.From, msg.To)

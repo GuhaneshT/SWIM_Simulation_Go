@@ -6,39 +6,40 @@ import (
 
 type MemberStatus string
 
-const(
-	StatusAlive MemberStatus = "alive"
+const (
+	StatusAlive   MemberStatus = "alive"
 	StatusSuspect MemberStatus = "suspect"
-	StatusFailed MemberStatus = "failed"
-	StatusLeft MemberStatus = "left"
+	StatusFailed  MemberStatus = "failed"
+	StatusLeft    MemberStatus = "left"
 )
 
 type MessageType string
 
-const(
-	MessagePing MessageType = "PING"
-	MessageAck MessageType = "ACK"
+const (
+	MessagePing    MessageType = "PING"
+	MessageAck     MessageType = "ACK"
 	MessagePingReq MessageType = "PING-REQ"
-	MessageAlive MessageType = "ALIVE"
+	MessageAlive   MessageType = "ALIVE"
 	MessageSuspect MessageType = "SUSPECT"
 	MessageConfirm MessageType = "CONFIRM"
-	MessageDead MessageType = "DEAD"
+	MessageDead    MessageType = "DEAD"
 )
 
-type Update struct{
-	NodeID string
-	Status MemberStatus
+type Update struct {
+	NodeID      string
+	Status      MemberStatus
 	Incarnation int64
-	ObservedAt time.Time
-	ObservedBy string
+	ObservedAt  time.Time
+	ObservedBy  string
 }
 
-type Message struct{
-	Type MessageType
-	From string
-	To string
-	Target string
+type Message struct {
+	Type          MessageType
+	From          string
+	To            string
+	Target        string
+	Requester     string
 	CorrelationID string
-	SentAt time.Time
-	Updates []Update
+	SentAt        time.Time
+	Updates       []Update
 }

@@ -1,0 +1,1408 @@
+[clusterpulse] 2026/06/17 23:31:02 cluster started with 5 nodes
+[clusterpulse] 2026/06/17 23:31:02 [node-2] started
+[clusterpulse] 2026/06/17 23:31:02 [node-1] started
+[clusterpulse] 2026/06/17 23:31:02 [node-5] started
+[clusterpulse] 2026/06/17 23:31:02 [node-4] started
+[clusterpulse] 2026/06/17 23:31:02 [node-3] started
+[clusterpulse] 2026/06/17 23:31:03 [node-3] probing node-5 (node-3-1781719263023161000-7404651373234663700)
+[clusterpulse] 2026/06/17 23:31:03 [node-4] probing node-1 (node-4-1781719263023215000-1702366523293341244)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] probing node-3 (node-5-1781719263023274000-862801366495228265)
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [node-2] probing node-5 (node-2-1781719263023208000-8061117326415367502)
+[clusterpulse] 2026/06/17 23:31:03 [node-1] probing node-2 (node-1-1781719263023196000-6645844622614750746)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-1 -> node-2 PING (node-1-1781719263023196000-6645844622614750746)
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [router] node-4 -> node-1 PING (node-4-1781719263023215000-1702366523293341244)
+[clusterpulse] 2026/06/17 23:31:03 [node-1] received PING from node-4 (node-4-1781719263023215000-1702366523293341244)
+[clusterpulse] 2026/06/17 23:31:03 [node-1] acknowledging node-4 (node-4-1781719263023215000-1702366523293341244)
+[clusterpulse] 2026/06/17 23:31:03 [node-2] received PING from node-1 (node-1-1781719263023196000-6645844622614750746)
+[clusterpulse] 2026/06/17 23:31:03 [node-2] acknowledging node-1 (node-1-1781719263023196000-6645844622614750746)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-1 -> node-4 ACK (node-4-1781719263023215000-1702366523293341244)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-2 -> node-5 PING (node-2-1781719263023208000-8061117326415367502)
+[clusterpulse] 2026/06/17 23:31:03 [node-4] received ACK from node-1 (node-4-1781719263023215000-1702366523293341244)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-2 -> node-1 ACK (node-1-1781719263023196000-6645844622614750746)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] received PING from node-2 (node-2-1781719263023208000-8061117326415367502)
+[clusterpulse] 2026/06/17 23:31:03 [node-1] received ACK from node-2 (node-1-1781719263023196000-6645844622614750746)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] acknowledging node-2 (node-2-1781719263023208000-8061117326415367502)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-5 -> node-2 ACK (node-2-1781719263023208000-8061117326415367502)
+[clusterpulse] 2026/06/17 23:31:03 [node-2] received ACK from node-5 (node-2-1781719263023208000-8061117326415367502)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] ACK timeout from node-3 (node-5-1781719263023274000-862801366495228265)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-5 -> node-4 PING-REQ (node-5-1781719263374461000-5417794406700912051)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-5 -> node-2 PING-REQ (node-5-1781719263374465000-4331524778213366101)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-5 -> node-1 PING-REQ (node-5-1781719263374466000-868786161297380774)
+[clusterpulse] 2026/06/17 23:31:03 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719263374466000-868786161297380774)
+[clusterpulse] 2026/06/17 23:31:03 [node-3] ACK timeout from node-5 (node-3-1781719263023161000-7404651373234663700)
+[clusterpulse] 2026/06/17 23:31:03 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719263374461000-5417794406700912051)
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719263374465000-4331524778213366101)
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [node-3] probing node-4 (node-3-1781719263773271000-673192418270730774)
+[clusterpulse] 2026/06/17 23:31:03 [node-4] probing node-5 (node-4-1781719263773322000-6028499490819257964)
+[clusterpulse] 2026/06/17 23:31:03 [node-1] probing node-4 (node-1-1781719263773339000-7957150992915800775)
+[clusterpulse] 2026/06/17 23:31:03 [node-2] probing node-5 (node-2-1781719263773271000-7115844379225649411)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] probing node-3 (node-5-1781719263773390000-4506618319514738363)
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [router] node-4 -> node-5 PING (node-4-1781719263773322000-6028499490819257964)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] received PING from node-4 (node-4-1781719263773322000-6028499490819257964)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] acknowledging node-4 (node-4-1781719263773322000-6028499490819257964)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-1 -> node-4 PING (node-1-1781719263773339000-7957150992915800775)
+[clusterpulse] 2026/06/17 23:31:03 [node-4] received PING from node-1 (node-1-1781719263773339000-7957150992915800775)
+[clusterpulse] 2026/06/17 23:31:03 [node-4] acknowledging node-1 (node-1-1781719263773339000-7957150992915800775)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-4 -> node-1 ACK (node-1-1781719263773339000-7957150992915800775)
+[clusterpulse] 2026/06/17 23:31:03 [node-1] received ACK from node-4 (node-1-1781719263773339000-7957150992915800775)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-2 -> node-5 PING (node-2-1781719263773271000-7115844379225649411)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] received PING from node-2 (node-2-1781719263773271000-7115844379225649411)
+[clusterpulse] 2026/06/17 23:31:03 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:03 [router] node-5 -> node-4 ACK (node-4-1781719263773322000-6028499490819257964)
+[clusterpulse] 2026/06/17 23:31:03 [node-5] acknowledging node-2 (node-2-1781719263773271000-7115844379225649411)
+[clusterpulse] 2026/06/17 23:31:03 [router] node-5 -> node-2 ACK (node-2-1781719263773271000-7115844379225649411)
+[clusterpulse] 2026/06/17 23:31:03 [node-2] received ACK from node-5 (node-2-1781719263773271000-7115844379225649411)
+[clusterpulse] 2026/06/17 23:31:03 [node-4] received ACK from node-5 (node-4-1781719263773322000-6028499490819257964)
+[clusterpulse] 2026/06/17 23:31:04 [node-5] ACK timeout from node-3 (node-5-1781719263773390000-4506618319514738363)
+[clusterpulse] 2026/06/17 23:31:04 [node-3] ACK timeout from node-4 (node-3-1781719263773271000-673192418270730774)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-5 -> node-2 PING-REQ (node-5-1781719264124630000-3683075952564973911)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-5 -> node-1 PING-REQ (node-5-1781719264124635000-4104574469810544914)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-5 -> node-4 PING-REQ (node-5-1781719264124636000-3089216448650891129)
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719264124636000-3089216448650891129)
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719264124635000-4104574469810544914)
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719264124630000-3683075952564973911)
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [node-5] probing node-2 (node-5-1781719264523143000-4759721837457015966)
+[clusterpulse] 2026/06/17 23:31:04 [node-2] probing node-4 (node-2-1781719264523161000-2438057118695626274)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-5 -> node-2 PING (node-5-1781719264523143000-4759721837457015966)
+[clusterpulse] 2026/06/17 23:31:04 [node-2] received PING from node-5 (node-5-1781719264523143000-4759721837457015966)
+[clusterpulse] 2026/06/17 23:31:04 [node-2] acknowledging node-5 (node-5-1781719264523143000-4759721837457015966)
+[clusterpulse] 2026/06/17 23:31:04 [node-3] probing node-1 (node-3-1781719264523170000-197645796870573283)
+[clusterpulse] 2026/06/17 23:31:04 [node-4] probing node-1 (node-4-1781719264523188000-9208363426468115278)
+[clusterpulse] 2026/06/17 23:31:04 [node-1] probing node-5 (node-1-1781719264523192000-6955650857163680904)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-2 -> node-4 PING (node-2-1781719264523161000-2438057118695626274)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-2 -> node-5 ACK (node-5-1781719264523143000-4759721837457015966)
+[clusterpulse] 2026/06/17 23:31:04 [node-4] received PING from node-2 (node-2-1781719264523161000-2438057118695626274)
+[clusterpulse] 2026/06/17 23:31:04 [node-4] acknowledging node-2 (node-2-1781719264523161000-2438057118695626274)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-4 -> node-1 PING (node-4-1781719264523188000-9208363426468115278)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-4 -> node-2 ACK (node-2-1781719264523161000-2438057118695626274)
+[clusterpulse] 2026/06/17 23:31:04 [node-2] received ACK from node-4 (node-2-1781719264523161000-2438057118695626274)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-1 -> node-5 PING (node-1-1781719264523192000-6955650857163680904)
+[clusterpulse] 2026/06/17 23:31:04 [node-1] received PING from node-4 (node-4-1781719264523188000-9208363426468115278)
+[clusterpulse] 2026/06/17 23:31:04 [node-1] acknowledging node-4 (node-4-1781719264523188000-9208363426468115278)
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping PING from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [node-5] received ACK from node-2 (node-5-1781719264523143000-4759721837457015966)
+[clusterpulse] 2026/06/17 23:31:04 [node-5] received PING from node-1 (node-1-1781719264523192000-6955650857163680904)
+[clusterpulse] 2026/06/17 23:31:04 [node-5] acknowledging node-1 (node-1-1781719264523192000-6955650857163680904)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-1 -> node-4 ACK (node-4-1781719264523188000-9208363426468115278)
+[clusterpulse] 2026/06/17 23:31:04 [router] node-5 -> node-1 ACK (node-1-1781719264523192000-6955650857163680904)
+[clusterpulse] 2026/06/17 23:31:04 [node-1] received ACK from node-5 (node-1-1781719264523192000-6955650857163680904)
+[clusterpulse] 2026/06/17 23:31:04 [node-4] received ACK from node-1 (node-4-1781719264523188000-9208363426468115278)
+[clusterpulse] 2026/06/17 23:31:04 [node-3] ACK timeout from node-1 (node-3-1781719264523170000-197645796870573283)
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:04 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:05 [node-5] probing node-1 (node-5-1781719265273142000-8296003194736310631)
+[clusterpulse] 2026/06/17 23:31:05 [node-2] probing node-4 (node-2-1781719265273157000-5632827629891682510)
+[clusterpulse] 2026/06/17 23:31:05 [node-4] probing node-1 (node-4-1781719265273168000-5888962613144593853)
+[clusterpulse] 2026/06/17 23:31:05 [node-3] probing node-2 (node-3-1781719265273174000-1392876045933817847)
+[clusterpulse] 2026/06/17 23:31:05 [node-1] probing node-5 (node-1-1781719265273175000-5505587839679193264)
+[clusterpulse] 2026/06/17 23:31:05 [router] node-5 -> node-1 PING (node-5-1781719265273142000-8296003194736310631)
+[clusterpulse] 2026/06/17 23:31:05 [node-1] received PING from node-5 (node-5-1781719265273142000-8296003194736310631)
+[clusterpulse] 2026/06/17 23:31:05 [router] node-2 -> node-4 PING (node-2-1781719265273157000-5632827629891682510)
+[clusterpulse] 2026/06/17 23:31:05 [node-4] received PING from node-2 (node-2-1781719265273157000-5632827629891682510)
+[clusterpulse] 2026/06/17 23:31:05 [node-4] acknowledging node-2 (node-2-1781719265273157000-5632827629891682510)
+[clusterpulse] 2026/06/17 23:31:05 [router] node-4 -> node-1 PING (node-4-1781719265273168000-5888962613144593853)
+[clusterpulse] 2026/06/17 23:31:05 [router] node-4 -> node-2 ACK (node-2-1781719265273157000-5632827629891682510)
+[clusterpulse] 2026/06/17 23:31:05 [node-2] received ACK from node-4 (node-2-1781719265273157000-5632827629891682510)
+[clusterpulse] 2026/06/17 23:31:05 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:05 [router] node-1 -> node-5 PING (node-1-1781719265273175000-5505587839679193264)
+[clusterpulse] 2026/06/17 23:31:05 [node-5] received PING from node-1 (node-1-1781719265273175000-5505587839679193264)
+[clusterpulse] 2026/06/17 23:31:05 [node-5] acknowledging node-1 (node-1-1781719265273175000-5505587839679193264)
+[clusterpulse] 2026/06/17 23:31:05 [node-1] acknowledging node-5 (node-5-1781719265273142000-8296003194736310631)
+[clusterpulse] 2026/06/17 23:31:05 [node-1] received PING from node-4 (node-4-1781719265273168000-5888962613144593853)
+[clusterpulse] 2026/06/17 23:31:05 [node-1] acknowledging node-4 (node-4-1781719265273168000-5888962613144593853)
+[clusterpulse] 2026/06/17 23:31:05 [router] node-5 -> node-1 ACK (node-1-1781719265273175000-5505587839679193264)
+[clusterpulse] 2026/06/17 23:31:05 [node-1] received ACK from node-5 (node-1-1781719265273175000-5505587839679193264)
+[clusterpulse] 2026/06/17 23:31:05 [router] node-1 -> node-5 ACK (node-5-1781719265273142000-8296003194736310631)
+[clusterpulse] 2026/06/17 23:31:05 [router] node-1 -> node-4 ACK (node-4-1781719265273168000-5888962613144593853)
+[clusterpulse] 2026/06/17 23:31:05 [node-5] received ACK from node-1 (node-5-1781719265273142000-8296003194736310631)
+[clusterpulse] 2026/06/17 23:31:05 [node-4] received ACK from node-1 (node-4-1781719265273168000-5888962613144593853)
+[clusterpulse] 2026/06/17 23:31:05 [node-3] ACK timeout from node-2 (node-3-1781719265273174000-1392876045933817847)
+[clusterpulse] 2026/06/17 23:31:05 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:05 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:05 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [node-3] probing node-2 (node-3-1781719266023163000-382392138709119320)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] probing node-3 (node-5-1781719266023180000-6865640040246146043)
+[clusterpulse] 2026/06/17 23:31:06 [node-4] probing node-2 (node-4-1781719266023202000-8564758527961927479)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [node-1] probing node-2 (node-1-1781719266023207000-2358487328789479958)
+[clusterpulse] 2026/06/17 23:31:06 [node-2] probing node-5 (node-2-1781719266023205000-3036685785513588652)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-1 -> node-2 PING (node-1-1781719266023207000-2358487328789479958)
+[clusterpulse] 2026/06/17 23:31:06 [node-2] received PING from node-1 (node-1-1781719266023207000-2358487328789479958)
+[clusterpulse] 2026/06/17 23:31:06 [node-2] acknowledging node-1 (node-1-1781719266023207000-2358487328789479958)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [router] node-4 -> node-2 PING (node-4-1781719266023202000-8564758527961927479)
+[clusterpulse] 2026/06/17 23:31:06 [node-2] received PING from node-4 (node-4-1781719266023202000-8564758527961927479)
+[clusterpulse] 2026/06/17 23:31:06 [node-2] acknowledging node-4 (node-4-1781719266023202000-8564758527961927479)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-2 -> node-5 PING (node-2-1781719266023205000-3036685785513588652)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-2 -> node-1 ACK (node-1-1781719266023207000-2358487328789479958)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-2 -> node-4 ACK (node-4-1781719266023202000-8564758527961927479)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] received PING from node-2 (node-2-1781719266023205000-3036685785513588652)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] acknowledging node-2 (node-2-1781719266023205000-3036685785513588652)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-5 -> node-2 ACK (node-2-1781719266023205000-3036685785513588652)
+[clusterpulse] 2026/06/17 23:31:06 [node-2] received ACK from node-5 (node-2-1781719266023205000-3036685785513588652)
+[clusterpulse] 2026/06/17 23:31:06 [node-4] received ACK from node-2 (node-4-1781719266023202000-8564758527961927479)
+[clusterpulse] 2026/06/17 23:31:06 [node-1] received ACK from node-2 (node-1-1781719266023207000-2358487328789479958)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] ACK timeout from node-3 (node-5-1781719266023180000-6865640040246146043)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-5 -> node-1 PING-REQ (node-5-1781719266374561000-1260423276170668546)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-5 -> node-2 PING-REQ (node-5-1781719266374573000-2391123661590289124)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-5 -> node-4 PING-REQ (node-5-1781719266374576000-760854548428979581)
+[clusterpulse] 2026/06/17 23:31:06 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719266374561000-1260423276170668546)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [node-3] ACK timeout from node-2 (node-3-1781719266023163000-382392138709119320)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719266374576000-760854548428979581)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719266374573000-2391123661590289124)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [node-2] probing node-4 (node-2-1781719266773205000-3277503170876019204)
+[clusterpulse] 2026/06/17 23:31:06 [node-3] probing node-4 (node-3-1781719266773227000-1511960262288189085)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] probing node-4 (node-5-1781719266773276000-5619929698179957677)
+[clusterpulse] 2026/06/17 23:31:06 [node-4] probing node-3 (node-4-1781719266773250000-6940912064991358520)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [node-1] probing node-5 (node-1-1781719266773256000-4030501237641007963)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-2 -> node-4 PING (node-2-1781719266773205000-3277503170876019204)
+[clusterpulse] 2026/06/17 23:31:06 [node-4] received PING from node-2 (node-2-1781719266773205000-3277503170876019204)
+[clusterpulse] 2026/06/17 23:31:06 [node-4] acknowledging node-2 (node-2-1781719266773205000-3277503170876019204)
+[clusterpulse] 2026/06/17 23:31:06 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:06 [router] node-5 -> node-4 PING (node-5-1781719266773276000-5619929698179957677)
+[clusterpulse] 2026/06/17 23:31:06 [node-4] received PING from node-5 (node-5-1781719266773276000-5619929698179957677)
+[clusterpulse] 2026/06/17 23:31:06 [node-4] acknowledging node-5 (node-5-1781719266773276000-5619929698179957677)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-1 -> node-5 PING (node-1-1781719266773256000-4030501237641007963)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] received PING from node-1 (node-1-1781719266773256000-4030501237641007963)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] acknowledging node-1 (node-1-1781719266773256000-4030501237641007963)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-5 -> node-1 ACK (node-1-1781719266773256000-4030501237641007963)
+[clusterpulse] 2026/06/17 23:31:06 [node-1] received ACK from node-5 (node-1-1781719266773256000-4030501237641007963)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-4 -> node-2 ACK (node-2-1781719266773205000-3277503170876019204)
+[clusterpulse] 2026/06/17 23:31:06 [router] node-4 -> node-5 ACK (node-5-1781719266773276000-5619929698179957677)
+[clusterpulse] 2026/06/17 23:31:06 [node-2] received ACK from node-4 (node-2-1781719266773205000-3277503170876019204)
+[clusterpulse] 2026/06/17 23:31:06 [node-5] received ACK from node-4 (node-5-1781719266773276000-5619929698179957677)
+[clusterpulse] 2026/06/17 23:31:07 [node-3] ACK timeout from node-4 (node-3-1781719266773227000-1511960262288189085)
+[clusterpulse] 2026/06/17 23:31:07 [node-4] ACK timeout from node-3 (node-4-1781719266773250000-6940912064991358520)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-4 -> node-5 PING-REQ (node-4-1781719267124800000-7367438461117986975)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-4 -> node-1 PING-REQ (node-4-1781719267124808000-2480395582555204759)
+[clusterpulse] 2026/06/17 23:31:07 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719267124800000-7367438461117986975)
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [router] node-4 -> node-2 PING-REQ (node-4-1781719267124810000-7415291252098928107)
+[clusterpulse] 2026/06/17 23:31:07 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719267124808000-2480395582555204759)
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719267124810000-7415291252098928107)
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [node-2] probing node-1 (node-2-1781719267523185000-7815045049082985986)
+[clusterpulse] 2026/06/17 23:31:07 [node-4] probing node-2 (node-4-1781719267523199000-8443617265357861815)
+[clusterpulse] 2026/06/17 23:31:07 [node-5] probing node-1 (node-5-1781719267523210000-6712513827406378599)
+[clusterpulse] 2026/06/17 23:31:07 [node-1] probing node-2 (node-1-1781719267523212000-5608944944781371008)
+[clusterpulse] 2026/06/17 23:31:07 [node-3] probing node-5 (node-3-1781719267523218000-1842630146273304456)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-2 -> node-1 PING (node-2-1781719267523185000-7815045049082985986)
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [router] node-4 -> node-2 PING (node-4-1781719267523199000-8443617265357861815)
+[clusterpulse] 2026/06/17 23:31:07 [node-2] received PING from node-4 (node-4-1781719267523199000-8443617265357861815)
+[clusterpulse] 2026/06/17 23:31:07 [node-2] acknowledging node-4 (node-4-1781719267523199000-8443617265357861815)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-2 -> node-4 ACK (node-4-1781719267523199000-8443617265357861815)
+[clusterpulse] 2026/06/17 23:31:07 [node-4] received ACK from node-2 (node-4-1781719267523199000-8443617265357861815)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-5 -> node-1 PING (node-5-1781719267523210000-6712513827406378599)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-1 -> node-2 PING (node-1-1781719267523212000-5608944944781371008)
+[clusterpulse] 2026/06/17 23:31:07 [node-2] received PING from node-1 (node-1-1781719267523212000-5608944944781371008)
+[clusterpulse] 2026/06/17 23:31:07 [node-2] acknowledging node-1 (node-1-1781719267523212000-5608944944781371008)
+[clusterpulse] 2026/06/17 23:31:07 [node-1] received PING from node-2 (node-2-1781719267523185000-7815045049082985986)
+[clusterpulse] 2026/06/17 23:31:07 [node-1] acknowledging node-2 (node-2-1781719267523185000-7815045049082985986)
+[clusterpulse] 2026/06/17 23:31:07 [node-1] received PING from node-5 (node-5-1781719267523210000-6712513827406378599)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-1 -> node-2 ACK (node-2-1781719267523185000-7815045049082985986)
+[clusterpulse] 2026/06/17 23:31:07 [node-2] received ACK from node-1 (node-2-1781719267523185000-7815045049082985986)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-2 -> node-1 ACK (node-1-1781719267523212000-5608944944781371008)
+[clusterpulse] 2026/06/17 23:31:07 [node-1] acknowledging node-5 (node-5-1781719267523210000-6712513827406378599)
+[clusterpulse] 2026/06/17 23:31:07 [node-1] received ACK from node-2 (node-1-1781719267523212000-5608944944781371008)
+[clusterpulse] 2026/06/17 23:31:07 [router] node-1 -> node-5 ACK (node-5-1781719267523210000-6712513827406378599)
+[clusterpulse] 2026/06/17 23:31:07 [node-5] received ACK from node-1 (node-5-1781719267523210000-6712513827406378599)
+[clusterpulse] 2026/06/17 23:31:07 [node-3] ACK timeout from node-5 (node-3-1781719267523218000-1842630146273304456)
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:07 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [node-2] probing node-5 (node-2-1781719268273202000-1943870578171697519)
+[clusterpulse] 2026/06/17 23:31:08 [node-3] probing node-2 (node-3-1781719268273223000-5640773595609048714)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-2 -> node-5 PING (node-2-1781719268273202000-1943870578171697519)
+[clusterpulse] 2026/06/17 23:31:08 [node-5] probing node-1 (node-5-1781719268273240000-2065169819238371686)
+[clusterpulse] 2026/06/17 23:31:08 [node-5] received PING from node-2 (node-2-1781719268273202000-1943870578171697519)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-5 -> node-1 PING (node-5-1781719268273240000-2065169819238371686)
+[clusterpulse] 2026/06/17 23:31:08 [node-4] probing node-3 (node-4-1781719268273248000-5623761880801656422)
+[clusterpulse] 2026/06/17 23:31:08 [node-5] acknowledging node-2 (node-2-1781719268273202000-1943870578171697519)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-5 -> node-2 ACK (node-2-1781719268273202000-1943870578171697519)
+[clusterpulse] 2026/06/17 23:31:08 [node-2] received ACK from node-5 (node-2-1781719268273202000-1943870578171697519)
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [node-1] probing node-2 (node-1-1781719268273253000-921997678378097048)
+[clusterpulse] 2026/06/17 23:31:08 [node-1] received PING from node-5 (node-5-1781719268273240000-2065169819238371686)
+[clusterpulse] 2026/06/17 23:31:08 [node-1] acknowledging node-5 (node-5-1781719268273240000-2065169819238371686)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-1 -> node-2 PING (node-1-1781719268273253000-921997678378097048)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-1 -> node-5 ACK (node-5-1781719268273240000-2065169819238371686)
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [node-5] received ACK from node-1 (node-5-1781719268273240000-2065169819238371686)
+[clusterpulse] 2026/06/17 23:31:08 [node-2] received PING from node-1 (node-1-1781719268273253000-921997678378097048)
+[clusterpulse] 2026/06/17 23:31:08 [node-2] acknowledging node-1 (node-1-1781719268273253000-921997678378097048)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-2 -> node-1 ACK (node-1-1781719268273253000-921997678378097048)
+[clusterpulse] 2026/06/17 23:31:08 [node-1] received ACK from node-2 (node-1-1781719268273253000-921997678378097048)
+[clusterpulse] 2026/06/17 23:31:08 [node-3] ACK timeout from node-2 (node-3-1781719268273223000-5640773595609048714)
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [node-4] ACK timeout from node-3 (node-4-1781719268273248000-5623761880801656422)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-4 -> node-5 PING-REQ (node-4-1781719268624730000-2315824023997520624)
+[clusterpulse] 2026/06/17 23:31:08 [router] node-4 -> node-1 PING-REQ (node-4-1781719268624735000-4527201674736563791)
+[clusterpulse] 2026/06/17 23:31:08 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719268624730000-2315824023997520624)
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [router] node-4 -> node-2 PING-REQ (node-4-1781719268624737000-2311662297793578016)
+[clusterpulse] 2026/06/17 23:31:08 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719268624737000-2311662297793578016)
+[clusterpulse] 2026/06/17 23:31:08 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719268624735000-4527201674736563791)
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:08 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-2] probing node-3 (node-2-1781719269023244000-3714221316071350278)
+[clusterpulse] 2026/06/17 23:31:09 [node-3] probing node-5 (node-3-1781719269023288000-2401835653908563849)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-1] probing node-4 (node-1-1781719269023301000-3317313930594101717)
+[clusterpulse] 2026/06/17 23:31:09 [node-4] probing node-3 (node-4-1781719269023302000-8485630373661420304)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-1 -> node-4 PING (node-1-1781719269023301000-3317313930594101717)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-4] received PING from node-1 (node-1-1781719269023301000-3317313930594101717)
+[clusterpulse] 2026/06/17 23:31:09 [node-4] acknowledging node-1 (node-1-1781719269023301000-3317313930594101717)
+[clusterpulse] 2026/06/17 23:31:09 [node-5] probing node-2 (node-5-1781719269023309000-8304228641031486640)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [router] node-4 -> node-1 ACK (node-1-1781719269023301000-3317313930594101717)
+[clusterpulse] 2026/06/17 23:31:09 [node-1] received ACK from node-4 (node-1-1781719269023301000-3317313930594101717)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-5 -> node-2 PING (node-5-1781719269023309000-8304228641031486640)
+[clusterpulse] 2026/06/17 23:31:09 [node-2] received PING from node-5 (node-5-1781719269023309000-8304228641031486640)
+[clusterpulse] 2026/06/17 23:31:09 [node-2] acknowledging node-5 (node-5-1781719269023309000-8304228641031486640)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-2 -> node-5 ACK (node-5-1781719269023309000-8304228641031486640)
+[clusterpulse] 2026/06/17 23:31:09 [node-5] received ACK from node-2 (node-5-1781719269023309000-8304228641031486640)
+[clusterpulse] 2026/06/17 23:31:09 [node-3] ACK timeout from node-5 (node-3-1781719269023288000-2401835653908563849)
+[clusterpulse] 2026/06/17 23:31:09 [node-2] ACK timeout from node-3 (node-2-1781719269023244000-3714221316071350278)
+[clusterpulse] 2026/06/17 23:31:09 [node-4] ACK timeout from node-3 (node-4-1781719269023302000-8485630373661420304)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-4 -> node-1 PING-REQ (node-4-1781719269374552000-7904171604494217989)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-4 -> node-5 PING-REQ (node-4-1781719269374555000-8753297091016987965)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-4 -> node-2 PING-REQ (node-4-1781719269374556000-367314444277836882)
+[clusterpulse] 2026/06/17 23:31:09 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719269374552000-7904171604494217989)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719269374556000-367314444277836882)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-2 -> node-1 PING-REQ (node-2-1781719269374525000-1890176986872367637)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-2 -> node-5 PING-REQ (node-2-1781719269374528000-7446979951461085896)
+[clusterpulse] 2026/06/17 23:31:09 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719269374555000-8753297091016987965)
+[clusterpulse] 2026/06/17 23:31:09 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719269374525000-1890176986872367637)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719269374528000-7446979951461085896)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [router] node-2 -> node-4 PING-REQ (node-2-1781719269374529000-7495324101313594005)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719269374529000-7495324101313594005)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-2] probing node-5 (node-2-1781719269773286000-6258267999533441256)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-2 -> node-5 PING (node-2-1781719269773286000-6258267999533441256)
+[clusterpulse] 2026/06/17 23:31:09 [node-5] probing node-4 (node-5-1781719269773360000-5264487711340893522)
+[clusterpulse] 2026/06/17 23:31:09 [node-5] received PING from node-2 (node-2-1781719269773286000-6258267999533441256)
+[clusterpulse] 2026/06/17 23:31:09 [node-5] acknowledging node-2 (node-2-1781719269773286000-6258267999533441256)
+[clusterpulse] 2026/06/17 23:31:09 [node-3] probing node-5 (node-3-1781719269773368000-6168203354700834487)
+[clusterpulse] 2026/06/17 23:31:09 [node-4] probing node-3 (node-4-1781719269773373000-1744238441453146428)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-5 -> node-4 PING (node-5-1781719269773360000-5264487711340893522)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-5 -> node-2 ACK (node-2-1781719269773286000-6258267999533441256)
+[clusterpulse] 2026/06/17 23:31:09 [node-2] received ACK from node-5 (node-2-1781719269773286000-6258267999533441256)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-1] probing node-3 (node-1-1781719269773375000-4358539337615569799)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:09 [node-4] received PING from node-5 (node-5-1781719269773360000-5264487711340893522)
+[clusterpulse] 2026/06/17 23:31:09 [node-4] acknowledging node-5 (node-5-1781719269773360000-5264487711340893522)
+[clusterpulse] 2026/06/17 23:31:09 [router] node-4 -> node-5 ACK (node-5-1781719269773360000-5264487711340893522)
+[clusterpulse] 2026/06/17 23:31:09 [node-5] received ACK from node-4 (node-5-1781719269773360000-5264487711340893522)
+[clusterpulse] 2026/06/17 23:31:09 [router] dropping PING from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [node-1] ACK timeout from node-3 (node-1-1781719269773375000-4358539337615569799)
+[clusterpulse] 2026/06/17 23:31:10 [node-3] ACK timeout from node-5 (node-3-1781719269773368000-6168203354700834487)
+[clusterpulse] 2026/06/17 23:31:10 [node-4] ACK timeout from node-3 (node-4-1781719269773373000-1744238441453146428)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-4 -> node-1 PING-REQ (node-4-1781719270124125000-5143450865660248885)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-4 -> node-2 PING-REQ (node-4-1781719270124129000-1766468996815964418)
+[clusterpulse] 2026/06/17 23:31:10 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719270124125000-5143450865660248885)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-1 -> node-2 PING-REQ (node-1-1781719270123970000-5080041078465934673)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-1 -> node-5 PING-REQ (node-1-1781719270123978000-8625521927731404840)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-4 -> node-5 PING-REQ (node-4-1781719270124130000-8101799877101866819)
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719270124129000-1766468996815964418)
+[clusterpulse] 2026/06/17 23:31:10 [node-2] received PING-REQ from node-1 to ping node-3 (node-1-1781719270123970000-5080041078465934673)
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [router] node-1 -> node-4 PING-REQ (node-1-1781719270123979000-4884825824002563017)
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [node-4] received PING-REQ from node-1 to ping node-3 (node-1-1781719270123979000-4884825824002563017)
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [node-5] received PING-REQ from node-1 to ping node-3 (node-1-1781719270123978000-8625521927731404840)
+[clusterpulse] 2026/06/17 23:31:10 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719270124130000-8101799877101866819)
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [node-3] probing node-1 (node-3-1781719270523261000-2661414792093849283)
+[clusterpulse] 2026/06/17 23:31:10 [node-5] probing node-2 (node-5-1781719270523388000-3903030722293733333)
+[clusterpulse] 2026/06/17 23:31:10 [node-4] probing node-1 (node-4-1781719270523307000-3031250866346597772)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-4 -> node-1 PING (node-4-1781719270523307000-3031250866346597772)
+[clusterpulse] 2026/06/17 23:31:10 [node-1] probing node-2 (node-1-1781719270523345000-6794852537697154834)
+[clusterpulse] 2026/06/17 23:31:10 [node-1] received PING from node-4 (node-4-1781719270523307000-3031250866346597772)
+[clusterpulse] 2026/06/17 23:31:10 [node-1] acknowledging node-4 (node-4-1781719270523307000-3031250866346597772)
+[clusterpulse] 2026/06/17 23:31:10 [node-2] probing node-4 (node-2-1781719270523376000-1808827557023708004)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-1 -> node-2 PING (node-1-1781719270523345000-6794852537697154834)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-2 -> node-4 PING (node-2-1781719270523376000-1808827557023708004)
+[clusterpulse] 2026/06/17 23:31:10 [node-4] received PING from node-2 (node-2-1781719270523376000-1808827557023708004)
+[clusterpulse] 2026/06/17 23:31:10 [node-4] acknowledging node-2 (node-2-1781719270523376000-1808827557023708004)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-4 -> node-2 ACK (node-2-1781719270523376000-1808827557023708004)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-1 -> node-4 ACK (node-4-1781719270523307000-3031250866346597772)
+[clusterpulse] 2026/06/17 23:31:10 [node-4] received ACK from node-1 (node-4-1781719270523307000-3031250866346597772)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-5 -> node-2 PING (node-5-1781719270523388000-3903030722293733333)
+[clusterpulse] 2026/06/17 23:31:10 [node-2] received PING from node-1 (node-1-1781719270523345000-6794852537697154834)
+[clusterpulse] 2026/06/17 23:31:10 [node-2] acknowledging node-1 (node-1-1781719270523345000-6794852537697154834)
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping PING from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [node-2] received ACK from node-4 (node-2-1781719270523376000-1808827557023708004)
+[clusterpulse] 2026/06/17 23:31:10 [node-2] received PING from node-5 (node-5-1781719270523388000-3903030722293733333)
+[clusterpulse] 2026/06/17 23:31:10 [node-2] acknowledging node-5 (node-5-1781719270523388000-3903030722293733333)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-2 -> node-1 ACK (node-1-1781719270523345000-6794852537697154834)
+[clusterpulse] 2026/06/17 23:31:10 [router] node-2 -> node-5 ACK (node-5-1781719270523388000-3903030722293733333)
+[clusterpulse] 2026/06/17 23:31:10 [node-5] received ACK from node-2 (node-5-1781719270523388000-3903030722293733333)
+[clusterpulse] 2026/06/17 23:31:10 [node-1] received ACK from node-2 (node-1-1781719270523345000-6794852537697154834)
+[clusterpulse] 2026/06/17 23:31:10 [node-3] ACK timeout from node-1 (node-3-1781719270523261000-2661414792093849283)
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:10 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [node-5] probing node-4 (node-5-1781719271273254000-2164846680086690529)
+[clusterpulse] 2026/06/17 23:31:11 [node-2] probing node-5 (node-2-1781719271273271000-3582665012653427732)
+[clusterpulse] 2026/06/17 23:31:11 [router] node-5 -> node-4 PING (node-5-1781719271273254000-2164846680086690529)
+[clusterpulse] 2026/06/17 23:31:11 [node-1] probing node-4 (node-1-1781719271273284000-4652322599201686937)
+[clusterpulse] 2026/06/17 23:31:11 [node-3] probing node-4 (node-3-1781719271273295000-6327593404210471782)
+[clusterpulse] 2026/06/17 23:31:11 [node-4] probing node-3 (node-4-1781719271273304000-2421023577218876948)
+[clusterpulse] 2026/06/17 23:31:11 [node-4] received PING from node-5 (node-5-1781719271273254000-2164846680086690529)
+[clusterpulse] 2026/06/17 23:31:11 [node-4] acknowledging node-5 (node-5-1781719271273254000-2164846680086690529)
+[clusterpulse] 2026/06/17 23:31:11 [router] node-2 -> node-5 PING (node-2-1781719271273271000-3582665012653427732)
+[clusterpulse] 2026/06/17 23:31:11 [node-5] received PING from node-2 (node-2-1781719271273271000-3582665012653427732)
+[clusterpulse] 2026/06/17 23:31:11 [node-5] acknowledging node-2 (node-2-1781719271273271000-3582665012653427732)
+[clusterpulse] 2026/06/17 23:31:11 [router] node-1 -> node-4 PING (node-1-1781719271273284000-4652322599201686937)
+[clusterpulse] 2026/06/17 23:31:11 [node-4] received PING from node-1 (node-1-1781719271273284000-4652322599201686937)
+[clusterpulse] 2026/06/17 23:31:11 [node-4] acknowledging node-1 (node-1-1781719271273284000-4652322599201686937)
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [router] node-4 -> node-5 ACK (node-5-1781719271273254000-2164846680086690529)
+[clusterpulse] 2026/06/17 23:31:11 [router] node-4 -> node-1 ACK (node-1-1781719271273284000-4652322599201686937)
+[clusterpulse] 2026/06/17 23:31:11 [node-1] received ACK from node-4 (node-1-1781719271273284000-4652322599201686937)
+[clusterpulse] 2026/06/17 23:31:11 [router] node-5 -> node-2 ACK (node-2-1781719271273271000-3582665012653427732)
+[clusterpulse] 2026/06/17 23:31:11 [node-2] received ACK from node-5 (node-2-1781719271273271000-3582665012653427732)
+[clusterpulse] 2026/06/17 23:31:11 [node-5] received ACK from node-4 (node-5-1781719271273254000-2164846680086690529)
+[clusterpulse] 2026/06/17 23:31:11 [node-3] ACK timeout from node-4 (node-3-1781719271273295000-6327593404210471782)
+[clusterpulse] 2026/06/17 23:31:11 [node-4] ACK timeout from node-3 (node-4-1781719271273304000-2421023577218876948)
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [router] node-4 -> node-5 PING-REQ (node-4-1781719271624731000-2098823437263720955)
+[clusterpulse] 2026/06/17 23:31:11 [router] node-4 -> node-2 PING-REQ (node-4-1781719271624736000-890356578790446540)
+[clusterpulse] 2026/06/17 23:31:11 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719271624731000-2098823437263720955)
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [router] node-4 -> node-1 PING-REQ (node-4-1781719271624737000-5882178660104659787)
+[clusterpulse] 2026/06/17 23:31:11 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719271624737000-5882178660104659787)
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:11 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719271624736000-890356578790446540)
+[clusterpulse] 2026/06/17 23:31:11 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [node-2] probing node-5 (node-2-1781719272023218000-2450892985560627636)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-2 -> node-5 PING (node-2-1781719272023218000-2450892985560627636)
+[clusterpulse] 2026/06/17 23:31:12 [node-3] probing node-4 (node-3-1781719272023280000-2895558260248122546)
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [node-1] probing node-4 (node-1-1781719272023291000-8549490647145512196)
+[clusterpulse] 2026/06/17 23:31:12 [node-5] probing node-3 (node-5-1781719272023281000-2434002791977005653)
+[clusterpulse] 2026/06/17 23:31:12 [node-5] received PING from node-2 (node-2-1781719272023218000-2450892985560627636)
+[clusterpulse] 2026/06/17 23:31:12 [node-5] acknowledging node-2 (node-2-1781719272023218000-2450892985560627636)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] probing node-1 (node-4-1781719272023293000-6604881252651351315)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-4 -> node-1 PING (node-4-1781719272023293000-6604881252651351315)
+[clusterpulse] 2026/06/17 23:31:12 [node-1] received PING from node-4 (node-4-1781719272023293000-6604881252651351315)
+[clusterpulse] 2026/06/17 23:31:12 [node-1] acknowledging node-4 (node-4-1781719272023293000-6604881252651351315)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-1 -> node-4 PING (node-1-1781719272023291000-8549490647145512196)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-1 -> node-4 ACK (node-4-1781719272023293000-6604881252651351315)
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [router] node-5 -> node-2 ACK (node-2-1781719272023218000-2450892985560627636)
+[clusterpulse] 2026/06/17 23:31:12 [node-2] received ACK from node-5 (node-2-1781719272023218000-2450892985560627636)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] received PING from node-1 (node-1-1781719272023291000-8549490647145512196)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] acknowledging node-1 (node-1-1781719272023291000-8549490647145512196)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] received ACK from node-1 (node-4-1781719272023293000-6604881252651351315)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-4 -> node-1 ACK (node-1-1781719272023291000-8549490647145512196)
+[clusterpulse] 2026/06/17 23:31:12 [node-1] received ACK from node-4 (node-1-1781719272023291000-8549490647145512196)
+[clusterpulse] 2026/06/17 23:31:12 [node-5] ACK timeout from node-3 (node-5-1781719272023281000-2434002791977005653)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-5 -> node-1 PING-REQ (node-5-1781719272374301000-6530251134188174129)
+[clusterpulse] 2026/06/17 23:31:12 [node-3] ACK timeout from node-4 (node-3-1781719272023280000-2895558260248122546)
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [router] node-5 -> node-2 PING-REQ (node-5-1781719272374304000-2352324384768446602)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-5 -> node-4 PING-REQ (node-5-1781719272374304000-540629219939877681)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719272374304000-540629219939877681)
+[clusterpulse] 2026/06/17 23:31:12 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719272374301000-6530251134188174129)
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719272374304000-2352324384768446602)
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [node-2] probing node-5 (node-2-1781719272773277000-2924894641268227335)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] probing node-3 (node-4-1781719272773311000-8861657012429224740)
+[clusterpulse] 2026/06/17 23:31:12 [node-1] probing node-4 (node-1-1781719272773330000-7293508734849835179)
+[clusterpulse] 2026/06/17 23:31:12 [node-5] probing node-2 (node-5-1781719272773348000-7817813596365871950)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-1 -> node-4 PING (node-1-1781719272773330000-7293508734849835179)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] received PING from node-1 (node-1-1781719272773330000-7293508734849835179)
+[clusterpulse] 2026/06/17 23:31:12 [node-4] acknowledging node-1 (node-1-1781719272773330000-7293508734849835179)
+[clusterpulse] 2026/06/17 23:31:12 [node-3] probing node-4 (node-3-1781719272773353000-2296771235338776179)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-2 -> node-5 PING (node-2-1781719272773277000-2924894641268227335)
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [node-5] received PING from node-2 (node-2-1781719272773277000-2924894641268227335)
+[clusterpulse] 2026/06/17 23:31:12 [node-5] acknowledging node-2 (node-2-1781719272773277000-2924894641268227335)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-5 -> node-2 PING (node-5-1781719272773348000-7817813596365871950)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-5 -> node-2 ACK (node-2-1781719272773277000-2924894641268227335)
+[clusterpulse] 2026/06/17 23:31:12 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:12 [router] node-4 -> node-1 ACK (node-1-1781719272773330000-7293508734849835179)
+[clusterpulse] 2026/06/17 23:31:12 [node-1] received ACK from node-4 (node-1-1781719272773330000-7293508734849835179)
+[clusterpulse] 2026/06/17 23:31:12 [node-2] received PING from node-5 (node-5-1781719272773348000-7817813596365871950)
+[clusterpulse] 2026/06/17 23:31:12 [node-2] acknowledging node-5 (node-5-1781719272773348000-7817813596365871950)
+[clusterpulse] 2026/06/17 23:31:12 [node-2] received ACK from node-5 (node-2-1781719272773277000-2924894641268227335)
+[clusterpulse] 2026/06/17 23:31:12 [router] node-2 -> node-5 ACK (node-5-1781719272773348000-7817813596365871950)
+[clusterpulse] 2026/06/17 23:31:12 [node-5] received ACK from node-2 (node-5-1781719272773348000-7817813596365871950)
+[clusterpulse] 2026/06/17 23:31:13 [node-3] ACK timeout from node-4 (node-3-1781719272773353000-2296771235338776179)
+[clusterpulse] 2026/06/17 23:31:13 [node-4] ACK timeout from node-3 (node-4-1781719272773311000-8861657012429224740)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-4 -> node-2 PING-REQ (node-4-1781719273124836000-3403242900738469413)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-4 -> node-5 PING-REQ (node-4-1781719273124843000-7831864458695670605)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719273124836000-3403242900738469413)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-4 -> node-1 PING-REQ (node-4-1781719273124845000-8846770796080121786)
+[clusterpulse] 2026/06/17 23:31:13 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719273124845000-8846770796080121786)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719273124843000-7831864458695670605)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [node-3] probing node-5 (node-3-1781719273523287000-1264524050208355570)
+[clusterpulse] 2026/06/17 23:31:13 [node-5] probing node-3 (node-5-1781719273523315000-2796999184602212175)
+[clusterpulse] 2026/06/17 23:31:13 [node-4] probing node-5 (node-4-1781719273523331000-8563371925431422987)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [node-1] probing node-4 (node-1-1781719273523338000-6263796609776470961)
+[clusterpulse] 2026/06/17 23:31:13 [node-2] probing node-4 (node-2-1781719273523335000-3494374649076997145)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-1 -> node-4 PING (node-1-1781719273523338000-6263796609776470961)
+[clusterpulse] 2026/06/17 23:31:13 [node-4] received PING from node-1 (node-1-1781719273523338000-6263796609776470961)
+[clusterpulse] 2026/06/17 23:31:13 [node-4] acknowledging node-1 (node-1-1781719273523338000-6263796609776470961)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [router] node-4 -> node-5 PING (node-4-1781719273523331000-8563371925431422987)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-4 -> node-1 ACK (node-1-1781719273523338000-6263796609776470961)
+[clusterpulse] 2026/06/17 23:31:13 [node-1] received ACK from node-4 (node-1-1781719273523338000-6263796609776470961)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-2 -> node-4 PING (node-2-1781719273523335000-3494374649076997145)
+[clusterpulse] 2026/06/17 23:31:13 [node-4] received PING from node-2 (node-2-1781719273523335000-3494374649076997145)
+[clusterpulse] 2026/06/17 23:31:13 [node-4] acknowledging node-2 (node-2-1781719273523335000-3494374649076997145)
+[clusterpulse] 2026/06/17 23:31:13 [node-5] received PING from node-4 (node-4-1781719273523331000-8563371925431422987)
+[clusterpulse] 2026/06/17 23:31:13 [node-5] acknowledging node-4 (node-4-1781719273523331000-8563371925431422987)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-4 -> node-2 ACK (node-2-1781719273523335000-3494374649076997145)
+[clusterpulse] 2026/06/17 23:31:13 [node-2] received ACK from node-4 (node-2-1781719273523335000-3494374649076997145)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-5 -> node-4 ACK (node-4-1781719273523331000-8563371925431422987)
+[clusterpulse] 2026/06/17 23:31:13 [node-4] received ACK from node-5 (node-4-1781719273523331000-8563371925431422987)
+[clusterpulse] 2026/06/17 23:31:13 [node-5] ACK timeout from node-3 (node-5-1781719273523315000-2796999184602212175)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-5 -> node-2 PING-REQ (node-5-1781719273874708000-1224192392890252686)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-5 -> node-4 PING-REQ (node-5-1781719273874721000-4815835554199274455)
+[clusterpulse] 2026/06/17 23:31:13 [router] node-5 -> node-1 PING-REQ (node-5-1781719273874723000-4465628505529688599)
+[clusterpulse] 2026/06/17 23:31:13 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719273874708000-1224192392890252686)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [node-3] ACK timeout from node-5 (node-3-1781719273523287000-1264524050208355570)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719273874723000-4465628505529688599)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:13 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719273874721000-4815835554199274455)
+[clusterpulse] 2026/06/17 23:31:13 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [node-2] probing node-3 (node-2-1781719274273294000-8425175874268683467)
+[clusterpulse] 2026/06/17 23:31:14 [node-5] probing node-2 (node-5-1781719274273328000-7995454057392090306)
+[clusterpulse] 2026/06/17 23:31:14 [node-3] probing node-1 (node-3-1781719274273356000-9205443460007621449)
+[clusterpulse] 2026/06/17 23:31:14 [node-1] probing node-3 (node-1-1781719274273371000-8253282189466642513)
+[clusterpulse] 2026/06/17 23:31:14 [node-4] probing node-5 (node-4-1781719274273377000-880346573943312719)
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] node-5 -> node-2 PING (node-5-1781719274273328000-7995454057392090306)
+[clusterpulse] 2026/06/17 23:31:14 [node-2] received PING from node-5 (node-5-1781719274273328000-7995454057392090306)
+[clusterpulse] 2026/06/17 23:31:14 [node-2] acknowledging node-5 (node-5-1781719274273328000-7995454057392090306)
+[clusterpulse] 2026/06/17 23:31:14 [router] node-2 -> node-5 ACK (node-5-1781719274273328000-7995454057392090306)
+[clusterpulse] 2026/06/17 23:31:14 [node-5] received ACK from node-2 (node-5-1781719274273328000-7995454057392090306)
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping PING from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping PING from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] node-4 -> node-5 PING (node-4-1781719274273377000-880346573943312719)
+[clusterpulse] 2026/06/17 23:31:14 [node-5] received PING from node-4 (node-4-1781719274273377000-880346573943312719)
+[clusterpulse] 2026/06/17 23:31:14 [node-5] acknowledging node-4 (node-4-1781719274273377000-880346573943312719)
+[clusterpulse] 2026/06/17 23:31:14 [router] node-5 -> node-4 ACK (node-4-1781719274273377000-880346573943312719)
+[clusterpulse] 2026/06/17 23:31:14 [node-4] received ACK from node-5 (node-4-1781719274273377000-880346573943312719)
+[clusterpulse] 2026/06/17 23:31:14 [node-2] ACK timeout from node-3 (node-2-1781719274273294000-8425175874268683467)
+[clusterpulse] 2026/06/17 23:31:14 [node-1] ACK timeout from node-3 (node-1-1781719274273371000-8253282189466642513)
+[clusterpulse] 2026/06/17 23:31:14 [node-3] ACK timeout from node-1 (node-3-1781719274273356000-9205443460007621449)
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] node-2 -> node-4 PING-REQ (node-2-1781719274623764000-3307077329952207563)
+[clusterpulse] 2026/06/17 23:31:14 [router] node-2 -> node-5 PING-REQ (node-2-1781719274623774000-826059470624524430)
+[clusterpulse] 2026/06/17 23:31:14 [router] node-1 -> node-5 PING-REQ (node-1-1781719274623793000-6970492520803215461)
+[clusterpulse] 2026/06/17 23:31:14 [router] node-1 -> node-2 PING-REQ (node-1-1781719274623797000-592217601892439352)
+[clusterpulse] 2026/06/17 23:31:14 [router] node-2 -> node-1 PING-REQ (node-2-1781719274623775000-4517295763212408819)
+[clusterpulse] 2026/06/17 23:31:14 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719274623775000-4517295763212408819)
+[clusterpulse] 2026/06/17 23:31:14 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719274623774000-826059470624524430)
+[clusterpulse] 2026/06/17 23:31:14 [node-5] received PING-REQ from node-1 to ping node-3 (node-1-1781719274623793000-6970492520803215461)
+[clusterpulse] 2026/06/17 23:31:14 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719274623764000-3307077329952207563)
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] node-1 -> node-4 PING-REQ (node-1-1781719274623799000-8837007932121058701)
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [node-2] received PING-REQ from node-1 to ping node-3 (node-1-1781719274623797000-592217601892439352)
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:14 [node-4] received PING-REQ from node-1 to ping node-3 (node-1-1781719274623799000-8837007932121058701)
+[clusterpulse] 2026/06/17 23:31:14 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [node-5] probing node-3 (node-5-1781719275023290000-9178910027447690702)
+[clusterpulse] 2026/06/17 23:31:15 [node-4] probing node-2 (node-4-1781719275023326000-7268190805872632011)
+[clusterpulse] 2026/06/17 23:31:15 [node-1] probing node-3 (node-1-1781719275023394000-4337144436222571196)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] probing node-3 (node-2-1781719275023411000-4463519401803901804)
+[clusterpulse] 2026/06/17 23:31:15 [node-3] probing node-4 (node-3-1781719275023409000-6266691124859360827)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] node-4 -> node-2 PING (node-4-1781719275023326000-7268190805872632011)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] received PING from node-4 (node-4-1781719275023326000-7268190805872632011)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] acknowledging node-4 (node-4-1781719275023326000-7268190805872632011)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] node-2 -> node-4 ACK (node-4-1781719275023326000-7268190805872632011)
+[clusterpulse] 2026/06/17 23:31:15 [node-4] received ACK from node-2 (node-4-1781719275023326000-7268190805872632011)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [node-3] ACK timeout from node-4 (node-3-1781719275023409000-6266691124859360827)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] ACK timeout from node-3 (node-2-1781719275023411000-4463519401803901804)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-2 -> node-5 PING-REQ (node-2-1781719275374754000-4767485644667833838)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-2 -> node-1 PING-REQ (node-2-1781719275374756000-1549153723873032796)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-2 -> node-4 PING-REQ (node-2-1781719275374757000-4564306168827275002)
+[clusterpulse] 2026/06/17 23:31:15 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719275374756000-1549153723873032796)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [node-1] ACK timeout from node-3 (node-1-1781719275023394000-4337144436222571196)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-1 -> node-5 PING-REQ (node-1-1781719275374824000-14022022224188085)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-1 -> node-4 PING-REQ (node-1-1781719275374825000-4998786670467269357)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-1 -> node-2 PING-REQ (node-1-1781719275374826000-2336950012208117156)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] received PING-REQ from node-1 to ping node-3 (node-1-1781719275374826000-2336950012208117156)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719275374754000-4767485644667833838)
+[clusterpulse] 2026/06/17 23:31:15 [node-5] received PING-REQ from node-1 to ping node-3 (node-1-1781719275374824000-14022022224188085)
+[clusterpulse] 2026/06/17 23:31:15 [node-5] ACK timeout from node-3 (node-5-1781719275023290000-9178910027447690702)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719275374757000-4564306168827275002)
+[clusterpulse] 2026/06/17 23:31:15 [node-4] received PING-REQ from node-1 to ping node-3 (node-1-1781719275374825000-4998786670467269357)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] node-5 -> node-2 PING-REQ (node-5-1781719275374882000-4174085328368373989)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-5 -> node-1 PING-REQ (node-5-1781719275374882000-4479277036408958545)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-5 -> node-4 PING-REQ (node-5-1781719275374883000-2796417557863432104)
+[clusterpulse] 2026/06/17 23:31:15 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719275374883000-2796417557863432104)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719275374882000-4174085328368373989)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719275374882000-4479277036408958545)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [node-2] probing node-3 (node-2-1781719275773310000-1081480345014313848)
+[clusterpulse] 2026/06/17 23:31:15 [node-4] probing node-5 (node-4-1781719275773349000-7307438586608051064)
+[clusterpulse] 2026/06/17 23:31:15 [node-1] probing node-2 (node-1-1781719275773368000-1543238186218953874)
+[clusterpulse] 2026/06/17 23:31:15 [node-3] probing node-5 (node-3-1781719275773385000-5979230440899861146)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-1 -> node-2 PING (node-1-1781719275773368000-1543238186218953874)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] received PING from node-1 (node-1-1781719275773368000-1543238186218953874)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] acknowledging node-1 (node-1-1781719275773368000-1543238186218953874)
+[clusterpulse] 2026/06/17 23:31:15 [node-5] probing node-2 (node-5-1781719275773391000-3281539743593802973)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] node-2 -> node-1 ACK (node-1-1781719275773368000-1543238186218953874)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-4 -> node-5 PING (node-4-1781719275773349000-7307438586608051064)
+[clusterpulse] 2026/06/17 23:31:15 [node-5] received PING from node-4 (node-4-1781719275773349000-7307438586608051064)
+[clusterpulse] 2026/06/17 23:31:15 [node-5] acknowledging node-4 (node-4-1781719275773349000-7307438586608051064)
+[clusterpulse] 2026/06/17 23:31:15 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:15 [router] node-5 -> node-2 PING (node-5-1781719275773391000-3281539743593802973)
+[clusterpulse] 2026/06/17 23:31:15 [node-1] received ACK from node-2 (node-1-1781719275773368000-1543238186218953874)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-5 -> node-4 ACK (node-4-1781719275773349000-7307438586608051064)
+[clusterpulse] 2026/06/17 23:31:15 [node-4] received ACK from node-5 (node-4-1781719275773349000-7307438586608051064)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] received PING from node-5 (node-5-1781719275773391000-3281539743593802973)
+[clusterpulse] 2026/06/17 23:31:15 [node-2] acknowledging node-5 (node-5-1781719275773391000-3281539743593802973)
+[clusterpulse] 2026/06/17 23:31:15 [router] node-2 -> node-5 ACK (node-5-1781719275773391000-3281539743593802973)
+[clusterpulse] 2026/06/17 23:31:15 [node-5] received ACK from node-2 (node-5-1781719275773391000-3281539743593802973)
+[clusterpulse] 2026/06/17 23:31:16 [node-3] ACK timeout from node-5 (node-3-1781719275773385000-5979230440899861146)
+[clusterpulse] 2026/06/17 23:31:16 [node-2] ACK timeout from node-3 (node-2-1781719275773310000-1081480345014313848)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-2 -> node-1 PING-REQ (node-2-1781719276124876000-776757520526670487)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-2 -> node-5 PING-REQ (node-2-1781719276124883000-4643641715106781174)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-2 -> node-4 PING-REQ (node-2-1781719276124886000-2534667072114634736)
+[clusterpulse] 2026/06/17 23:31:16 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719276124886000-2534667072114634736)
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719276124876000-776757520526670487)
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719276124883000-4643641715106781174)
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [node-4] probing node-2 (node-4-1781719276523310000-2473281453314162528)
+[clusterpulse] 2026/06/17 23:31:16 [node-3] probing node-1 (node-3-1781719276523375000-8065042963070157677)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-4 -> node-2 PING (node-4-1781719276523310000-2473281453314162528)
+[clusterpulse] 2026/06/17 23:31:16 [node-5] probing node-2 (node-5-1781719276523378000-4339211302915583170)
+[clusterpulse] 2026/06/17 23:31:16 [node-1] probing node-5 (node-1-1781719276523359000-72944536923342589)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-5 -> node-2 PING (node-5-1781719276523378000-4339211302915583170)
+[clusterpulse] 2026/06/17 23:31:16 [node-2] probing node-1 (node-2-1781719276523359000-8139385274210381229)
+[clusterpulse] 2026/06/17 23:31:16 [node-2] received PING from node-4 (node-4-1781719276523310000-2473281453314162528)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-2 -> node-1 PING (node-2-1781719276523359000-8139385274210381229)
+[clusterpulse] 2026/06/17 23:31:16 [node-1] received PING from node-2 (node-2-1781719276523359000-8139385274210381229)
+[clusterpulse] 2026/06/17 23:31:16 [node-1] acknowledging node-2 (node-2-1781719276523359000-8139385274210381229)
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping PING from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [node-2] acknowledging node-4 (node-4-1781719276523310000-2473281453314162528)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-1 -> node-5 PING (node-1-1781719276523359000-72944536923342589)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-1 -> node-2 ACK (node-2-1781719276523359000-8139385274210381229)
+[clusterpulse] 2026/06/17 23:31:16 [node-2] received PING from node-5 (node-5-1781719276523378000-4339211302915583170)
+[clusterpulse] 2026/06/17 23:31:16 [node-2] acknowledging node-5 (node-5-1781719276523378000-4339211302915583170)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-2 -> node-4 ACK (node-4-1781719276523310000-2473281453314162528)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-2 -> node-5 ACK (node-5-1781719276523378000-4339211302915583170)
+[clusterpulse] 2026/06/17 23:31:16 [node-5] received PING from node-1 (node-1-1781719276523359000-72944536923342589)
+[clusterpulse] 2026/06/17 23:31:16 [node-5] acknowledging node-1 (node-1-1781719276523359000-72944536923342589)
+[clusterpulse] 2026/06/17 23:31:16 [node-5] received ACK from node-2 (node-5-1781719276523378000-4339211302915583170)
+[clusterpulse] 2026/06/17 23:31:16 [node-2] received ACK from node-1 (node-2-1781719276523359000-8139385274210381229)
+[clusterpulse] 2026/06/17 23:31:16 [node-4] received ACK from node-2 (node-4-1781719276523310000-2473281453314162528)
+[clusterpulse] 2026/06/17 23:31:16 [router] node-5 -> node-1 ACK (node-1-1781719276523359000-72944536923342589)
+[clusterpulse] 2026/06/17 23:31:16 [node-1] received ACK from node-5 (node-1-1781719276523359000-72944536923342589)
+[clusterpulse] 2026/06/17 23:31:16 [node-3] ACK timeout from node-1 (node-3-1781719276523375000-8065042963070157677)
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:16 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [node-2] probing node-3 (node-2-1781719277273097000-1369576627237490204)
+[clusterpulse] 2026/06/17 23:31:17 [node-4] probing node-5 (node-4-1781719277273120000-4095742827049013918)
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [node-5] probing node-1 (node-5-1781719277273137000-2208824548559391282)
+[clusterpulse] 2026/06/17 23:31:17 [node-1] probing node-4 (node-1-1781719277273136000-6183820146644995517)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-5 -> node-1 PING (node-5-1781719277273137000-2208824548559391282)
+[clusterpulse] 2026/06/17 23:31:17 [node-1] received PING from node-5 (node-5-1781719277273137000-2208824548559391282)
+[clusterpulse] 2026/06/17 23:31:17 [node-1] acknowledging node-5 (node-5-1781719277273137000-2208824548559391282)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-1 -> node-4 PING (node-1-1781719277273136000-6183820146644995517)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-1 -> node-5 ACK (node-5-1781719277273137000-2208824548559391282)
+[clusterpulse] 2026/06/17 23:31:17 [node-4] received PING from node-1 (node-1-1781719277273136000-6183820146644995517)
+[clusterpulse] 2026/06/17 23:31:17 [node-4] acknowledging node-1 (node-1-1781719277273136000-6183820146644995517)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-4 -> node-5 PING (node-4-1781719277273120000-4095742827049013918)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-4 -> node-1 ACK (node-1-1781719277273136000-6183820146644995517)
+[clusterpulse] 2026/06/17 23:31:17 [node-5] received ACK from node-1 (node-5-1781719277273137000-2208824548559391282)
+[clusterpulse] 2026/06/17 23:31:17 [node-5] received PING from node-4 (node-4-1781719277273120000-4095742827049013918)
+[clusterpulse] 2026/06/17 23:31:17 [node-5] acknowledging node-4 (node-4-1781719277273120000-4095742827049013918)
+[clusterpulse] 2026/06/17 23:31:17 [node-3] probing node-4 (node-3-1781719277273147000-7673841342123321739)
+[clusterpulse] 2026/06/17 23:31:17 [node-1] received ACK from node-4 (node-1-1781719277273136000-6183820146644995517)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-5 -> node-4 ACK (node-4-1781719277273120000-4095742827049013918)
+[clusterpulse] 2026/06/17 23:31:17 [node-4] received ACK from node-5 (node-4-1781719277273120000-4095742827049013918)
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [node-2] ACK timeout from node-3 (node-2-1781719277273097000-1369576627237490204)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-2 -> node-4 PING-REQ (node-2-1781719277624506000-7770130866726604824)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-2 -> node-5 PING-REQ (node-2-1781719277624518000-7946584748660498007)
+[clusterpulse] 2026/06/17 23:31:17 [router] node-2 -> node-1 PING-REQ (node-2-1781719277624521000-6279503695770364449)
+[clusterpulse] 2026/06/17 23:31:17 [node-3] ACK timeout from node-4 (node-3-1781719277273147000-7673841342123321739)
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719277624506000-7770130866726604824)
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719277624521000-6279503695770364449)
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:17 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719277624518000-7946584748660498007)
+[clusterpulse] 2026/06/17 23:31:17 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:18 [node-3] probing node-2 (node-3-1781719278023379000-1762447466136210250)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] probing node-4 (node-2-1781719278023422000-844303084963334066)
+[clusterpulse] 2026/06/17 23:31:18 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:18 [node-4] probing node-1 (node-4-1781719278023443000-6895896737575327555)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] probing node-2 (node-1-1781719278023453000-5323880606083998673)
+[clusterpulse] 2026/06/17 23:31:18 [node-5] probing node-2 (node-5-1781719278023458000-5495889894890868650)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-2 -> node-4 PING (node-2-1781719278023422000-844303084963334066)
+[clusterpulse] 2026/06/17 23:31:18 [node-4] received PING from node-2 (node-2-1781719278023422000-844303084963334066)
+[clusterpulse] 2026/06/17 23:31:18 [node-4] acknowledging node-2 (node-2-1781719278023422000-844303084963334066)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-4 -> node-1 PING (node-4-1781719278023443000-6895896737575327555)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-4 -> node-2 ACK (node-2-1781719278023422000-844303084963334066)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] received ACK from node-4 (node-2-1781719278023422000-844303084963334066)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-1 -> node-2 PING (node-1-1781719278023453000-5323880606083998673)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] received PING from node-1 (node-1-1781719278023453000-5323880606083998673)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] acknowledging node-1 (node-1-1781719278023453000-5323880606083998673)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-5 -> node-2 PING (node-5-1781719278023458000-5495889894890868650)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] received PING from node-5 (node-5-1781719278023458000-5495889894890868650)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] acknowledging node-5 (node-5-1781719278023458000-5495889894890868650)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] received PING from node-4 (node-4-1781719278023443000-6895896737575327555)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] acknowledging node-4 (node-4-1781719278023443000-6895896737575327555)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-2 -> node-1 ACK (node-1-1781719278023453000-5323880606083998673)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-2 -> node-5 ACK (node-5-1781719278023458000-5495889894890868650)
+[clusterpulse] 2026/06/17 23:31:18 [node-5] received ACK from node-2 (node-5-1781719278023458000-5495889894890868650)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-1 -> node-4 ACK (node-4-1781719278023443000-6895896737575327555)
+[clusterpulse] 2026/06/17 23:31:18 [node-4] received ACK from node-1 (node-4-1781719278023443000-6895896737575327555)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] received ACK from node-2 (node-1-1781719278023453000-5323880606083998673)
+[clusterpulse] 2026/06/17 23:31:18 [node-3] ACK timeout from node-2 (node-3-1781719278023379000-1762447466136210250)
+[clusterpulse] 2026/06/17 23:31:18 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:18 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:18 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:18 [node-3] probing node-5 (node-3-1781719278773335000-1525842726826030692)
+[clusterpulse] 2026/06/17 23:31:18 [node-5] probing node-2 (node-5-1781719278773383000-8529237125377644788)
+[clusterpulse] 2026/06/17 23:31:18 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:18 [node-2] probing node-1 (node-2-1781719278773413000-5062744597320856694)
+[clusterpulse] 2026/06/17 23:31:18 [node-4] probing node-3 (node-4-1781719278773421000-2536290944205339920)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] probing node-5 (node-1-1781719278773434000-6971395259465886562)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-5 -> node-2 PING (node-5-1781719278773383000-8529237125377644788)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] received PING from node-5 (node-5-1781719278773383000-8529237125377644788)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] acknowledging node-5 (node-5-1781719278773383000-8529237125377644788)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-2 -> node-1 PING (node-2-1781719278773413000-5062744597320856694)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-2 -> node-5 ACK (node-5-1781719278773383000-8529237125377644788)
+[clusterpulse] 2026/06/17 23:31:18 [node-5] received ACK from node-2 (node-5-1781719278773383000-8529237125377644788)
+[clusterpulse] 2026/06/17 23:31:18 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:18 [router] node-1 -> node-5 PING (node-1-1781719278773434000-6971395259465886562)
+[clusterpulse] 2026/06/17 23:31:18 [node-5] received PING from node-1 (node-1-1781719278773434000-6971395259465886562)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] received PING from node-2 (node-2-1781719278773413000-5062744597320856694)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] acknowledging node-2 (node-2-1781719278773413000-5062744597320856694)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-1 -> node-2 ACK (node-2-1781719278773413000-5062744597320856694)
+[clusterpulse] 2026/06/17 23:31:18 [node-2] received ACK from node-1 (node-2-1781719278773413000-5062744597320856694)
+[clusterpulse] 2026/06/17 23:31:18 [node-5] acknowledging node-1 (node-1-1781719278773434000-6971395259465886562)
+[clusterpulse] 2026/06/17 23:31:18 [router] node-5 -> node-1 ACK (node-1-1781719278773434000-6971395259465886562)
+[clusterpulse] 2026/06/17 23:31:18 [node-1] received ACK from node-5 (node-1-1781719278773434000-6971395259465886562)
+[clusterpulse] 2026/06/17 23:31:19 [node-3] ACK timeout from node-5 (node-3-1781719278773335000-1525842726826030692)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-4] ACK timeout from node-3 (node-4-1781719278773421000-2536290944205339920)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-4 -> node-2 PING-REQ (node-4-1781719279125042000-2399765909165849918)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-4 -> node-5 PING-REQ (node-4-1781719279125053000-8407582291030841988)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-4 -> node-1 PING-REQ (node-4-1781719279125056000-1245904173741775503)
+[clusterpulse] 2026/06/17 23:31:19 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719279125056000-1245904173741775503)
+[clusterpulse] 2026/06/17 23:31:19 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719279125053000-8407582291030841988)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719279125042000-2399765909165849918)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-5] probing node-3 (node-5-1781719279523350000-3566139789048389168)
+[clusterpulse] 2026/06/17 23:31:19 [node-2] probing node-1 (node-2-1781719279523364000-5557536406927239383)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-4] probing node-3 (node-4-1781719279523380000-6347415912543548412)
+[clusterpulse] 2026/06/17 23:31:19 [node-1] probing node-5 (node-1-1781719279523386000-1112828952767664254)
+[clusterpulse] 2026/06/17 23:31:19 [node-3] probing node-1 (node-3-1781719279523410000-1815503744700465887)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-2 -> node-1 PING (node-2-1781719279523364000-5557536406927239383)
+[clusterpulse] 2026/06/17 23:31:19 [node-1] received PING from node-2 (node-2-1781719279523364000-5557536406927239383)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] node-1 -> node-5 PING (node-1-1781719279523386000-1112828952767664254)
+[clusterpulse] 2026/06/17 23:31:19 [node-5] received PING from node-1 (node-1-1781719279523386000-1112828952767664254)
+[clusterpulse] 2026/06/17 23:31:19 [node-5] acknowledging node-1 (node-1-1781719279523386000-1112828952767664254)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-5 -> node-1 ACK (node-1-1781719279523386000-1112828952767664254)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-1] acknowledging node-2 (node-2-1781719279523364000-5557536406927239383)
+[clusterpulse] 2026/06/17 23:31:19 [node-1] received ACK from node-5 (node-1-1781719279523386000-1112828952767664254)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-1 -> node-2 ACK (node-2-1781719279523364000-5557536406927239383)
+[clusterpulse] 2026/06/17 23:31:19 [node-2] received ACK from node-1 (node-2-1781719279523364000-5557536406927239383)
+[clusterpulse] 2026/06/17 23:31:19 [node-5] ACK timeout from node-3 (node-5-1781719279523350000-3566139789048389168)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-5 -> node-2 PING-REQ (node-5-1781719279874804000-454708874883749286)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-5 -> node-4 PING-REQ (node-5-1781719279874814000-1275830552060993339)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-5 -> node-1 PING-REQ (node-5-1781719279874815000-9182376806050815823)
+[clusterpulse] 2026/06/17 23:31:19 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719279874815000-9182376806050815823)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-3] ACK timeout from node-1 (node-3-1781719279523410000-1815503744700465887)
+[clusterpulse] 2026/06/17 23:31:19 [node-4] ACK timeout from node-3 (node-4-1781719279523380000-6347415912543548412)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-4 -> node-2 PING-REQ (node-4-1781719279875176000-7642623546553383757)
+[clusterpulse] 2026/06/17 23:31:19 [router] node-4 -> node-5 PING-REQ (node-4-1781719279875181000-4213701685843073834)
+[clusterpulse] 2026/06/17 23:31:19 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719279874804000-454708874883749286)
+[clusterpulse] 2026/06/17 23:31:19 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719279875176000-7642623546553383757)
+[clusterpulse] 2026/06/17 23:31:19 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719279874814000-1275830552060993339)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] node-4 -> node-1 PING-REQ (node-4-1781719279875183000-5463337758505209989)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719279875181000-4213701685843073834)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:19 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719279875183000-5463337758505209989)
+[clusterpulse] 2026/06/17 23:31:19 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [node-5] probing node-3 (node-5-1781719280273310000-378254586038542100)
+[clusterpulse] 2026/06/17 23:31:20 [node-1] probing node-2 (node-1-1781719280273333000-6978779536686719067)
+[clusterpulse] 2026/06/17 23:31:20 [node-2] probing node-4 (node-2-1781719280273324000-9118496654224178230)
+[clusterpulse] 2026/06/17 23:31:20 [node-4] probing node-3 (node-4-1781719280273331000-7260478137000514800)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [node-3] probing node-2 (node-3-1781719280273350000-1583715033481872909)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-1 -> node-2 PING (node-1-1781719280273333000-6978779536686719067)
+[clusterpulse] 2026/06/17 23:31:20 [node-2] received PING from node-1 (node-1-1781719280273333000-6978779536686719067)
+[clusterpulse] 2026/06/17 23:31:20 [node-2] acknowledging node-1 (node-1-1781719280273333000-6978779536686719067)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-2 -> node-4 PING (node-2-1781719280273324000-9118496654224178230)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-2 -> node-1 ACK (node-1-1781719280273333000-6978779536686719067)
+[clusterpulse] 2026/06/17 23:31:20 [node-4] received PING from node-2 (node-2-1781719280273324000-9118496654224178230)
+[clusterpulse] 2026/06/17 23:31:20 [node-4] acknowledging node-2 (node-2-1781719280273324000-9118496654224178230)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [router] node-4 -> node-2 ACK (node-2-1781719280273324000-9118496654224178230)
+[clusterpulse] 2026/06/17 23:31:20 [node-1] received ACK from node-2 (node-1-1781719280273333000-6978779536686719067)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [node-2] received ACK from node-4 (node-2-1781719280273324000-9118496654224178230)
+[clusterpulse] 2026/06/17 23:31:20 [node-3] ACK timeout from node-2 (node-3-1781719280273350000-1583715033481872909)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [node-4] ACK timeout from node-3 (node-4-1781719280273331000-7260478137000514800)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-4 -> node-2 PING-REQ (node-4-1781719280624883000-8314389459079179582)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-4 -> node-5 PING-REQ (node-4-1781719280624888000-5157427605357137068)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-4 -> node-1 PING-REQ (node-4-1781719280624890000-3450779376483717534)
+[clusterpulse] 2026/06/17 23:31:20 [node-5] ACK timeout from node-3 (node-5-1781719280273310000-378254586038542100)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-5 -> node-4 PING-REQ (node-5-1781719280625079000-3792299396731426154)
+[clusterpulse] 2026/06/17 23:31:20 [router] node-5 -> node-1 PING-REQ (node-5-1781719280625086000-1770957804253047401)
+[clusterpulse] 2026/06/17 23:31:20 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719280625079000-3792299396731426154)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719280624883000-8314389459079179582)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [router] node-5 -> node-2 PING-REQ (node-5-1781719280625089000-2679433333134503919)
+[clusterpulse] 2026/06/17 23:31:20 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719280625089000-2679433333134503919)
+[clusterpulse] 2026/06/17 23:31:20 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719280624888000-5157427605357137068)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719280624890000-3450779376483717534)
+[clusterpulse] 2026/06/17 23:31:20 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719280625086000-1770957804253047401)
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:20 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [node-4] probing node-3 (node-4-1781719281023396000-8434151128885545562)
+[clusterpulse] 2026/06/17 23:31:21 [node-3] probing node-5 (node-3-1781719281023471000-8761750771917009147)
+[clusterpulse] 2026/06/17 23:31:21 [node-1] probing node-5 (node-1-1781719281023472000-3985874995079960267)
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [node-2] probing node-5 (node-2-1781719281023480000-4511172656001997323)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] probing node-4 (node-5-1781719281023485000-3616088165219573097)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-2 -> node-5 PING (node-2-1781719281023480000-4511172656001997323)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] received PING from node-2 (node-2-1781719281023480000-4511172656001997323)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] acknowledging node-2 (node-2-1781719281023480000-4511172656001997323)
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [router] node-1 -> node-5 PING (node-1-1781719281023472000-3985874995079960267)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] received PING from node-1 (node-1-1781719281023472000-3985874995079960267)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] acknowledging node-1 (node-1-1781719281023472000-3985874995079960267)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-5 -> node-4 PING (node-5-1781719281023485000-3616088165219573097)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-5 -> node-2 ACK (node-2-1781719281023480000-4511172656001997323)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] received PING from node-5 (node-5-1781719281023485000-3616088165219573097)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] acknowledging node-5 (node-5-1781719281023485000-3616088165219573097)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-4 -> node-5 ACK (node-5-1781719281023485000-3616088165219573097)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] received ACK from node-4 (node-5-1781719281023485000-3616088165219573097)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-5 -> node-1 ACK (node-1-1781719281023472000-3985874995079960267)
+[clusterpulse] 2026/06/17 23:31:21 [node-1] received ACK from node-5 (node-1-1781719281023472000-3985874995079960267)
+[clusterpulse] 2026/06/17 23:31:21 [node-2] received ACK from node-5 (node-2-1781719281023480000-4511172656001997323)
+[clusterpulse] 2026/06/17 23:31:21 [node-3] ACK timeout from node-5 (node-3-1781719281023471000-8761750771917009147)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] ACK timeout from node-3 (node-4-1781719281023396000-8434151128885545562)
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [router] node-4 -> node-2 PING-REQ (node-4-1781719281374824000-7408247381845855502)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-4 -> node-1 PING-REQ (node-4-1781719281374830000-319477612214207990)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-4 -> node-5 PING-REQ (node-4-1781719281374831000-2059439978950943196)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719281374831000-2059439978950943196)
+[clusterpulse] 2026/06/17 23:31:21 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719281374830000-319477612214207990)
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719281374824000-7408247381845855502)
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [node-3] probing node-5 (node-3-1781719281773389000-822151046538138439)
+[clusterpulse] 2026/06/17 23:31:21 [node-2] probing node-4 (node-2-1781719281773425000-4121945780484177698)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] probing node-4 (node-5-1781719281773458000-3864501383916972647)
+[clusterpulse] 2026/06/17 23:31:21 [node-1] probing node-5 (node-1-1781719281773478000-1585818216010526195)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] probing node-5 (node-4-1781719281773486000-6461440524105452461)
+[clusterpulse] 2026/06/17 23:31:21 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:21 [router] node-2 -> node-4 PING (node-2-1781719281773425000-4121945780484177698)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] received PING from node-2 (node-2-1781719281773425000-4121945780484177698)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] acknowledging node-2 (node-2-1781719281773425000-4121945780484177698)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-5 -> node-4 PING (node-5-1781719281773458000-3864501383916972647)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-1 -> node-5 PING (node-1-1781719281773478000-1585818216010526195)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] received PING from node-1 (node-1-1781719281773478000-1585818216010526195)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] acknowledging node-1 (node-1-1781719281773478000-1585818216010526195)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-5 -> node-1 ACK (node-1-1781719281773478000-1585818216010526195)
+[clusterpulse] 2026/06/17 23:31:21 [node-1] received ACK from node-5 (node-1-1781719281773478000-1585818216010526195)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-4 -> node-5 PING (node-4-1781719281773486000-6461440524105452461)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-4 -> node-2 ACK (node-2-1781719281773425000-4121945780484177698)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] received PING from node-4 (node-4-1781719281773486000-6461440524105452461)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] acknowledging node-4 (node-4-1781719281773486000-6461440524105452461)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-5 -> node-4 ACK (node-4-1781719281773486000-6461440524105452461)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] received PING from node-5 (node-5-1781719281773458000-3864501383916972647)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] acknowledging node-5 (node-5-1781719281773458000-3864501383916972647)
+[clusterpulse] 2026/06/17 23:31:21 [node-4] received ACK from node-5 (node-4-1781719281773486000-6461440524105452461)
+[clusterpulse] 2026/06/17 23:31:21 [router] node-4 -> node-5 ACK (node-5-1781719281773458000-3864501383916972647)
+[clusterpulse] 2026/06/17 23:31:21 [node-5] received ACK from node-4 (node-5-1781719281773458000-3864501383916972647)
+[clusterpulse] 2026/06/17 23:31:21 [node-2] received ACK from node-4 (node-2-1781719281773425000-4121945780484177698)
+[clusterpulse] 2026/06/17 23:31:22 [node-3] ACK timeout from node-5 (node-3-1781719281773389000-822151046538138439)
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [node-4] probing node-3 (node-4-1781719282523396000-4214494113938800642)
+[clusterpulse] 2026/06/17 23:31:22 [node-3] probing node-1 (node-3-1781719282523368000-6727703404992318951)
+[clusterpulse] 2026/06/17 23:31:22 [node-2] probing node-5 (node-2-1781719282523425000-4232047975501919201)
+[clusterpulse] 2026/06/17 23:31:22 [node-5] probing node-4 (node-5-1781719282523428000-2985341551318410006)
+[clusterpulse] 2026/06/17 23:31:22 [node-1] probing node-5 (node-1-1781719282523436000-3565862524306869914)
+[clusterpulse] 2026/06/17 23:31:22 [router] node-2 -> node-5 PING (node-2-1781719282523425000-4232047975501919201)
+[clusterpulse] 2026/06/17 23:31:22 [node-5] received PING from node-2 (node-2-1781719282523425000-4232047975501919201)
+[clusterpulse] 2026/06/17 23:31:22 [node-5] acknowledging node-2 (node-2-1781719282523425000-4232047975501919201)
+[clusterpulse] 2026/06/17 23:31:22 [router] node-1 -> node-5 PING (node-1-1781719282523436000-3565862524306869914)
+[clusterpulse] 2026/06/17 23:31:22 [node-5] received PING from node-1 (node-1-1781719282523436000-3565862524306869914)
+[clusterpulse] 2026/06/17 23:31:22 [node-5] acknowledging node-1 (node-1-1781719282523436000-3565862524306869914)
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [router] node-5 -> node-4 PING (node-5-1781719282523428000-2985341551318410006)
+[clusterpulse] 2026/06/17 23:31:22 [router] node-5 -> node-2 ACK (node-2-1781719282523425000-4232047975501919201)
+[clusterpulse] 2026/06/17 23:31:22 [router] node-5 -> node-1 ACK (node-1-1781719282523436000-3565862524306869914)
+[clusterpulse] 2026/06/17 23:31:22 [node-1] received ACK from node-5 (node-1-1781719282523436000-3565862524306869914)
+[clusterpulse] 2026/06/17 23:31:22 [node-4] received PING from node-5 (node-5-1781719282523428000-2985341551318410006)
+[clusterpulse] 2026/06/17 23:31:22 [node-4] acknowledging node-5 (node-5-1781719282523428000-2985341551318410006)
+[clusterpulse] 2026/06/17 23:31:22 [router] node-4 -> node-5 ACK (node-5-1781719282523428000-2985341551318410006)
+[clusterpulse] 2026/06/17 23:31:22 [node-5] received ACK from node-4 (node-5-1781719282523428000-2985341551318410006)
+[clusterpulse] 2026/06/17 23:31:22 [node-2] received ACK from node-5 (node-2-1781719282523425000-4232047975501919201)
+[clusterpulse] 2026/06/17 23:31:22 [node-3] ACK timeout from node-1 (node-3-1781719282523368000-6727703404992318951)
+[clusterpulse] 2026/06/17 23:31:22 [node-4] ACK timeout from node-3 (node-4-1781719282523396000-4214494113938800642)
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [router] node-4 -> node-2 PING-REQ (node-4-1781719282874829000-1510920815120374804)
+[clusterpulse] 2026/06/17 23:31:22 [router] node-4 -> node-5 PING-REQ (node-4-1781719282874834000-2296157825687476533)
+[clusterpulse] 2026/06/17 23:31:22 [router] node-4 -> node-1 PING-REQ (node-4-1781719282874835000-6349285816472000610)
+[clusterpulse] 2026/06/17 23:31:22 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781719282874835000-6349285816472000610)
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781719282874834000-2296157825687476533)
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:22 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781719282874829000-1510920815120374804)
+[clusterpulse] 2026/06/17 23:31:22 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:23 [node-5] probing node-4 (node-5-1781719283273369000-3810182373363757003)
+[clusterpulse] 2026/06/17 23:31:23 [node-3] probing node-2 (node-3-1781719283273395000-5791806586055370236)
+[clusterpulse] 2026/06/17 23:31:23 [router] node-5 -> node-4 PING (node-5-1781719283273369000-3810182373363757003)
+[clusterpulse] 2026/06/17 23:31:23 [node-1] probing node-5 (node-1-1781719283273416000-2102707844420853071)
+[clusterpulse] 2026/06/17 23:31:23 [router] node-1 -> node-5 PING (node-1-1781719283273416000-2102707844420853071)
+[clusterpulse] 2026/06/17 23:31:23 [node-5] received PING from node-1 (node-1-1781719283273416000-2102707844420853071)
+[clusterpulse] 2026/06/17 23:31:23 [node-5] acknowledging node-1 (node-1-1781719283273416000-2102707844420853071)
+[clusterpulse] 2026/06/17 23:31:23 [router] node-5 -> node-1 ACK (node-1-1781719283273416000-2102707844420853071)
+[clusterpulse] 2026/06/17 23:31:23 [node-1] received ACK from node-5 (node-1-1781719283273416000-2102707844420853071)
+[clusterpulse] 2026/06/17 23:31:23 [node-4] probing node-2 (node-4-1781719283273418000-6399469690828952495)
+[clusterpulse] 2026/06/17 23:31:23 [node-4] received PING from node-5 (node-5-1781719283273369000-3810182373363757003)
+[clusterpulse] 2026/06/17 23:31:23 [router] node-4 -> node-2 PING (node-4-1781719283273418000-6399469690828952495)
+[clusterpulse] 2026/06/17 23:31:23 [node-2] probing node-5 (node-2-1781719283273407000-5282506794792982277)
+[clusterpulse] 2026/06/17 23:31:23 [node-2] received PING from node-4 (node-4-1781719283273418000-6399469690828952495)
+[clusterpulse] 2026/06/17 23:31:23 [node-2] acknowledging node-4 (node-4-1781719283273418000-6399469690828952495)
+[clusterpulse] 2026/06/17 23:31:23 [node-4] acknowledging node-5 (node-5-1781719283273369000-3810182373363757003)
+[clusterpulse] 2026/06/17 23:31:23 [router] node-4 -> node-5 ACK (node-5-1781719283273369000-3810182373363757003)
+[clusterpulse] 2026/06/17 23:31:23 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:23 [router] node-2 -> node-5 PING (node-2-1781719283273407000-5282506794792982277)
+[clusterpulse] 2026/06/17 23:31:23 [router] node-2 -> node-4 ACK (node-4-1781719283273418000-6399469690828952495)
+[clusterpulse] 2026/06/17 23:31:23 [node-4] received ACK from node-2 (node-4-1781719283273418000-6399469690828952495)
+[clusterpulse] 2026/06/17 23:31:23 [node-5] received ACK from node-4 (node-5-1781719283273369000-3810182373363757003)
+[clusterpulse] 2026/06/17 23:31:23 [node-5] received PING from node-2 (node-2-1781719283273407000-5282506794792982277)
+[clusterpulse] 2026/06/17 23:31:23 [node-5] acknowledging node-2 (node-2-1781719283273407000-5282506794792982277)
+[clusterpulse] 2026/06/17 23:31:23 [router] node-5 -> node-2 ACK (node-2-1781719283273407000-5282506794792982277)
+[clusterpulse] 2026/06/17 23:31:23 [node-2] received ACK from node-5 (node-2-1781719283273407000-5282506794792982277)
+[clusterpulse] 2026/06/17 23:31:23 [node-3] ACK timeout from node-2 (node-3-1781719283273395000-5791806586055370236)
+[clusterpulse] 2026/06/17 23:31:23 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:23 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:23 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:24 [node-4] probing node-5 (node-4-1781719284023388000-5479580703399445303)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] probing node-1 (node-5-1781719284023411000-9093242466542590122)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] probing node-5 (node-2-1781719284023428000-6980599124129665649)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-5 -> node-1 PING (node-5-1781719284023411000-9093242466542590122)
+[clusterpulse] 2026/06/17 23:31:24 [node-1] probing node-2 (node-1-1781719284023438000-5488847090966108552)
+[clusterpulse] 2026/06/17 23:31:24 [node-1] received PING from node-5 (node-5-1781719284023411000-9093242466542590122)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-1 -> node-2 PING (node-1-1781719284023438000-5488847090966108552)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] received PING from node-1 (node-1-1781719284023438000-5488847090966108552)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] acknowledging node-1 (node-1-1781719284023438000-5488847090966108552)
+[clusterpulse] 2026/06/17 23:31:24 [node-3] probing node-5 (node-3-1781719284023438000-4649364689307237654)
+[clusterpulse] 2026/06/17 23:31:24 [node-1] acknowledging node-5 (node-5-1781719284023411000-9093242466542590122)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-1 -> node-5 ACK (node-5-1781719284023411000-9093242466542590122)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] received ACK from node-1 (node-5-1781719284023411000-9093242466542590122)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-4 -> node-5 PING (node-4-1781719284023388000-5479580703399445303)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] received PING from node-4 (node-4-1781719284023388000-5479580703399445303)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-2 -> node-5 PING (node-2-1781719284023428000-6980599124129665649)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-2 -> node-1 ACK (node-1-1781719284023438000-5488847090966108552)
+[clusterpulse] 2026/06/17 23:31:24 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:24 [node-5] acknowledging node-4 (node-4-1781719284023388000-5479580703399445303)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] received PING from node-2 (node-2-1781719284023428000-6980599124129665649)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] acknowledging node-2 (node-2-1781719284023428000-6980599124129665649)
+[clusterpulse] 2026/06/17 23:31:24 [node-1] received ACK from node-2 (node-1-1781719284023438000-5488847090966108552)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-5 -> node-4 ACK (node-4-1781719284023388000-5479580703399445303)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-5 -> node-2 ACK (node-2-1781719284023428000-6980599124129665649)
+[clusterpulse] 2026/06/17 23:31:24 [node-4] received ACK from node-5 (node-4-1781719284023388000-5479580703399445303)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] received ACK from node-5 (node-2-1781719284023428000-6980599124129665649)
+[clusterpulse] 2026/06/17 23:31:24 [node-3] ACK timeout from node-5 (node-3-1781719284023438000-4649364689307237654)
+[clusterpulse] 2026/06/17 23:31:24 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:24 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:24 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:24 [node-4] probing node-5 (node-4-1781719284773399000-5990892322972065873)
+[clusterpulse] 2026/06/17 23:31:24 [node-3] probing node-4 (node-3-1781719284773417000-287317239326850518)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] probing node-2 (node-5-1781719284773431000-6463062001836755384)
+[clusterpulse] 2026/06/17 23:31:24 [node-1] probing node-2 (node-1-1781719284773462000-8127336182749869233)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] probing node-4 (node-2-1781719284773463000-7734098878936320142)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-4 -> node-5 PING (node-4-1781719284773399000-5990892322972065873)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] received PING from node-4 (node-4-1781719284773399000-5990892322972065873)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] acknowledging node-4 (node-4-1781719284773399000-5990892322972065873)
+[clusterpulse] 2026/06/17 23:31:24 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:24 [router] node-5 -> node-2 PING (node-5-1781719284773431000-6463062001836755384)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-5 -> node-4 ACK (node-4-1781719284773399000-5990892322972065873)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] received PING from node-5 (node-5-1781719284773431000-6463062001836755384)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] acknowledging node-5 (node-5-1781719284773431000-6463062001836755384)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-1 -> node-2 PING (node-1-1781719284773462000-8127336182749869233)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] received PING from node-1 (node-1-1781719284773462000-8127336182749869233)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] acknowledging node-1 (node-1-1781719284773462000-8127336182749869233)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-2 -> node-4 PING (node-2-1781719284773463000-7734098878936320142)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-2 -> node-5 ACK (node-5-1781719284773431000-6463062001836755384)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-2 -> node-1 ACK (node-1-1781719284773462000-8127336182749869233)
+[clusterpulse] 2026/06/17 23:31:24 [node-1] received ACK from node-2 (node-1-1781719284773462000-8127336182749869233)
+[clusterpulse] 2026/06/17 23:31:24 [node-5] received ACK from node-2 (node-5-1781719284773431000-6463062001836755384)
+[clusterpulse] 2026/06/17 23:31:24 [node-4] received ACK from node-5 (node-4-1781719284773399000-5990892322972065873)
+[clusterpulse] 2026/06/17 23:31:24 [node-4] received PING from node-2 (node-2-1781719284773463000-7734098878936320142)
+[clusterpulse] 2026/06/17 23:31:24 [node-4] acknowledging node-2 (node-2-1781719284773463000-7734098878936320142)
+[clusterpulse] 2026/06/17 23:31:24 [router] node-4 -> node-2 ACK (node-2-1781719284773463000-7734098878936320142)
+[clusterpulse] 2026/06/17 23:31:24 [node-2] received ACK from node-4 (node-2-1781719284773463000-7734098878936320142)
+[clusterpulse] 2026/06/17 23:31:25 [node-3] ACK timeout from node-4 (node-3-1781719284773417000-287317239326850518)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [node-2] probing node-3 (node-2-1781719285523427000-6925995315187607725)
+[clusterpulse] 2026/06/17 23:31:25 [node-3] probing node-4 (node-3-1781719285523404000-7959867399549491810)
+[clusterpulse] 2026/06/17 23:31:25 [node-5] probing node-2 (node-5-1781719285523430000-3674730142239674681)
+[clusterpulse] 2026/06/17 23:31:25 [node-4] probing node-2 (node-4-1781719285523479000-9079342538140837754)
+[clusterpulse] 2026/06/17 23:31:25 [router] node-5 -> node-2 PING (node-5-1781719285523430000-3674730142239674681)
+[clusterpulse] 2026/06/17 23:31:25 [node-2] received PING from node-5 (node-5-1781719285523430000-3674730142239674681)
+[clusterpulse] 2026/06/17 23:31:25 [node-2] acknowledging node-5 (node-5-1781719285523430000-3674730142239674681)
+[clusterpulse] 2026/06/17 23:31:25 [node-1] probing node-3 (node-1-1781719285523493000-6407460130568607265)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] node-2 -> node-5 ACK (node-5-1781719285523430000-3674730142239674681)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] node-4 -> node-2 PING (node-4-1781719285523479000-9079342538140837754)
+[clusterpulse] 2026/06/17 23:31:25 [node-2] received PING from node-4 (node-4-1781719285523479000-9079342538140837754)
+[clusterpulse] 2026/06/17 23:31:25 [node-2] acknowledging node-4 (node-4-1781719285523479000-9079342538140837754)
+[clusterpulse] 2026/06/17 23:31:25 [router] node-2 -> node-4 ACK (node-4-1781719285523479000-9079342538140837754)
+[clusterpulse] 2026/06/17 23:31:25 [node-4] received ACK from node-2 (node-4-1781719285523479000-9079342538140837754)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [node-5] received ACK from node-2 (node-5-1781719285523430000-3674730142239674681)
+[clusterpulse] 2026/06/17 23:31:25 [node-3] ACK timeout from node-4 (node-3-1781719285523404000-7959867399549491810)
+[clusterpulse] 2026/06/17 23:31:25 [node-1] ACK timeout from node-3 (node-1-1781719285523493000-6407460130568607265)
+[clusterpulse] 2026/06/17 23:31:25 [node-2] ACK timeout from node-3 (node-2-1781719285523427000-6925995315187607725)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] node-1 -> node-2 PING-REQ (node-1-1781719285874949000-148242853897818536)
+[clusterpulse] 2026/06/17 23:31:25 [router] node-1 -> node-5 PING-REQ (node-1-1781719285874957000-2403482455165409771)
+[clusterpulse] 2026/06/17 23:31:25 [node-2] received PING-REQ from node-1 to ping node-3 (node-1-1781719285874949000-148242853897818536)
+[clusterpulse] 2026/06/17 23:31:25 [router] node-2 -> node-1 PING-REQ (node-2-1781719285875031000-3664612283511677360)
+[clusterpulse] 2026/06/17 23:31:25 [router] node-2 -> node-5 PING-REQ (node-2-1781719285875037000-3380284560084450977)
+[clusterpulse] 2026/06/17 23:31:25 [router] node-2 -> node-4 PING-REQ (node-2-1781719285875040000-8009602646868253849)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719285875040000-8009602646868253849)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] node-1 -> node-4 PING-REQ (node-1-1781719285874959000-3409674382827596231)
+[clusterpulse] 2026/06/17 23:31:25 [node-4] received PING-REQ from node-1 to ping node-3 (node-1-1781719285874959000-3409674382827596231)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719285875031000-3664612283511677360)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [node-5] received PING-REQ from node-1 to ping node-3 (node-1-1781719285874957000-2403482455165409771)
+[clusterpulse] 2026/06/17 23:31:25 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719285875037000-3380284560084450977)
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:25 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [node-3] probing node-2 (node-3-1781719286273421000-4518576342817931853)
+[clusterpulse] 2026/06/17 23:31:26 [node-4] probing node-5 (node-4-1781719286273460000-423264141823964416)
+[clusterpulse] 2026/06/17 23:31:26 [node-5] probing node-3 (node-5-1781719286273507000-1841860623842676717)
+[clusterpulse] 2026/06/17 23:31:26 [node-1] probing node-3 (node-1-1781719286273480000-4253989126861680540)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [node-2] probing node-5 (node-2-1781719286273536000-6715198460800656790)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [router] node-4 -> node-5 PING (node-4-1781719286273460000-423264141823964416)
+[clusterpulse] 2026/06/17 23:31:26 [node-5] received PING from node-4 (node-4-1781719286273460000-423264141823964416)
+[clusterpulse] 2026/06/17 23:31:26 [node-5] acknowledging node-4 (node-4-1781719286273460000-423264141823964416)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-5 -> node-4 ACK (node-4-1781719286273460000-423264141823964416)
+[clusterpulse] 2026/06/17 23:31:26 [node-4] received ACK from node-5 (node-4-1781719286273460000-423264141823964416)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping PING from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [router] node-2 -> node-5 PING (node-2-1781719286273536000-6715198460800656790)
+[clusterpulse] 2026/06/17 23:31:26 [node-5] received PING from node-2 (node-2-1781719286273536000-6715198460800656790)
+[clusterpulse] 2026/06/17 23:31:26 [node-5] acknowledging node-2 (node-2-1781719286273536000-6715198460800656790)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-5 -> node-2 ACK (node-2-1781719286273536000-6715198460800656790)
+[clusterpulse] 2026/06/17 23:31:26 [node-2] received ACK from node-5 (node-2-1781719286273536000-6715198460800656790)
+[clusterpulse] 2026/06/17 23:31:26 [node-3] ACK timeout from node-2 (node-3-1781719286273421000-4518576342817931853)
+[clusterpulse] 2026/06/17 23:31:26 [node-1] ACK timeout from node-3 (node-1-1781719286273480000-4253989126861680540)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-1 -> node-2 PING-REQ (node-1-1781719286625027000-592632690487677471)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-1 -> node-4 PING-REQ (node-1-1781719286625034000-6623777801354443488)
+[clusterpulse] 2026/06/17 23:31:26 [node-2] received PING-REQ from node-1 to ping node-3 (node-1-1781719286625027000-592632690487677471)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [node-5] ACK timeout from node-3 (node-5-1781719286273507000-1841860623842676717)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-5 -> node-4 PING-REQ (node-5-1781719286625234000-1906587559171429017)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-5 -> node-2 PING-REQ (node-5-1781719286625239000-361625286235788138)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-5 -> node-1 PING-REQ (node-5-1781719286625242000-3395062778770677085)
+[clusterpulse] 2026/06/17 23:31:26 [router] node-1 -> node-5 PING-REQ (node-1-1781719286625036000-2003339030709804781)
+[clusterpulse] 2026/06/17 23:31:26 [node-5] received PING-REQ from node-1 to ping node-3 (node-1-1781719286625036000-2003339030709804781)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [node-4] received PING-REQ from node-1 to ping node-3 (node-1-1781719286625034000-6623777801354443488)
+[clusterpulse] 2026/06/17 23:31:26 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719286625234000-1906587559171429017)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719286625242000-3395062778770677085)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719286625239000-361625286235788138)
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:26 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [node-4] probing node-5 (node-4-1781719287023382000-3834539135649038274)
+[clusterpulse] 2026/06/17 23:31:27 [node-3] probing node-5 (node-3-1781719287023387000-1772484814982654931)
+[clusterpulse] 2026/06/17 23:31:27 [node-1] probing node-5 (node-1-1781719287023403000-231705519408800814)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [node-5] probing node-4 (node-5-1781719287023404000-5886631647904857381)
+[clusterpulse] 2026/06/17 23:31:27 [node-2] probing node-3 (node-2-1781719287023411000-3319369960579262591)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-4 -> node-5 PING (node-4-1781719287023382000-3834539135649038274)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-1 -> node-5 PING (node-1-1781719287023403000-231705519408800814)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-5 -> node-4 PING (node-5-1781719287023404000-5886631647904857381)
+[clusterpulse] 2026/06/17 23:31:27 [node-4] received PING from node-5 (node-5-1781719287023404000-5886631647904857381)
+[clusterpulse] 2026/06/17 23:31:27 [node-4] acknowledging node-5 (node-5-1781719287023404000-5886631647904857381)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-4 -> node-5 ACK (node-5-1781719287023404000-5886631647904857381)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [node-5] received PING from node-4 (node-4-1781719287023382000-3834539135649038274)
+[clusterpulse] 2026/06/17 23:31:27 [node-5] acknowledging node-4 (node-4-1781719287023382000-3834539135649038274)
+[clusterpulse] 2026/06/17 23:31:27 [node-5] received PING from node-1 (node-1-1781719287023403000-231705519408800814)
+[clusterpulse] 2026/06/17 23:31:27 [node-5] acknowledging node-1 (node-1-1781719287023403000-231705519408800814)
+[clusterpulse] 2026/06/17 23:31:27 [node-5] received ACK from node-4 (node-5-1781719287023404000-5886631647904857381)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-5 -> node-4 ACK (node-4-1781719287023382000-3834539135649038274)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-5 -> node-1 ACK (node-1-1781719287023403000-231705519408800814)
+[clusterpulse] 2026/06/17 23:31:27 [node-1] received ACK from node-5 (node-1-1781719287023403000-231705519408800814)
+[clusterpulse] 2026/06/17 23:31:27 [node-4] received ACK from node-5 (node-4-1781719287023382000-3834539135649038274)
+[clusterpulse] 2026/06/17 23:31:27 [node-3] ACK timeout from node-5 (node-3-1781719287023387000-1772484814982654931)
+[clusterpulse] 2026/06/17 23:31:27 [node-2] ACK timeout from node-3 (node-2-1781719287023411000-3319369960579262591)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [router] node-2 -> node-5 PING-REQ (node-2-1781719287374637000-7814599340637367566)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-2 -> node-1 PING-REQ (node-2-1781719287374640000-1189956750284397534)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-2 -> node-4 PING-REQ (node-2-1781719287374640000-1402952201677023116)
+[clusterpulse] 2026/06/17 23:31:27 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719287374640000-1402952201677023116)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719287374640000-1189956750284397534)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719287374637000-7814599340637367566)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [node-5] probing node-1 (node-5-1781719287773410000-3567516191886423842)
+[clusterpulse] 2026/06/17 23:31:27 [node-2] probing node-3 (node-2-1781719287773441000-925025247164593700)
+[clusterpulse] 2026/06/17 23:31:27 [node-4] probing node-5 (node-4-1781719287773452000-6478162761859495443)
+[clusterpulse] 2026/06/17 23:31:27 [node-1] probing node-4 (node-1-1781719287773456000-3462936323599453601)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-4 -> node-5 PING (node-4-1781719287773452000-6478162761859495443)
+[clusterpulse] 2026/06/17 23:31:27 [node-5] received PING from node-4 (node-4-1781719287773452000-6478162761859495443)
+[clusterpulse] 2026/06/17 23:31:27 [node-5] acknowledging node-4 (node-4-1781719287773452000-6478162761859495443)
+[clusterpulse] 2026/06/17 23:31:27 [node-3] probing node-1 (node-3-1781719287773458000-4321550906043459478)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-5 -> node-1 PING (node-5-1781719287773410000-3567516191886423842)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-5 -> node-4 ACK (node-4-1781719287773452000-6478162761859495443)
+[clusterpulse] 2026/06/17 23:31:27 [node-1] received PING from node-5 (node-5-1781719287773410000-3567516191886423842)
+[clusterpulse] 2026/06/17 23:31:27 [node-1] acknowledging node-5 (node-5-1781719287773410000-3567516191886423842)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [node-4] received ACK from node-5 (node-4-1781719287773452000-6478162761859495443)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-1 -> node-4 PING (node-1-1781719287773456000-3462936323599453601)
+[clusterpulse] 2026/06/17 23:31:27 [router] dropping PING from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:27 [router] node-1 -> node-5 ACK (node-5-1781719287773410000-3567516191886423842)
+[clusterpulse] 2026/06/17 23:31:27 [node-4] received PING from node-1 (node-1-1781719287773456000-3462936323599453601)
+[clusterpulse] 2026/06/17 23:31:27 [node-4] acknowledging node-1 (node-1-1781719287773456000-3462936323599453601)
+[clusterpulse] 2026/06/17 23:31:27 [router] node-4 -> node-1 ACK (node-1-1781719287773456000-3462936323599453601)
+[clusterpulse] 2026/06/17 23:31:27 [node-1] received ACK from node-4 (node-1-1781719287773456000-3462936323599453601)
+[clusterpulse] 2026/06/17 23:31:27 [node-5] received ACK from node-1 (node-5-1781719287773410000-3567516191886423842)
+[clusterpulse] 2026/06/17 23:31:28 [node-3] ACK timeout from node-1 (node-3-1781719287773458000-4321550906043459478)
+[clusterpulse] 2026/06/17 23:31:28 [node-2] ACK timeout from node-3 (node-2-1781719287773441000-925025247164593700)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] node-2 -> node-5 PING-REQ (node-2-1781719288124975000-3565173690044895735)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-2 -> node-1 PING-REQ (node-2-1781719288124987000-6823055009129029018)
+[clusterpulse] 2026/06/17 23:31:28 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719288124975000-3565173690044895735)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] node-2 -> node-4 PING-REQ (node-2-1781719288124990000-5837429240404730813)
+[clusterpulse] 2026/06/17 23:31:28 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719288124990000-5837429240404730813)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719288124987000-6823055009129029018)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [node-4] probing node-1 (node-4-1781719288522639000-283577198710114285)
+[clusterpulse] 2026/06/17 23:31:28 [node-3] probing node-5 (node-3-1781719288522665000-8281392719017503593)
+[clusterpulse] 2026/06/17 23:31:28 [node-1] probing node-3 (node-1-1781719288522671000-7559630281115947068)
+[clusterpulse] 2026/06/17 23:31:28 [node-5] probing node-3 (node-5-1781719288522727000-4360215484414434119)
+[clusterpulse] 2026/06/17 23:31:28 [node-2] probing node-5 (node-2-1781719288522738000-4285306256350747107)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-4 -> node-1 PING (node-4-1781719288522639000-283577198710114285)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-2 -> node-5 PING (node-2-1781719288522738000-4285306256350747107)
+[clusterpulse] 2026/06/17 23:31:28 [node-5] received PING from node-2 (node-2-1781719288522738000-4285306256350747107)
+[clusterpulse] 2026/06/17 23:31:28 [node-5] acknowledging node-2 (node-2-1781719288522738000-4285306256350747107)
+[clusterpulse] 2026/06/17 23:31:28 [node-1] received PING from node-4 (node-4-1781719288522639000-283577198710114285)
+[clusterpulse] 2026/06/17 23:31:28 [node-1] acknowledging node-4 (node-4-1781719288522639000-283577198710114285)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] node-1 -> node-4 ACK (node-4-1781719288522639000-283577198710114285)
+[clusterpulse] 2026/06/17 23:31:28 [node-4] received ACK from node-1 (node-4-1781719288522639000-283577198710114285)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] node-5 -> node-2 ACK (node-2-1781719288522738000-4285306256350747107)
+[clusterpulse] 2026/06/17 23:31:28 [node-2] received ACK from node-5 (node-2-1781719288522738000-4285306256350747107)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [node-5] ACK timeout from node-3 (node-5-1781719288522727000-4360215484414434119)
+[clusterpulse] 2026/06/17 23:31:28 [node-1] ACK timeout from node-3 (node-1-1781719288522671000-7559630281115947068)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-1 -> node-2 PING-REQ (node-1-1781719288874312000-3949303283768058532)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-1 -> node-5 PING-REQ (node-1-1781719288874320000-2946058688164632054)
+[clusterpulse] 2026/06/17 23:31:28 [node-3] ACK timeout from node-5 (node-3-1781719288522665000-8281392719017503593)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-5 -> node-2 PING-REQ (node-5-1781719288874165000-7285316490824444781)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-5 -> node-1 PING-REQ (node-5-1781719288874178000-2626574682790492774)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-5 -> node-4 PING-REQ (node-5-1781719288874181000-2294972759050040804)
+[clusterpulse] 2026/06/17 23:31:28 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719288874178000-2626574682790492774)
+[clusterpulse] 2026/06/17 23:31:28 [router] node-1 -> node-4 PING-REQ (node-1-1781719288874322000-67436229735932575)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719288874181000-2294972759050040804)
+[clusterpulse] 2026/06/17 23:31:28 [node-4] received PING-REQ from node-1 to ping node-3 (node-1-1781719288874322000-67436229735932575)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [node-5] received PING-REQ from node-1 to ping node-3 (node-1-1781719288874320000-2946058688164632054)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [node-2] received PING-REQ from node-1 to ping node-3 (node-1-1781719288874312000-3949303283768058532)
+[clusterpulse] 2026/06/17 23:31:28 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719288874165000-7285316490824444781)
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:28 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:29 [node-5] probing node-4 (node-5-1781719289273470000-8232166634292433279)
+[clusterpulse] 2026/06/17 23:31:29 [node-4] probing node-2 (node-4-1781719289273444000-8263867829365667457)
+[clusterpulse] 2026/06/17 23:31:29 [node-2] probing node-4 (node-2-1781719289273511000-2984182033527596516)
+[clusterpulse] 2026/06/17 23:31:29 [node-1] probing node-2 (node-1-1781719289273471000-6472264526114117162)
+[clusterpulse] 2026/06/17 23:31:29 [node-3] probing node-2 (node-3-1781719289273526000-1331060627087318554)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-5 -> node-4 PING (node-5-1781719289273470000-8232166634292433279)
+[clusterpulse] 2026/06/17 23:31:29 [node-4] received PING from node-5 (node-5-1781719289273470000-8232166634292433279)
+[clusterpulse] 2026/06/17 23:31:29 [node-4] acknowledging node-5 (node-5-1781719289273470000-8232166634292433279)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-4 -> node-2 PING (node-4-1781719289273444000-8263867829365667457)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-4 -> node-5 ACK (node-5-1781719289273470000-8232166634292433279)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-2 -> node-4 PING (node-2-1781719289273511000-2984182033527596516)
+[clusterpulse] 2026/06/17 23:31:29 [node-4] received PING from node-2 (node-2-1781719289273511000-2984182033527596516)
+[clusterpulse] 2026/06/17 23:31:29 [node-4] acknowledging node-2 (node-2-1781719289273511000-2984182033527596516)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-4 -> node-2 ACK (node-2-1781719289273511000-2984182033527596516)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-1 -> node-2 PING (node-1-1781719289273471000-6472264526114117162)
+[clusterpulse] 2026/06/17 23:31:29 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:29 [node-5] received ACK from node-4 (node-5-1781719289273470000-8232166634292433279)
+[clusterpulse] 2026/06/17 23:31:29 [node-2] received PING from node-4 (node-4-1781719289273444000-8263867829365667457)
+[clusterpulse] 2026/06/17 23:31:29 [node-2] acknowledging node-4 (node-4-1781719289273444000-8263867829365667457)
+[clusterpulse] 2026/06/17 23:31:29 [node-2] received ACK from node-4 (node-2-1781719289273511000-2984182033527596516)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-2 -> node-4 ACK (node-4-1781719289273444000-8263867829365667457)
+[clusterpulse] 2026/06/17 23:31:29 [node-4] received ACK from node-2 (node-4-1781719289273444000-8263867829365667457)
+[clusterpulse] 2026/06/17 23:31:29 [node-2] received PING from node-1 (node-1-1781719289273471000-6472264526114117162)
+[clusterpulse] 2026/06/17 23:31:29 [node-2] acknowledging node-1 (node-1-1781719289273471000-6472264526114117162)
+[clusterpulse] 2026/06/17 23:31:29 [router] node-2 -> node-1 ACK (node-1-1781719289273471000-6472264526114117162)
+[clusterpulse] 2026/06/17 23:31:29 [node-1] received ACK from node-2 (node-1-1781719289273471000-6472264526114117162)
+[clusterpulse] 2026/06/17 23:31:29 [node-3] ACK timeout from node-2 (node-3-1781719289273526000-1331060627087318554)
+[clusterpulse] 2026/06/17 23:31:29 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:29 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:29 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [node-5] probing node-1 (node-5-1781719290023470000-7662762847343104224)
+[clusterpulse] 2026/06/17 23:31:30 [node-3] probing node-4 (node-3-1781719290023501000-4375616886452134829)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] probing node-3 (node-2-1781719290023538000-4350141045475456384)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping PING from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [node-4] probing node-1 (node-4-1781719290023558000-1224191559983504071)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] probing node-2 (node-1-1781719290023540000-4741632552223818184)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-5 -> node-1 PING (node-5-1781719290023470000-7662762847343104224)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] received PING from node-5 (node-5-1781719290023470000-7662762847343104224)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] acknowledging node-5 (node-5-1781719290023470000-7662762847343104224)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping PING from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [router] node-4 -> node-1 PING (node-4-1781719290023558000-1224191559983504071)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] received PING from node-4 (node-4-1781719290023558000-1224191559983504071)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] acknowledging node-4 (node-4-1781719290023558000-1224191559983504071)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-1 -> node-2 PING (node-1-1781719290023540000-4741632552223818184)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-1 -> node-5 ACK (node-5-1781719290023470000-7662762847343104224)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] received PING from node-1 (node-1-1781719290023540000-4741632552223818184)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] acknowledging node-1 (node-1-1781719290023540000-4741632552223818184)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-1 -> node-4 ACK (node-4-1781719290023558000-1224191559983504071)
+[clusterpulse] 2026/06/17 23:31:30 [node-4] received ACK from node-1 (node-4-1781719290023558000-1224191559983504071)
+[clusterpulse] 2026/06/17 23:31:30 [node-5] received ACK from node-1 (node-5-1781719290023470000-7662762847343104224)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-2 -> node-1 ACK (node-1-1781719290023540000-4741632552223818184)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] received ACK from node-2 (node-1-1781719290023540000-4741632552223818184)
+[clusterpulse] 2026/06/17 23:31:30 [node-3] ACK timeout from node-4 (node-3-1781719290023501000-4375616886452134829)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] ACK timeout from node-3 (node-2-1781719290023538000-4350141045475456384)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping PING-REQ from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [router] node-2 -> node-1 PING-REQ (node-2-1781719290375085000-7477129987143656525)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-2 -> node-4 PING-REQ (node-2-1781719290375092000-1370523855285821221)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-2 -> node-5 PING-REQ (node-2-1781719290375095000-8062575501262493217)
+[clusterpulse] 2026/06/17 23:31:30 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781719290375092000-1370523855285821221)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781719290375095000-8062575501262493217)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping SUSPECT from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781719290375085000-7477129987143656525)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [node-5] probing node-3 (node-5-1781719290773435000-7018195149173518138)
+[clusterpulse] 2026/06/17 23:31:30 [node-3] probing node-2 (node-3-1781719290773474000-1490807038561984676)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] probing node-5 (node-2-1781719290773494000-7099149942671196564)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping PING from node-3 to node-5 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [node-1] probing node-2 (node-1-1781719290773504000-5490488949185744332)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-1 -> node-2 PING (node-1-1781719290773504000-5490488949185744332)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] received PING from node-1 (node-1-1781719290773504000-5490488949185744332)
+[clusterpulse] 2026/06/17 23:31:30 [node-4] probing node-1 (node-4-1781719290773515000-2779403618541888358)
+[clusterpulse] 2026/06/17 23:31:30 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:30 [router] node-2 -> node-5 PING (node-2-1781719290773494000-7099149942671196564)
+[clusterpulse] 2026/06/17 23:31:30 [node-5] received PING from node-2 (node-2-1781719290773494000-7099149942671196564)
+[clusterpulse] 2026/06/17 23:31:30 [node-5] acknowledging node-2 (node-2-1781719290773494000-7099149942671196564)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] acknowledging node-1 (node-1-1781719290773504000-5490488949185744332)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-2 -> node-1 ACK (node-1-1781719290773504000-5490488949185744332)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-4 -> node-1 PING (node-4-1781719290773515000-2779403618541888358)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-5 -> node-2 ACK (node-2-1781719290773494000-7099149942671196564)
+[clusterpulse] 2026/06/17 23:31:30 [node-2] received ACK from node-5 (node-2-1781719290773494000-7099149942671196564)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] received ACK from node-2 (node-1-1781719290773504000-5490488949185744332)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] received PING from node-4 (node-4-1781719290773515000-2779403618541888358)
+[clusterpulse] 2026/06/17 23:31:30 [node-1] acknowledging node-4 (node-4-1781719290773515000-2779403618541888358)
+[clusterpulse] 2026/06/17 23:31:30 [router] node-1 -> node-4 ACK (node-4-1781719290773515000-2779403618541888358)
+[clusterpulse] 2026/06/17 23:31:30 [node-4] received ACK from node-1 (node-4-1781719290773515000-2779403618541888358)
+[clusterpulse] 2026/06/17 23:31:31 [node-5] ACK timeout from node-3 (node-5-1781719290773435000-7018195149173518138)
+[clusterpulse] 2026/06/17 23:31:31 [node-3] ACK timeout from node-2 (node-3-1781719290773474000-1490807038561984676)
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [router] node-5 -> node-4 PING-REQ (node-5-1781719291124396000-8244743190377914783)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-5 -> node-1 PING-REQ (node-5-1781719291124406000-4146283800055822729)
+[clusterpulse] 2026/06/17 23:31:31 [node-4] received PING-REQ from node-5 to ping node-3 (node-5-1781719291124396000-8244743190377914783)
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping SUSPECT from node-3 to node-4 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [router] node-5 -> node-2 PING-REQ (node-5-1781719291124409000-2364292533308225599)
+[clusterpulse] 2026/06/17 23:31:31 [node-2] received PING-REQ from node-5 to ping node-3 (node-5-1781719291124409000-2364292533308225599)
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping SUSPECT from node-3 to node-2 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [node-1] received PING-REQ from node-5 to ping node-3 (node-5-1781719291124406000-4146283800055822729)
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping SUSPECT from node-3 to node-1 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [node-4] probing node-5 (node-4-1781719291523478000-1438012236962432476)
+[clusterpulse] 2026/06/17 23:31:31 [node-1] probing node-4 (node-1-1781719291523508000-8729089919963151790)
+[clusterpulse] 2026/06/17 23:31:31 [node-3] probing node-2 (node-3-1781719291523536000-3695615680095043415)
+[clusterpulse] 2026/06/17 23:31:31 [node-5] probing node-2 (node-5-1781719291523548000-701507805793622181)
+[clusterpulse] 2026/06/17 23:31:31 [node-2] probing node-4 (node-2-1781719291523557000-1883553491730483797)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-4 -> node-5 PING (node-4-1781719291523478000-1438012236962432476)
+[clusterpulse] 2026/06/17 23:31:31 [node-5] received PING from node-4 (node-4-1781719291523478000-1438012236962432476)
+[clusterpulse] 2026/06/17 23:31:31 [node-5] acknowledging node-4 (node-4-1781719291523478000-1438012236962432476)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-1 -> node-4 PING (node-1-1781719291523508000-8729089919963151790)
+[clusterpulse] 2026/06/17 23:31:31 [node-4] received PING from node-1 (node-1-1781719291523508000-8729089919963151790)
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping PING from node-2 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [router] node-5 -> node-2 PING (node-5-1781719291523548000-701507805793622181)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-5 -> node-4 ACK (node-4-1781719291523478000-1438012236962432476)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-2 -> node-4 PING (node-2-1781719291523557000-1883553491730483797)
+[clusterpulse] 2026/06/17 23:31:31 [node-4] acknowledging node-1 (node-1-1781719291523508000-8729089919963151790)
+[clusterpulse] 2026/06/17 23:31:31 [node-4] received ACK from node-5 (node-4-1781719291523478000-1438012236962432476)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-4 -> node-1 ACK (node-1-1781719291523508000-8729089919963151790)
+[clusterpulse] 2026/06/17 23:31:31 [node-1] received ACK from node-4 (node-1-1781719291523508000-8729089919963151790)
+[clusterpulse] 2026/06/17 23:31:31 [node-2] received PING from node-5 (node-5-1781719291523548000-701507805793622181)
+[clusterpulse] 2026/06/17 23:31:31 [node-2] acknowledging node-5 (node-5-1781719291523548000-701507805793622181)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-2 -> node-5 ACK (node-5-1781719291523548000-701507805793622181)
+[clusterpulse] 2026/06/17 23:31:31 [node-5] received ACK from node-2 (node-5-1781719291523548000-701507805793622181)
+[clusterpulse] 2026/06/17 23:31:31 [node-4] received PING from node-2 (node-2-1781719291523557000-1883553491730483797)
+[clusterpulse] 2026/06/17 23:31:31 [node-4] acknowledging node-2 (node-2-1781719291523557000-1883553491730483797)
+[clusterpulse] 2026/06/17 23:31:31 [router] node-4 -> node-2 ACK (node-2-1781719291523557000-1883553491730483797)
+[clusterpulse] 2026/06/17 23:31:31 [node-2] received ACK from node-4 (node-2-1781719291523557000-1883553491730483797)
+[clusterpulse] 2026/06/17 23:31:31 [node-3] ACK timeout from node-2 (node-3-1781719291523536000-3695615680095043415)
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping PING-REQ from node-1 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping PING-REQ from node-4 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:31 [router] dropping PING-REQ from node-5 to node-3 becasue node 3 is ded
+[clusterpulse] 2026/06/17 23:31:32 [node-4] probing node-5 (node-4-1781719292273485000-3379701114495711831)
+[clusterpulse] 2026/06/17 23:31:32 [node-4] stopped
+[clusterpulse] 2026/06/17 23:31:32 [node-1] probing node-3 (node-1-1781719292273515000-1568734968326552247)
+[clusterpulse] 2026/06/17 23:31:32 [node-1] stopped
+[clusterpulse] 2026/06/17 23:31:32 [node-3] probing node-2 (node-3-1781719292273544000-229491758760165081)
+[clusterpulse] 2026/06/17 23:31:32 [node-3] stopped
+[clusterpulse] 2026/06/17 23:31:32 [node-2] stopped
+[clusterpulse] 2026/06/17 23:31:32 [node-5] stopped
+[clusterpulse] 2026/06/17 23:31:32 cluster stopped
+[clusterpulse] 2026/06/17 23:31:32 simulation finished

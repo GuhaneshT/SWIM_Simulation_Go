@@ -6,8 +6,8 @@ import (
 	"log"
 	"math/rand"
 	"sort"
+	"sync"
 	"time"
-	"strings"
 
 	"clusterpulse/membership"
 	"clusterpulse/protocol"
@@ -29,6 +29,8 @@ type Node struct {
 	table         *membership.Table
 	inbox         chan protocol.Message
 	outbox        chan protocol.Message
+	pendingMu     sync.Mutex
+	pendingAcks   map[string]string
 }
 
 func New(cfg Config) *Node {
@@ -58,7 +60,7 @@ func New(cfg Config) *Node {
 
 	sort.Strings(peers)
 
-	bufferSize := len(peers)*4+8
+	bufferSize := len(peers)*4 + 8
 	if bufferSize < 16 {
 		bufferSize = 16
 	}
@@ -73,9 +75,10 @@ func New(cfg Config) *Node {
 				time.Now().UnixNano() + int64(len(cfg.ID))*7919,
 			),
 		),
-		inbox:  make(chan protocol.Message, bufferSize),
-		outbox: make(chan protocol.Message, bufferSize),
-		table:  membership.NewTable(cfg.ID, cfg.KnownNodes),
+		inbox:       make(chan protocol.Message, bufferSize),
+		outbox:      make(chan protocol.Message, bufferSize),
+		table:       membership.NewTable(cfg.ID, cfg.KnownNodes),
+		pendingAcks: make(map[string]string),
 	}
 }
 
@@ -114,27 +117,29 @@ func (n *Node) Run(ctx context.Context, logger *log.Logger) {
 	}
 }
 
-func (n *Node) handleSuspectQuery(ctx context.Context, suspecteeID string,correlationID string) {
-	
+func (n *Node) handleSuspectQuery(ctx context.Context, helperID string, requesterID string, correlationID string) {
+
 	msg := protocol.Message{
-		Type: protocol.MessageAlive,
-		From: n.id,
-		To: suspecteeID,
+		Type:          protocol.MessageAlive,
+		From:          n.id,
+		To:            helperID,
 		CorrelationID: correlationID,
-		Target: n.id,
-		SentAt: time.Now(),
+		Target:        n.id,
+		Requester:     requesterID,
+		SentAt:        time.Now(),
 	}
 	n.send(ctx, msg)
 }
 
-func (n *Node) probeSuspectedNode(ctx context.Context, suspectID string, correlationID string){
+func (n *Node) probeSuspectedNode(ctx context.Context, suspectID string, requesterID string, correlationID string) {
 	msg := protocol.Message{
-		Type: protocol.MessageSuspect,
-		From: n.id,
-		To: suspectID,
+		Type:          protocol.MessageSuspect,
+		From:          n.id,
+		To:            suspectID,
 		CorrelationID: correlationID,
-		Target: suspectID,
-		SentAt: time.Now(),
+		Target:        suspectID,
+		Requester:     requesterID,
+		SentAt:        time.Now(),
 	}
 	n.send(ctx, msg)
 }
@@ -145,6 +150,7 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 	}
 
 	peer := n.peers[n.rng.Intn(len(n.peers))]
+
 	piggybackUpdates := n.table.Updates()
 	msg := protocol.Message{
 		Type:          protocol.MessagePing,
@@ -154,90 +160,140 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 		SentAt:        time.Now(),
 		Updates:       piggybackUpdates,
 	}
-
 	logf(logger, "[%s] probing %s (%s)", n.id, peer, msg.CorrelationID)
-	n.send(ctx, msg)
+	n.trackPendingAck(msg.CorrelationID, peer)
+	if !n.send(ctx, msg) {
+		n.clearPendingAck(msg.CorrelationID)
+		return
+	}
+	n.watchAckTimeout(ctx, msg.CorrelationID, logger)
 }
 
 func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *log.Logger) {
 	switch msg.Type {
 	case protocol.MessagePing:
 		// sender is alive, mark in table and do nothing . data will get populated when it randomly pings someother node
-		
+
 		logf(logger, "[%s] received PING from %s (%s)", n.id, msg.From, msg.CorrelationID)
 		n.table.MarkAlive(msg.From, msg.SentAt)
 		n.sendAck(ctx, msg, logger)
-	
+
 	case protocol.MessageAck:
 		logf(logger, "[%s] received ACK from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.clearPendingAck(msg.CorrelationID)
 		n.table.MarkAlive(msg.From, msg.SentAt)
 	case protocol.MessagePingReq:
 		logf(logger, "[%s] received PING-REQ from %s to ping %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
-		n.probeSuspectedNode(ctx,msg.Target,msg.CorrelationID)
+		n.probeSuspectedNode(ctx, msg.Target, msg.Requester, msg.CorrelationID)
 	case protocol.MessageSuspect:
 		logf(logger, "[%s] received SUSPECT from %s about %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
 		// tell them, as you can see i am not dead yet, wakanda forever
-		n.handleSuspectQuery(ctx,msg.From,msg.CorrelationID)
-	
+		n.handleSuspectQuery(ctx, msg.From, msg.Requester, msg.CorrelationID)
+
 	case protocol.MessageAlive:
 		logf(logger, "[%s] received ALIVE from %s (%s)", n.id, msg.From, msg.CorrelationID)
-		
-		n.handleAlive(ctx,msg,logger)
-		
+
+		n.handleAlive(ctx, msg, logger)
+
 	case protocol.MessageDead:
 		//to be handled
 		logf(logger, "[%s] ignored %s from %s (%s)", n.id, msg.Type, msg.From, msg.CorrelationID)
-	
+
 	default:
 		// to be done, handle other message types
-		}
+	}
 }
+
+func (n *Node) trackPendingAck(correlationID string, peer string) {
+	n.pendingMu.Lock()
+	defer n.pendingMu.Unlock()
+	n.pendingAcks[correlationID] = peer
+}
+
+func (n *Node) clearPendingAck(correlationID string) {
+	n.pendingMu.Lock()
+	defer n.pendingMu.Unlock()
+	delete(n.pendingAcks, correlationID)
+}
+
+func (n *Node) consumePendingAck(correlationID string) (string, bool) {
+	n.pendingMu.Lock()
+	defer n.pendingMu.Unlock()
+
+	peer, exists := n.pendingAcks[correlationID]
+	if !exists {
+		return "", false
+	}
+
+	delete(n.pendingAcks, correlationID)
+	return peer, true
+}
+
+func (n *Node) watchAckTimeout(ctx context.Context, correlationID string, logger *log.Logger) {
+	go func() {
+		timer := time.NewTimer(n.ackTimeout)
+		defer timer.Stop()
+
+		select {
+		case <-ctx.Done():
+			return
+		case <-timer.C:
+			peer, exists := n.consumePendingAck(correlationID)
+			if !exists {
+				return
+			}
+
+			logf(logger, "[%s] ACK timeout from %s (%s)", n.id, peer, correlationID)
+			n.table.MarkSuspect(peer, time.Now())
+			n.handleSuspect(peer, ctx, logger)
+		}
+	}()
+}
+
 func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *log.Logger) {
-	innitiator, _, ok := strings.Cut(msg.CorrelationID, "-")
-	if !ok || innitiator == ""{
-		logf(logger, "[%s] invalid correlation ID in ALIVE message from %s", n.id, msg.From)
+	if msg.Requester == "" {
+		logf(logger, "[%s] ALIVE from %s has empty requester (%s)", n.id, msg.From, msg.CorrelationID)
 		return
 	}
-	if msg.Target != ""{
+	if msg.Target != "" {
 		n.table.MarkAlive(msg.Target, time.Now())
 	}
-	
-	if innitiator == n.id{
-		
+
+	if msg.Requester == n.id {
+
 		return
 	}
 
-
-
 	send_msg := protocol.Message{
-		Type: protocol.MessageAlive,
-		From: n.id,
-		To: innitiator,
+		Type:          protocol.MessageAlive,
+		From:          n.id,
+		To:            msg.Requester,
 		CorrelationID: msg.CorrelationID,
-		Target: msg.Target,
-		SentAt: time.Now(),
+		Target:        msg.Target,
+		Requester:     msg.Requester,
+		SentAt:        time.Now(),
 	}
 	n.send(ctx, send_msg)
 
 }
-func (n *Node) handleSuspect(suspectID string,ctx context.Context, logger *log.Logger) {
+func (n *Node) handleSuspect(suspectID string, ctx context.Context, logger *log.Logger) {
 	randomPeers := n.selectRandomPeers(3, suspectID)
-	if randomPeers == nil{
-		logf(logger,"[%s] no peers available to ping %s", n.id, suspectID)
+	if randomPeers == nil {
+		logf(logger, "[%s] no peers available to ping %s", n.id, suspectID)
 	}
-	for _, peer := range randomPeers{
+	for _, peer := range randomPeers {
 		msg := protocol.Message{
-			Type: protocol.MessagePingReq,
-			From: n.id,
-			To: peer,
-			Target: suspectID,
+			Type:          protocol.MessagePingReq,
+			From:          n.id,
+			To:            peer,
+			Target:        suspectID,
+			Requester:     n.id,
 			CorrelationID: n.newCorrelationID(),
 		}
 		n.send(ctx, msg)
 	}
-	
-}
 
+}
 
 func (n *Node) selectRandomPeers(nPeers int, excludeID string) []string {
 	peers := make([]string, 0, len(n.peers))
