@@ -6,85 +6,82 @@ import (
 	"time"
 )
 
-type Record struct{
-	NodeID string
-	Status protocol.MemberStatus
+type Record struct {
+	NodeID      string
+	Status      protocol.MemberStatus
 	Incarnation int64
-	UpdatedAt time.Time
-
-
-
+	UpdatedAt   time.Time
 }
 
-type Table struct{
-	mu sync.RWMutex
-	entries map[string]Record
+type Table struct {
+	mu         sync.RWMutex
+	entries    map[string]Record
 	lastUpdate time.Time
-
 }
 
-func NewTable(selfID string, knownNodes []string) *Table{
+func NewTable(selfID string, knownNodes []string) *Table {
 	t := &Table{
-		entries: make(map[string]Record,len(knownNodes)+1),
+		entries: make(map[string]Record, len(knownNodes)+1),
 	}
 
-	now :=time.Now()
+	now := time.Now()
 
-	for _, nodeID := range knownNodes{
-		if nodeID == ""{
+	for _, nodeID := range knownNodes {
+		if nodeID == "" {
 			continue
 		}
-		if _, exists := t.entries[nodeID]; exists{
+		if _, exists := t.entries[nodeID]; exists {
 			continue
 		}
 		t.entries[nodeID] = Record{
-			NodeID: nodeID,
-			Status: protocol.StatusAlive,
+			NodeID:      nodeID,
+			Status:      protocol.StatusAlive,
 			Incarnation: 0,
-			UpdatedAt: now,
+			UpdatedAt:   now,
 		}
 	}
-	if _, exists := t.entries[selfID]; !exists{
+	if _, exists := t.entries[selfID]; !exists {
 		t.entries[selfID] = Record{
-			NodeID: selfID,
-			Status: protocol.StatusAlive,
+			NodeID:      selfID,
+			Status:      protocol.StatusAlive,
 			Incarnation: 0,
-			UpdatedAt: now,
+			UpdatedAt:   now,
 		}
 	}
 	return t
 }
-func (t *Table) setStatus(nodeID string, status protocol.MemberStatus, observedAt time.Time) Record{
+func (t *Table) setStatus(nodeID string, status protocol.MemberStatus, observedAt time.Time) Record {
 	t.mu.Lock()
 	defer t.mu.Unlock()
 	record, exists := t.entries[nodeID]
 	if !exists {
 		record = Record{NodeID: nodeID}
 	}
-	
+	if exists && statusRank(status) < statusRank(record.Status) {
+		return record
+	}
+
 	record.Status = status
 	record.UpdatedAt = observedAt
 	t.entries[nodeID] = record
 	return record
 
-
-
 }
-func(t * Table) MarkAlive(nodeID string, observedAt time.Time) Record{
+func (t *Table) MarkAlive(nodeID string, observedAt time.Time) Record {
 	return t.setStatus(nodeID, protocol.StatusAlive, observedAt)
 
 }
-func(t * Table) MarkSuspect(nodeID string, observedAt time.Time) Record{
+func (t *Table) MarkSuspect(nodeID string, observedAt time.Time) Record {
 	return t.setStatus(nodeID, protocol.StatusSuspect, observedAt)
 }
-func(t * Table) MarkFailed(nodeID string, observedAt time.Time) Record{
+func (t *Table) MarkFailed(nodeID string, observedAt time.Time) Record {
 	return t.setStatus(nodeID, protocol.StatusFailed, observedAt)
 }
-func(t * Table) MarkLeft(nodeID string, observedAt time.Time) Record{
+func (t *Table) MarkLeft(nodeID string, observedAt time.Time) Record {
 	return t.setStatus(nodeID, protocol.StatusLeft, observedAt)
 }
 
-func (t *Table) Updates() []protocol.Update{
+func (t *Table) Updates() []protocol.Update {
 	t.mu.Lock()
 	defer t.mu.Unlock()
 
@@ -95,27 +92,38 @@ func (t *Table) Updates() []protocol.Update{
 			continue
 		}
 		updates = append(updates, protocol.Update{
-			NodeID: record.NodeID,
-			Status: record.Status,
+			NodeID:      record.NodeID,
+			Status:      record.Status,
 			Incarnation: record.Incarnation,
-			ObservedAt: record.UpdatedAt,
+			ObservedAt:  record.UpdatedAt,
 		})
 	}
 	t.lastUpdate = cutoff
 	return updates
 }
 
-func (t *Table) Get(nodeID string)(Record,bool){
+func (t *Table) Get(nodeID string) (Record, bool) {
 	t.mu.RLock()
 	defer t.mu.RUnlock()
-	if record, exists := t.entries[nodeID]; exists{
+	if record, exists := t.entries[nodeID]; exists {
 		return record, true
 	}
 	return Record{}, false
 }
 
-func (t *Table) Merge(update protocol.Update) bool{
-	if update.NodeID == ""{
+func (t *Table) Snapshot() []Record {
+	t.mu.RLock()
+	defer t.mu.RUnlock()
+
+	records := make([]Record, 0, len(t.entries))
+	for _, record := range t.entries {
+		records = append(records, record)
+	}
+	return records
+}
+
+func (t *Table) Merge(update protocol.Update) bool {
+	if update.NodeID == "" {
 		return false
 	}
 	status := update.Status
@@ -124,39 +132,30 @@ func (t *Table) Merge(update protocol.Update) bool{
 	t.mu.Lock()
 	defer t.mu.Unlock()
 	record, exists := t.entries[update.NodeID]
-	if !exists || record.Incarnation < incarnation{
+	if !exists || record.Incarnation < incarnation {
 		t.entries[update.NodeID] = Record{
-			NodeID: update.NodeID,
-			Status: status,
+			NodeID:      update.NodeID,
+			Status:      status,
 			Incarnation: incarnation,
-			UpdatedAt: observedAt,
+			UpdatedAt:   observedAt,
 		}
 		return true
 	}
-	if (incarnation == record.Incarnation){
-		if update.Status == protocol.StatusAlive && record.Status == protocol.StatusSuspect {
+	if incarnation == record.Incarnation {
+		if statusRank(status) > statusRank(record.Status) {
 			t.entries[update.NodeID] = Record{
 				NodeID:      update.NodeID,
-				Status:      update.Status,
-				Incarnation: update.Incarnation,
-				UpdatedAt:   update.ObservedAt,
+				Status:      status,
+				Incarnation: incarnation,
+				UpdatedAt:   observedAt,
 			}
 			return true
 		}
-		if statusRank(status) > statusRank(record.Status){
-		t.entries[update.NodeID] = Record{
-			NodeID: update.NodeID,
-			Status: status,
-			Incarnation: incarnation,
-			UpdatedAt: observedAt,
-		}
-		return true
-	}
-	
+
 	}
 	return false
 }
-func statusRank(status protocol.MemberStatus) int{
+func statusRank(status protocol.MemberStatus) int {
 	switch status {
 	case protocol.StatusAlive:
 		return 1

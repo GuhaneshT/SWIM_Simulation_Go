@@ -31,6 +31,8 @@ type Node struct {
 	outbox        chan protocol.Message
 	pendingMu     sync.Mutex
 	pendingAcks   map[string]string
+	suspectMu     sync.Mutex
+	suspicions    map[string]struct{}
 }
 
 func New(cfg Config) *Node {
@@ -79,6 +81,7 @@ func New(cfg Config) *Node {
 		outbox:      make(chan protocol.Message, bufferSize),
 		table:       membership.NewTable(cfg.ID, cfg.KnownNodes),
 		pendingAcks: make(map[string]string),
+		suspicions:  make(map[string]struct{}),
 	}
 }
 
@@ -92,6 +95,14 @@ func (n *Node) Inbox() chan protocol.Message {
 
 func (n *Node) Outbox() <-chan protocol.Message {
 	return n.outbox
+}
+
+func (n *Node) MemberStatus(nodeID string) (protocol.MemberStatus, bool) {
+	record, exists := n.table.Get(nodeID)
+	if !exists {
+		return "", false
+	}
+	return record.Status, true
 }
 
 func (n *Node) Run(ctx context.Context, logger *log.Logger) {
@@ -127,6 +138,7 @@ func (n *Node) handleSuspectQuery(ctx context.Context, helperID string, requeste
 		Target:        n.id,
 		Requester:     requesterID,
 		SentAt:        time.Now(),
+		Updates:       n.table.Updates(),
 	}
 	n.send(ctx, msg)
 }
@@ -140,16 +152,16 @@ func (n *Node) probeSuspectedNode(ctx context.Context, suspectID string, request
 		Target:        suspectID,
 		Requester:     requesterID,
 		SentAt:        time.Now(),
+		Updates:       n.table.Updates(),
 	}
 	n.send(ctx, msg)
 }
 
 func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
-	if len(n.peers) == 0 {
+	peer, ok := n.randomProbePeer()
+	if !ok {
 		return
 	}
-
-	peer := n.peers[n.rng.Intn(len(n.peers))]
 
 	piggybackUpdates := n.table.Updates()
 	msg := protocol.Message{
@@ -169,7 +181,26 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 	n.watchAckTimeout(ctx, msg.CorrelationID, logger)
 }
 
+func (n *Node) randomProbePeer() (string, bool) {
+	eligiblePeers := make([]string, 0, len(n.peers))
+	for _, peer := range n.peers {
+		record, exists := n.table.Get(peer)
+		if exists && (record.Status == protocol.StatusFailed || record.Status == protocol.StatusLeft) {
+			continue
+		}
+		eligiblePeers = append(eligiblePeers, peer)
+	}
+
+	if len(eligiblePeers) == 0 {
+		return "", false
+	}
+
+	return eligiblePeers[n.rng.Intn(len(eligiblePeers))], true
+}
+
 func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *log.Logger) {
+	n.handleUpdates(msg.Updates, msg.From)
+
 	switch msg.Type {
 	case protocol.MessagePing:
 		// sender is alive, mark in table and do nothing . data will get populated when it randomly pings someother node
@@ -181,6 +212,7 @@ func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *
 	case protocol.MessageAck:
 		logf(logger, "[%s] received ACK from %s (%s)", n.id, msg.From, msg.CorrelationID)
 		n.clearPendingAck(msg.CorrelationID)
+		n.clearSuspicion(msg.From)
 		n.table.MarkAlive(msg.From, msg.SentAt)
 	case protocol.MessagePingReq:
 		logf(logger, "[%s] received PING-REQ from %s to ping %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
@@ -229,6 +261,30 @@ func (n *Node) consumePendingAck(correlationID string) (string, bool) {
 	return peer, true
 }
 
+func (n *Node) trackSuspicion(nodeID string) {
+	n.suspectMu.Lock()
+	defer n.suspectMu.Unlock()
+	n.suspicions[nodeID] = struct{}{}
+}
+
+func (n *Node) clearSuspicion(nodeID string) {
+	n.suspectMu.Lock()
+	defer n.suspectMu.Unlock()
+	delete(n.suspicions, nodeID)
+}
+
+func (n *Node) consumeSuspicion(nodeID string) bool {
+	n.suspectMu.Lock()
+	defer n.suspectMu.Unlock()
+
+	if _, exists := n.suspicions[nodeID]; !exists {
+		return false
+	}
+
+	delete(n.suspicions, nodeID)
+	return true
+}
+
 func (n *Node) watchAckTimeout(ctx context.Context, correlationID string, logger *log.Logger) {
 	go func() {
 		timer := time.NewTimer(n.ackTimeout)
@@ -245,7 +301,28 @@ func (n *Node) watchAckTimeout(ctx context.Context, correlationID string, logger
 
 			logf(logger, "[%s] ACK timeout from %s (%s)", n.id, peer, correlationID)
 			n.table.MarkSuspect(peer, time.Now())
+			n.trackSuspicion(peer)
 			n.handleSuspect(peer, ctx, logger)
+			n.watchSuspectTimeout(ctx, peer, logger)
+		}
+	}()
+}
+
+func (n *Node) watchSuspectTimeout(ctx context.Context, nodeID string, logger *log.Logger) {
+	go func() {
+		timer := time.NewTimer(3 * n.ackTimeout)
+		defer timer.Stop()
+
+		select {
+		case <-ctx.Done():
+			return
+		case <-timer.C:
+			if !n.consumeSuspicion(nodeID) {
+				return
+			}
+
+			logf(logger, "[%s] suspect timeout for %s; marking failed", n.id, nodeID)
+			n.table.MarkFailed(nodeID, time.Now())
 		}
 	}()
 }
@@ -256,6 +333,7 @@ func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *lo
 		return
 	}
 	if msg.Target != "" {
+		n.clearSuspicion(msg.Target)
 		n.table.MarkAlive(msg.Target, time.Now())
 	}
 
@@ -272,6 +350,7 @@ func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *lo
 		Target:        msg.Target,
 		Requester:     msg.Requester,
 		SentAt:        time.Now(),
+		Updates:       n.table.Updates(),
 	}
 	n.send(ctx, send_msg)
 
@@ -289,6 +368,7 @@ func (n *Node) handleSuspect(suspectID string, ctx context.Context, logger *log.
 			Target:        suspectID,
 			Requester:     n.id,
 			CorrelationID: n.newCorrelationID(),
+			Updates:       n.table.Updates(),
 		}
 		n.send(ctx, msg)
 	}
@@ -320,6 +400,9 @@ func (n *Node) selectRandomPeers(nPeers int, excludeID string) []string {
 }
 
 func (n *Node) handleUpdates(updates []protocol.Update, observedBy string) {
+	if len(updates) == 0 {
+		return
+	}
 	fmt.Println("merging updates for node ", n.id, " observed by ", observedBy)
 	for _, update := range updates {
 		n.table.Merge(update)
@@ -333,6 +416,7 @@ func (n *Node) sendAck(ctx context.Context, ping protocol.Message, logger *log.L
 		To:            ping.From,
 		CorrelationID: ping.CorrelationID,
 		SentAt:        time.Now(),
+		Updates:       n.table.Updates(),
 	}
 
 	logf(logger, "[%s] acknowledging %s (%s)", n.id, ping.From, ping.CorrelationID)

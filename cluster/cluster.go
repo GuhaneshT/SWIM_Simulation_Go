@@ -117,7 +117,20 @@ func (c *Cluster) Stop() {
 	}
 
 	c.wg.Wait()
+	c.logMembershipStatus("node-3")
 	c.log.Printf("cluster stopped")
+}
+
+func (c *Cluster) logMembershipStatus(nodeID string) {
+	for _, observerID := range c.ids {
+		observer := c.nodes[observerID]
+		status, exists := observer.MemberStatus(nodeID)
+		if !exists {
+			c.log.Printf("[membership] [%s] has no record for %s", observerID, nodeID)
+			continue
+		}
+		c.log.Printf("[membership] [%s] sees %s as %s", observerID, nodeID, status)
+	}
 }
 
 func (c *Cluster) routeMessages(ctx context.Context, source *node.Node) {
@@ -136,7 +149,7 @@ func (c *Cluster) routeMessages(ctx context.Context, source *node.Node) {
 
 func (c *Cluster) deliver(ctx context.Context, msg protocol.Message) {
 	if msg.To == "node-3" || msg.From == "node-3" {
-		c.log.Printf("[router] dropping %s from %s to %s becasue node 3 is ded", msg.Type, msg.To, msg.From)
+		c.log.Printf("[router] dropping %s from %s to %s because node-3 is simulated dead", msg.Type, msg.From, msg.To)
 		return
 	}
 	target, exists := c.nodes[msg.To]
