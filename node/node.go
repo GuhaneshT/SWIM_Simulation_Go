@@ -12,6 +12,14 @@ import (
 	"clusterpulse/membership"
 	"clusterpulse/protocol"
 )
+type Item struct{
+	NodeID string
+	Retransmits int
+}
+
+type GossipQueue struct{
+	Items[] Item
+}
 
 type Config struct {
 	ID            string
@@ -33,6 +41,7 @@ type Node struct {
 	pendingAcks   map[string]string
 	suspectMu     sync.Mutex
 	suspicions    map[string]struct{}
+	gossipqueue   GossipQueue
 }
 
 func New(cfg Config) *Node {
@@ -82,6 +91,7 @@ func New(cfg Config) *Node {
 		table:       membership.NewTable(cfg.ID, cfg.KnownNodes),
 		pendingAcks: make(map[string]string),
 		suspicions:  make(map[string]struct{}),
+		gossipqueue: GossipQueue{Items: make([]Item, 0)},
 	}
 }
 
@@ -322,6 +332,7 @@ func (n *Node) watchSuspectTimeout(ctx context.Context, nodeID string, logger *l
 			}
 
 			logf(logger, "[%s] suspect timeout for %s; marking failed", n.id, nodeID)
+			n.gossipqueue.Items = append(n.gossipqueue.Items,Item{nodeID,3})
 			n.table.MarkFailed(nodeID, time.Now())
 		}
 	}()
