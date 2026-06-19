@@ -1,0 +1,1263 @@
+[clusterpulse] 2026/06/19 12:31:14 cluster started with 5 nodes
+[clusterpulse] 2026/06/19 12:31:14 [node-3] started
+[clusterpulse] 2026/06/19 12:31:14 [node-1] started
+[clusterpulse] 2026/06/19 12:31:14 [node-4] started
+[clusterpulse] 2026/06/19 12:31:14 [node-5] started
+[clusterpulse] 2026/06/19 12:31:14 [node-2] started
+[clusterpulse] 2026/06/19 12:31:15 [node-5] probing node-4 (node-5-1781852475330333000-8100703481998466496)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] probing node-2 (node-4-1781852475330381000-9153994802043863284)
+[clusterpulse] 2026/06/19 12:31:15 [node-3] probing node-4 (node-3-1781852475330369000-5810945185037882738)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-4 -> node-2 PING (node-4-1781852475330381000-9153994802043863284)
+[clusterpulse] 2026/06/19 12:31:15 [node-2] probing node-4 (node-2-1781852475330345000-367189707525389078)
+[clusterpulse] 2026/06/19 12:31:15 [router] dropping PING from node-3 to node-4 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:15 [node-2] received PING from node-4 (node-4-1781852475330381000-9153994802043863284)
+[clusterpulse] 2026/06/19 12:31:15 [node-2] acknowledging node-4 (node-4-1781852475330381000-9153994802043863284)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-2 -> node-4 PING (node-2-1781852475330345000-367189707525389078)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-2 -> node-4 ACK (node-4-1781852475330381000-9153994802043863284)
+[clusterpulse] 2026/06/19 12:31:15 [node-1] probing node-4 (node-1-1781852475330356000-7957252990461645714)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-5 -> node-4 PING (node-5-1781852475330333000-8100703481998466496)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] received PING from node-2 (node-2-1781852475330345000-367189707525389078)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] acknowledging node-2 (node-2-1781852475330345000-367189707525389078)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] received ACK from node-2 (node-4-1781852475330381000-9153994802043863284)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-1 -> node-4 PING (node-1-1781852475330356000-7957252990461645714)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] received PING from node-5 (node-5-1781852475330333000-8100703481998466496)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] acknowledging node-5 (node-5-1781852475330333000-8100703481998466496)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] received PING from node-1 (node-1-1781852475330356000-7957252990461645714)
+[clusterpulse] 2026/06/19 12:31:15 [node-4] acknowledging node-1 (node-1-1781852475330356000-7957252990461645714)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-4 -> node-2 ACK (node-2-1781852475330345000-367189707525389078)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-4 -> node-5 ACK (node-5-1781852475330333000-8100703481998466496)
+[clusterpulse] 2026/06/19 12:31:15 [router] node-4 -> node-1 ACK (node-1-1781852475330356000-7957252990461645714)
+[clusterpulse] 2026/06/19 12:31:15 [node-2] received ACK from node-4 (node-2-1781852475330345000-367189707525389078)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:15 [node-1] received ACK from node-4 (node-1-1781852475330356000-7957252990461645714)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:15 [node-5] received ACK from node-4 (node-5-1781852475330333000-8100703481998466496)
+[clusterpulse] 2026/06/19 12:31:15 [node-3] ACK timeout from node-4 (node-3-1781852475330369000-5810945185037882738)
+[clusterpulse] 2026/06/19 12:31:15 [router] dropping PING-REQ from node-3 to node-1 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:15 [router] dropping PING-REQ from node-3 to node-2 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:15 [router] dropping PING-REQ from node-3 to node-5 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [node-5] probing node-1 (node-5-1781852476080447000-2526078546765979007)
+[clusterpulse] 2026/06/19 12:31:16 [node-4] probing node-5 (node-4-1781852476080435000-5490031552106662462)
+[clusterpulse] 2026/06/19 12:31:16 [node-2] probing node-3 (node-2-1781852476080505000-280023835356911435)
+[clusterpulse] 2026/06/19 12:31:16 [node-1] probing node-5 (node-1-1781852476080524000-1728218187335436400)
+[clusterpulse] 2026/06/19 12:31:16 [node-3] probing node-5 (node-3-1781852476080542000-1103571361440313065)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-5 -> node-1 PING (node-5-1781852476080447000-2526078546765979007)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:16 [router] node-4 -> node-5 PING (node-4-1781852476080435000-5490031552106662462)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] received PING from node-4 (node-4-1781852476080435000-5490031552106662462)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] acknowledging node-4 (node-4-1781852476080435000-5490031552106662462)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-5 -> node-4 ACK (node-4-1781852476080435000-5490031552106662462)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping PING from node-2 to node-3 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [router] node-1 -> node-5 PING (node-1-1781852476080524000-1728218187335436400)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping PING from node-3 to node-5 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [node-1] received PING from node-5 (node-5-1781852476080447000-2526078546765979007)
+[clusterpulse] 2026/06/19 12:31:16 [node-1] acknowledging node-5 (node-5-1781852476080447000-2526078546765979007)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-1 -> node-5 ACK (node-5-1781852476080447000-2526078546765979007)
+[clusterpulse] 2026/06/19 12:31:16 [node-4] received ACK from node-5 (node-4-1781852476080435000-5490031552106662462)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] received PING from node-1 (node-1-1781852476080524000-1728218187335436400)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] acknowledging node-1 (node-1-1781852476080524000-1728218187335436400)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:16 [node-5] received ACK from node-1 (node-5-1781852476080447000-2526078546765979007)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-5 -> node-1 ACK (node-1-1781852476080524000-1728218187335436400)
+[clusterpulse] 2026/06/19 12:31:16 [node-1] received ACK from node-5 (node-1-1781852476080524000-1728218187335436400)
+[clusterpulse] 2026/06/19 12:31:16 [node-2] ACK timeout from node-3 (node-2-1781852476080505000-280023835356911435)
+[clusterpulse] 2026/06/19 12:31:16 [node-3] ACK timeout from node-5 (node-3-1781852476080542000-1103571361440313065)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-2 -> node-5 PING-REQ (node-2-1781852476431850000-7733321491616650254)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-2 -> node-4 PING-REQ (node-2-1781852476431856000-1061941451805890015)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-2 -> node-1 PING-REQ (node-2-1781852476431857000-7742538617923968751)
+merging updates for node  node-4  observed by  node-2
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping PING-REQ from node-3 to node-2 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping PING-REQ from node-3 to node-1 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping PING-REQ from node-3 to node-4 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [node-1] received PING-REQ from node-2 to ping node-3 (node-2-1781852476431857000-7742538617923968751)
+[clusterpulse] 2026/06/19 12:31:16 [node-4] received PING-REQ from node-2 to ping node-3 (node-2-1781852476431856000-1061941451805890015)
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping SUSPECT from node-4 to node-3 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [node-5] received PING-REQ from node-2 to ping node-3 (node-2-1781852476431850000-7733321491616650254)
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping SUSPECT from node-1 to node-3 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping SUSPECT from node-5 to node-3 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [node-3] suspect timeout for node-4; marking failed
+[clusterpulse] 2026/06/19 12:31:16 [node-2] probing node-1 (node-2-1781852476830377000-8948340502356246842)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] probing node-4 (node-5-1781852476830393000-1747863888157328700)
+[clusterpulse] 2026/06/19 12:31:16 [node-1] probing node-2 (node-1-1781852476830402000-4455376952758361533)
+[clusterpulse] 2026/06/19 12:31:16 [node-3] probing node-5 (node-3-1781852476830406000-907047432686784696)
+[clusterpulse] 2026/06/19 12:31:16 [node-4] probing node-5 (node-4-1781852476830409000-5825005201551879384)
+[clusterpulse] 2026/06/19 12:31:16 [router] dropping PING from node-3 to node-5 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:16 [router] node-2 -> node-1 PING (node-2-1781852476830377000-8948340502356246842)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-4 -> node-5 PING (node-4-1781852476830409000-5825005201551879384)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:16 [node-1] received PING from node-2 (node-2-1781852476830377000-8948340502356246842)
+[clusterpulse] 2026/06/19 12:31:16 [node-1] acknowledging node-2 (node-2-1781852476830377000-8948340502356246842)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-1 -> node-2 PING (node-1-1781852476830402000-4455376952758361533)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-1 -> node-2 ACK (node-2-1781852476830377000-8948340502356246842)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-5 -> node-4 PING (node-5-1781852476830393000-1747863888157328700)
+merging updates for node  node-4  observed by  node-5
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:16 [node-4] received PING from node-5 (node-5-1781852476830393000-1747863888157328700)
+[clusterpulse] 2026/06/19 12:31:16 [node-4] acknowledging node-5 (node-5-1781852476830393000-1747863888157328700)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] received PING from node-4 (node-4-1781852476830409000-5825005201551879384)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] acknowledging node-4 (node-4-1781852476830409000-5825005201551879384)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-5 -> node-4 ACK (node-4-1781852476830409000-5825005201551879384)
+[clusterpulse] 2026/06/19 12:31:16 [node-4] received ACK from node-5 (node-4-1781852476830409000-5825005201551879384)
+[clusterpulse] 2026/06/19 12:31:16 [node-2] received PING from node-1 (node-1-1781852476830402000-4455376952758361533)
+[clusterpulse] 2026/06/19 12:31:16 [node-2] acknowledging node-1 (node-1-1781852476830402000-4455376952758361533)
+[clusterpulse] 2026/06/19 12:31:16 [node-2] received ACK from node-1 (node-2-1781852476830377000-8948340502356246842)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-2 -> node-1 ACK (node-1-1781852476830402000-4455376952758361533)
+[clusterpulse] 2026/06/19 12:31:16 [node-1] received ACK from node-2 (node-1-1781852476830402000-4455376952758361533)
+[clusterpulse] 2026/06/19 12:31:16 [router] node-4 -> node-5 ACK (node-5-1781852476830393000-1747863888157328700)
+[clusterpulse] 2026/06/19 12:31:16 [node-5] received ACK from node-4 (node-5-1781852476830393000-1747863888157328700)
+[clusterpulse] 2026/06/19 12:31:17 [node-3] ACK timeout from node-5 (node-3-1781852476830406000-907047432686784696)
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING-REQ from node-3 to node-4 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING-REQ from node-3 to node-1 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING-REQ from node-3 to node-2 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [node-3] suspect timeout for node-5; marking failed
+[clusterpulse] 2026/06/19 12:31:17 [node-2] suspect timeout for node-3; marking failed
+[clusterpulse] 2026/06/19 12:31:17 [node-5] probing node-1 (node-5-1781852477580385000-4397633304550827877)
+[clusterpulse] 2026/06/19 12:31:17 [router] node-5 -> node-1 PING (node-5-1781852477580385000-4397633304550827877)
+[clusterpulse] 2026/06/19 12:31:17 [node-4] probing node-3 (node-4-1781852477580396000-8913677659071969981)
+[clusterpulse] 2026/06/19 12:31:17 [node-2] probing node-5 (node-2-1781852477580419000-4530155421680883566)
+[clusterpulse] 2026/06/19 12:31:17 [node-3] probing node-1 (node-3-1781852477580432000-6562553196914587001)
+[clusterpulse] 2026/06/19 12:31:17 [node-1] probing node-5 (node-1-1781852477580431000-8183484735420605809)
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING from node-4 to node-3 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [router] node-2 -> node-5 PING (node-2-1781852477580419000-4530155421680883566)
+merging updates for node  node-1  observed by  node-5
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING from node-3 to node-1 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [router] node-1 -> node-5 PING (node-1-1781852477580431000-8183484735420605809)
+[clusterpulse] 2026/06/19 12:31:17 [node-1] received PING from node-5 (node-5-1781852477580385000-4397633304550827877)
+[clusterpulse] 2026/06/19 12:31:17 [node-1] acknowledging node-5 (node-5-1781852477580385000-4397633304550827877)
+[clusterpulse] 2026/06/19 12:31:17 [node-5] received PING from node-2 (node-2-1781852477580419000-4530155421680883566)
+[clusterpulse] 2026/06/19 12:31:17 [node-5] acknowledging node-2 (node-2-1781852477580419000-4530155421680883566)
+[clusterpulse] 2026/06/19 12:31:17 [router] node-1 -> node-5 ACK (node-5-1781852477580385000-4397633304550827877)
+[clusterpulse] 2026/06/19 12:31:17 [router] node-5 -> node-2 ACK (node-2-1781852477580419000-4530155421680883566)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:17 [node-5] received PING from node-1 (node-1-1781852477580431000-8183484735420605809)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:17 [node-5] acknowledging node-1 (node-1-1781852477580431000-8183484735420605809)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:17 [node-2] received ACK from node-5 (node-2-1781852477580419000-4530155421680883566)
+[clusterpulse] 2026/06/19 12:31:17 [node-5] received ACK from node-1 (node-5-1781852477580385000-4397633304550827877)
+[clusterpulse] 2026/06/19 12:31:17 [router] node-5 -> node-1 ACK (node-1-1781852477580431000-8183484735420605809)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:17 [node-1] received ACK from node-5 (node-1-1781852477580431000-8183484735420605809)
+[clusterpulse] 2026/06/19 12:31:17 [node-3] ACK timeout from node-1 (node-3-1781852477580432000-6562553196914587001)
+[clusterpulse] 2026/06/19 12:31:17 [node-4] ACK timeout from node-3 (node-4-1781852477580396000-8913677659071969981)
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING-REQ from node-3 to node-4 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING-REQ from node-3 to node-5 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping PING-REQ from node-3 to node-2 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [router] node-4 -> node-1 PING-REQ (node-4-1781852477931630000-8837913083426116471)
+[clusterpulse] 2026/06/19 12:31:17 [router] node-4 -> node-2 PING-REQ (node-4-1781852477931635000-166885295780180086)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:17 [router] node-4 -> node-5 PING-REQ (node-4-1781852477931636000-2612963727856638097)
+[clusterpulse] 2026/06/19 12:31:17 [node-5] received PING-REQ from node-4 to ping node-3 (node-4-1781852477931636000-2612963727856638097)
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping SUSPECT from node-5 to node-3 because node-3 is simulated dead
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:17 [node-1] received PING-REQ from node-4 to ping node-3 (node-4-1781852477931630000-8837913083426116471)
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping SUSPECT from node-1 to node-3 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:17 [node-2] received PING-REQ from node-4 to ping node-3 (node-4-1781852477931635000-166885295780180086)
+[clusterpulse] 2026/06/19 12:31:17 [router] dropping SUSPECT from node-2 to node-3 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:18 [node-4] probing node-2 (node-4-1781852478330428000-5660426052883085031)
+[clusterpulse] 2026/06/19 12:31:18 [node-5] probing node-2 (node-5-1781852478330443000-891348385695003837)
+[clusterpulse] 2026/06/19 12:31:18 [node-3] probing node-2 (node-3-1781852478330462000-5411877132040633909)
+[clusterpulse] 2026/06/19 12:31:18 [node-2] probing node-5 (node-2-1781852478330477000-8530424300296643462)
+[clusterpulse] 2026/06/19 12:31:18 [node-1] probing node-4 (node-1-1781852478330481000-6474093790700366729)
+[clusterpulse] 2026/06/19 12:31:18 [router] node-4 -> node-2 PING (node-4-1781852478330428000-5660426052883085031)
+[clusterpulse] 2026/06/19 12:31:18 [node-2] received PING from node-4 (node-4-1781852478330428000-5660426052883085031)
+[clusterpulse] 2026/06/19 12:31:18 [node-2] acknowledging node-4 (node-4-1781852478330428000-5660426052883085031)
+[clusterpulse] 2026/06/19 12:31:18 [router] node-5 -> node-2 PING (node-5-1781852478330443000-891348385695003837)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:18 [router] dropping PING from node-3 to node-2 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:18 [router] node-2 -> node-5 PING (node-2-1781852478330477000-8530424300296643462)
+[clusterpulse] 2026/06/19 12:31:18 [router] node-2 -> node-4 ACK (node-4-1781852478330428000-5660426052883085031)
+[clusterpulse] 2026/06/19 12:31:18 [node-4] received ACK from node-2 (node-4-1781852478330428000-5660426052883085031)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:18 [router] node-1 -> node-4 PING (node-1-1781852478330481000-6474093790700366729)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:18 [node-2] received PING from node-5 (node-5-1781852478330443000-891348385695003837)
+[clusterpulse] 2026/06/19 12:31:18 [node-2] acknowledging node-5 (node-5-1781852478330443000-891348385695003837)
+[clusterpulse] 2026/06/19 12:31:18 [node-5] received PING from node-2 (node-2-1781852478330477000-8530424300296643462)
+[clusterpulse] 2026/06/19 12:31:18 [node-5] acknowledging node-2 (node-2-1781852478330477000-8530424300296643462)
+[clusterpulse] 2026/06/19 12:31:18 [router] node-5 -> node-2 ACK (node-2-1781852478330477000-8530424300296643462)
+[clusterpulse] 2026/06/19 12:31:18 [node-2] received ACK from node-5 (node-2-1781852478330477000-8530424300296643462)
+[clusterpulse] 2026/06/19 12:31:18 [node-4] received PING from node-1 (node-1-1781852478330481000-6474093790700366729)
+[clusterpulse] 2026/06/19 12:31:18 [node-4] acknowledging node-1 (node-1-1781852478330481000-6474093790700366729)
+[clusterpulse] 2026/06/19 12:31:18 [router] node-2 -> node-5 ACK (node-5-1781852478330443000-891348385695003837)
+[clusterpulse] 2026/06/19 12:31:18 [node-5] received ACK from node-2 (node-5-1781852478330443000-891348385695003837)
+[clusterpulse] 2026/06/19 12:31:18 [router] node-4 -> node-1 ACK (node-1-1781852478330481000-6474093790700366729)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:18 [node-1] received ACK from node-4 (node-1-1781852478330481000-6474093790700366729)
+[clusterpulse] 2026/06/19 12:31:18 [node-3] ACK timeout from node-2 (node-3-1781852478330462000-5411877132040633909)
+[clusterpulse] 2026/06/19 12:31:18 [router] dropping PING-REQ from node-3 to node-5 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:18 [router] dropping PING-REQ from node-3 to node-1 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:18 [router] dropping PING-REQ from node-3 to node-4 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:18 [node-4] suspect timeout for node-3; marking failed
+[clusterpulse] 2026/06/19 12:31:18 [node-3] suspect timeout for node-1; marking failed
+[clusterpulse] 2026/06/19 12:31:19 [node-1] probing node-2 (node-1-1781852479080453000-8261487294005672593)
+[clusterpulse] 2026/06/19 12:31:19 [node-3] probing node-2 (node-3-1781852479080473000-876117899020078572)
+[clusterpulse] 2026/06/19 12:31:19 [node-2] probing node-4 (node-2-1781852479080499000-3078703637238179371)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] probing node-4 (node-5-1781852479080504000-6780689581304978590)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] probing node-1 (node-4-1781852479080513000-9206486994166292543)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-1 -> node-2 PING (node-1-1781852479080453000-8261487294005672593)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:19 [router] dropping PING from node-3 to node-2 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:19 [router] node-2 -> node-4 PING (node-2-1781852479080499000-3078703637238179371)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:19 [router] node-5 -> node-4 PING (node-5-1781852479080504000-6780689581304978590)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-4 -> node-1 PING (node-4-1781852479080513000-9206486994166292543)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:19 [node-1] received PING from node-4 (node-4-1781852479080513000-9206486994166292543)
+[clusterpulse] 2026/06/19 12:31:19 [node-1] acknowledging node-4 (node-4-1781852479080513000-9206486994166292543)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-1 -> node-4 ACK (node-4-1781852479080513000-9206486994166292543)
+[clusterpulse] 2026/06/19 12:31:19 [node-2] received PING from node-1 (node-1-1781852479080453000-8261487294005672593)
+[clusterpulse] 2026/06/19 12:31:19 [node-2] acknowledging node-1 (node-1-1781852479080453000-8261487294005672593)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] received PING from node-2 (node-2-1781852479080499000-3078703637238179371)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] acknowledging node-2 (node-2-1781852479080499000-3078703637238179371)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:19 [router] node-2 -> node-1 ACK (node-1-1781852479080453000-8261487294005672593)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:19 [router] node-4 -> node-2 ACK (node-2-1781852479080499000-3078703637238179371)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:19 [node-2] received ACK from node-4 (node-2-1781852479080499000-3078703637238179371)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] received PING from node-5 (node-5-1781852479080504000-6780689581304978590)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] acknowledging node-5 (node-5-1781852479080504000-6780689581304978590)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:19 [node-1] received ACK from node-2 (node-1-1781852479080453000-8261487294005672593)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-4 -> node-5 ACK (node-5-1781852479080504000-6780689581304978590)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] received ACK from node-4 (node-5-1781852479080504000-6780689581304978590)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] received ACK from node-1 (node-4-1781852479080513000-9206486994166292543)
+[clusterpulse] 2026/06/19 12:31:19 [node-3] ACK timeout from node-2 (node-3-1781852479080473000-876117899020078572)
+[clusterpulse] 2026/06/19 12:31:19 [router] dropping PING-REQ from node-3 to node-1 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:19 [router] dropping PING-REQ from node-3 to node-5 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:19 [router] dropping PING-REQ from node-3 to node-4 because node-3 is simulated dead
+[clusterpulse] 2026/06/19 12:31:19 [node-3] suspect timeout for node-2; marking failed
+[clusterpulse] 2026/06/19 12:31:19 [node-4] probing node-5 (node-4-1781852479830125000-2628850541892599419)
+[clusterpulse] 2026/06/19 12:31:19 [node-2] probing node-4 (node-2-1781852479830145000-8132543666280373025)
+[clusterpulse] 2026/06/19 12:31:19 [node-1] probing node-5 (node-1-1781852479830173000-5750304281734918628)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] probing node-4 (node-5-1781852479830174000-8957184110590366)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-4 -> node-5 PING (node-4-1781852479830125000-2628850541892599419)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:19 [router] node-2 -> node-4 PING (node-2-1781852479830145000-8132543666280373025)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:19 [router] node-1 -> node-5 PING (node-1-1781852479830173000-5750304281734918628)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-5 -> node-4 PING (node-5-1781852479830174000-8957184110590366)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] received PING from node-4 (node-4-1781852479830125000-2628850541892599419)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] acknowledging node-4 (node-4-1781852479830125000-2628850541892599419)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:19 [node-4] received PING from node-2 (node-2-1781852479830145000-8132543666280373025)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] acknowledging node-2 (node-2-1781852479830145000-8132543666280373025)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-5 -> node-4 ACK (node-4-1781852479830125000-2628850541892599419)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] received PING from node-1 (node-1-1781852479830173000-5750304281734918628)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] acknowledging node-1 (node-1-1781852479830173000-5750304281734918628)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:19 [router] node-4 -> node-2 ACK (node-2-1781852479830145000-8132543666280373025)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:19 [router] node-5 -> node-1 ACK (node-1-1781852479830173000-5750304281734918628)
+[clusterpulse] 2026/06/19 12:31:19 [node-1] received ACK from node-5 (node-1-1781852479830173000-5750304281734918628)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] received PING from node-5 (node-5-1781852479830174000-8957184110590366)
+[clusterpulse] 2026/06/19 12:31:19 [node-4] acknowledging node-5 (node-5-1781852479830174000-8957184110590366)
+[clusterpulse] 2026/06/19 12:31:19 [node-2] received ACK from node-4 (node-2-1781852479830145000-8132543666280373025)
+[clusterpulse] 2026/06/19 12:31:19 [router] node-4 -> node-5 ACK (node-5-1781852479830174000-8957184110590366)
+[clusterpulse] 2026/06/19 12:31:19 [node-5] received ACK from node-4 (node-5-1781852479830174000-8957184110590366)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:19 [node-4] received ACK from node-5 (node-4-1781852479830125000-2628850541892599419)
+[clusterpulse] 2026/06/19 12:31:20 [node-2] probing node-1 (node-2-1781852480580174000-5337007320109575057)
+[clusterpulse] 2026/06/19 12:31:20 [node-5] probing node-2 (node-5-1781852480580214000-7797093515661043153)
+[clusterpulse] 2026/06/19 12:31:20 [node-4] probing node-5 (node-4-1781852480580227000-810183205234742474)
+[clusterpulse] 2026/06/19 12:31:20 [node-1] probing node-5 (node-1-1781852480580240000-5771644224017785743)
+[clusterpulse] 2026/06/19 12:31:20 [router] node-2 -> node-1 PING (node-2-1781852480580174000-5337007320109575057)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:20 [router] node-5 -> node-2 PING (node-5-1781852480580214000-7797093515661043153)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:20 [router] node-4 -> node-5 PING (node-4-1781852480580227000-810183205234742474)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:20 [router] node-1 -> node-5 PING (node-1-1781852480580240000-5771644224017785743)
+[clusterpulse] 2026/06/19 12:31:20 [node-1] received PING from node-2 (node-2-1781852480580174000-5337007320109575057)
+[clusterpulse] 2026/06/19 12:31:20 [node-1] acknowledging node-2 (node-2-1781852480580174000-5337007320109575057)
+[clusterpulse] 2026/06/19 12:31:20 [node-2] received PING from node-5 (node-5-1781852480580214000-7797093515661043153)
+[clusterpulse] 2026/06/19 12:31:20 [node-2] acknowledging node-5 (node-5-1781852480580214000-7797093515661043153)
+[clusterpulse] 2026/06/19 12:31:20 [router] node-2 -> node-5 ACK (node-5-1781852480580214000-7797093515661043153)
+[clusterpulse] 2026/06/19 12:31:20 [node-5] received PING from node-4 (node-4-1781852480580227000-810183205234742474)
+[clusterpulse] 2026/06/19 12:31:20 [node-5] acknowledging node-4 (node-4-1781852480580227000-810183205234742474)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:20 [node-5] received PING from node-1 (node-1-1781852480580240000-5771644224017785743)
+[clusterpulse] 2026/06/19 12:31:20 [node-5] acknowledging node-1 (node-1-1781852480580240000-5771644224017785743)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:20 [node-5] received ACK from node-2 (node-5-1781852480580214000-7797093515661043153)
+[clusterpulse] 2026/06/19 12:31:20 [router] node-5 -> node-4 ACK (node-4-1781852480580227000-810183205234742474)
+[clusterpulse] 2026/06/19 12:31:20 [router] node-5 -> node-1 ACK (node-1-1781852480580240000-5771644224017785743)
+[clusterpulse] 2026/06/19 12:31:20 [node-1] received ACK from node-5 (node-1-1781852480580240000-5771644224017785743)
+[clusterpulse] 2026/06/19 12:31:20 [router] node-1 -> node-2 ACK (node-2-1781852480580174000-5337007320109575057)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:20 [node-2] received ACK from node-1 (node-2-1781852480580174000-5337007320109575057)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:20 [node-4] received ACK from node-5 (node-4-1781852480580227000-810183205234742474)
+[clusterpulse] 2026/06/19 12:31:21 [node-2] probing node-4 (node-2-1781852481330149000-743554714310460201)
+[clusterpulse] 2026/06/19 12:31:21 [node-5] probing node-4 (node-5-1781852481330170000-5468474752079480563)
+[clusterpulse] 2026/06/19 12:31:21 [node-4] probing node-2 (node-4-1781852481330185000-6968679107594231704)
+[clusterpulse] 2026/06/19 12:31:21 [node-1] probing node-4 (node-1-1781852481330202000-2604736681728734265)
+[clusterpulse] 2026/06/19 12:31:21 [router] node-2 -> node-4 PING (node-2-1781852481330149000-743554714310460201)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:21 [router] node-5 -> node-4 PING (node-5-1781852481330170000-5468474752079480563)
+[clusterpulse] 2026/06/19 12:31:21 [router] node-4 -> node-2 PING (node-4-1781852481330185000-6968679107594231704)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:21 [router] node-1 -> node-4 PING (node-1-1781852481330202000-2604736681728734265)
+[clusterpulse] 2026/06/19 12:31:21 [node-4] received PING from node-2 (node-2-1781852481330149000-743554714310460201)
+[clusterpulse] 2026/06/19 12:31:21 [node-4] acknowledging node-2 (node-2-1781852481330149000-743554714310460201)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:21 [node-2] received PING from node-4 (node-4-1781852481330185000-6968679107594231704)
+[clusterpulse] 2026/06/19 12:31:21 [node-2] acknowledging node-4 (node-4-1781852481330185000-6968679107594231704)
+[clusterpulse] 2026/06/19 12:31:21 [router] node-4 -> node-2 ACK (node-2-1781852481330149000-743554714310460201)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:21 [node-4] received PING from node-5 (node-5-1781852481330170000-5468474752079480563)
+[clusterpulse] 2026/06/19 12:31:21 [node-4] acknowledging node-5 (node-5-1781852481330170000-5468474752079480563)
+[clusterpulse] 2026/06/19 12:31:21 [router] node-2 -> node-4 ACK (node-4-1781852481330185000-6968679107594231704)
+[clusterpulse] 2026/06/19 12:31:21 [node-2] received ACK from node-4 (node-2-1781852481330149000-743554714310460201)
+[clusterpulse] 2026/06/19 12:31:21 [router] node-4 -> node-5 ACK (node-5-1781852481330170000-5468474752079480563)
+[clusterpulse] 2026/06/19 12:31:21 [node-5] received ACK from node-4 (node-5-1781852481330170000-5468474752079480563)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:21 [node-4] received PING from node-1 (node-1-1781852481330202000-2604736681728734265)
+[clusterpulse] 2026/06/19 12:31:21 [node-4] acknowledging node-1 (node-1-1781852481330202000-2604736681728734265)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:21 [router] node-4 -> node-1 ACK (node-1-1781852481330202000-2604736681728734265)
+[clusterpulse] 2026/06/19 12:31:21 [node-1] received ACK from node-4 (node-1-1781852481330202000-2604736681728734265)
+[clusterpulse] 2026/06/19 12:31:21 [node-4] received ACK from node-2 (node-4-1781852481330185000-6968679107594231704)
+[clusterpulse] 2026/06/19 12:31:22 [node-2] probing node-5 (node-2-1781852482080346000-5766367619253102757)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] probing node-2 (node-5-1781852482080362000-98928961198343051)
+[clusterpulse] 2026/06/19 12:31:22 [node-4] probing node-1 (node-4-1781852482080369000-2315812867176767605)
+[clusterpulse] 2026/06/19 12:31:22 [node-1] probing node-5 (node-1-1781852482080376000-2226283819873161338)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-2 -> node-5 PING (node-2-1781852482080346000-5766367619253102757)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-1 -> node-5 PING (node-1-1781852482080376000-2226283819873161338)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-5 -> node-2 PING (node-5-1781852482080362000-98928961198343051)
+merging updates for node  node-2  observed by  node-5
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:22 [router] node-4 -> node-1 PING (node-4-1781852482080369000-2315812867176767605)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:22 [node-2] received PING from node-5 (node-5-1781852482080362000-98928961198343051)
+[clusterpulse] 2026/06/19 12:31:22 [node-2] acknowledging node-5 (node-5-1781852482080362000-98928961198343051)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-2 -> node-5 ACK (node-5-1781852482080362000-98928961198343051)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] received PING from node-2 (node-2-1781852482080346000-5766367619253102757)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] acknowledging node-2 (node-2-1781852482080346000-5766367619253102757)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:22 [node-1] received PING from node-4 (node-4-1781852482080369000-2315812867176767605)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-5 -> node-2 ACK (node-2-1781852482080346000-5766367619253102757)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:22 [node-1] acknowledging node-4 (node-4-1781852482080369000-2315812867176767605)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-1 -> node-4 ACK (node-4-1781852482080369000-2315812867176767605)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:22 [node-5] received PING from node-1 (node-1-1781852482080376000-2226283819873161338)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] acknowledging node-1 (node-1-1781852482080376000-2226283819873161338)
+[clusterpulse] 2026/06/19 12:31:22 [node-2] received ACK from node-5 (node-2-1781852482080346000-5766367619253102757)
+[clusterpulse] 2026/06/19 12:31:22 [node-4] received ACK from node-1 (node-4-1781852482080369000-2315812867176767605)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-5 -> node-1 ACK (node-1-1781852482080376000-2226283819873161338)
+[clusterpulse] 2026/06/19 12:31:22 [node-1] received ACK from node-5 (node-1-1781852482080376000-2226283819873161338)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:22 [node-5] received ACK from node-2 (node-5-1781852482080362000-98928961198343051)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] probing node-2 (node-5-1781852482830532000-2017794709928774366)
+[clusterpulse] 2026/06/19 12:31:22 [node-4] probing node-5 (node-4-1781852482830570000-8825657579416234069)
+[clusterpulse] 2026/06/19 12:31:22 [node-1] probing node-5 (node-1-1781852482830624000-907370341564552142)
+[clusterpulse] 2026/06/19 12:31:22 [node-2] probing node-1 (node-2-1781852482830683000-4876981178982543519)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-1 -> node-5 PING (node-1-1781852482830624000-907370341564552142)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-5 -> node-2 PING (node-5-1781852482830532000-2017794709928774366)
+merging updates for node  node-2  observed by  node-5
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:22 [router] node-4 -> node-5 PING (node-4-1781852482830570000-8825657579416234069)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-2 -> node-1 PING (node-2-1781852482830683000-4876981178982543519)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:22 [node-2] received PING from node-5 (node-5-1781852482830532000-2017794709928774366)
+[clusterpulse] 2026/06/19 12:31:22 [node-2] acknowledging node-5 (node-5-1781852482830532000-2017794709928774366)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] received PING from node-1 (node-1-1781852482830624000-907370341564552142)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] acknowledging node-1 (node-1-1781852482830624000-907370341564552142)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:22 [node-1] received PING from node-2 (node-2-1781852482830683000-4876981178982543519)
+[clusterpulse] 2026/06/19 12:31:22 [node-1] acknowledging node-2 (node-2-1781852482830683000-4876981178982543519)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-1 -> node-2 ACK (node-2-1781852482830683000-4876981178982543519)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:22 [router] node-2 -> node-5 ACK (node-5-1781852482830532000-2017794709928774366)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-5 -> node-1 ACK (node-1-1781852482830624000-907370341564552142)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:22 [node-1] received ACK from node-5 (node-1-1781852482830624000-907370341564552142)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] received PING from node-4 (node-4-1781852482830570000-8825657579416234069)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] acknowledging node-4 (node-4-1781852482830570000-8825657579416234069)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:22 [node-2] received ACK from node-1 (node-2-1781852482830683000-4876981178982543519)
+[clusterpulse] 2026/06/19 12:31:22 [node-5] received ACK from node-2 (node-5-1781852482830532000-2017794709928774366)
+[clusterpulse] 2026/06/19 12:31:22 [router] node-5 -> node-4 ACK (node-4-1781852482830570000-8825657579416234069)
+[clusterpulse] 2026/06/19 12:31:22 [node-4] received ACK from node-5 (node-4-1781852482830570000-8825657579416234069)
+[clusterpulse] 2026/06/19 12:31:23 [node-5] probing node-2 (node-5-1781852483580197000-8786568730792934056)
+[clusterpulse] 2026/06/19 12:31:23 [node-2] probing node-4 (node-2-1781852483580225000-6285658559115684614)
+[clusterpulse] 2026/06/19 12:31:23 [node-4] probing node-2 (node-4-1781852483580251000-6441080133780064923)
+[clusterpulse] 2026/06/19 12:31:23 [node-1] probing node-4 (node-1-1781852483580308000-8056278851552067019)
+[clusterpulse] 2026/06/19 12:31:23 [router] node-5 -> node-2 PING (node-5-1781852483580197000-8786568730792934056)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:23 [router] node-2 -> node-4 PING (node-2-1781852483580225000-6285658559115684614)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:23 [router] node-4 -> node-2 PING (node-4-1781852483580251000-6441080133780064923)
+[clusterpulse] 2026/06/19 12:31:23 [router] node-1 -> node-4 PING (node-1-1781852483580308000-8056278851552067019)
+[clusterpulse] 2026/06/19 12:31:23 [node-2] received PING from node-5 (node-5-1781852483580197000-8786568730792934056)
+[clusterpulse] 2026/06/19 12:31:23 [node-2] acknowledging node-5 (node-5-1781852483580197000-8786568730792934056)
+[clusterpulse] 2026/06/19 12:31:23 [node-4] received PING from node-2 (node-2-1781852483580225000-6285658559115684614)
+[clusterpulse] 2026/06/19 12:31:23 [node-4] acknowledging node-2 (node-2-1781852483580225000-6285658559115684614)
+merging updates for node  node-4  observed by  node-1
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:23 [router] node-2 -> node-5 ACK (node-5-1781852483580197000-8786568730792934056)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:23 [router] node-4 -> node-2 ACK (node-2-1781852483580225000-6285658559115684614)
+[clusterpulse] 2026/06/19 12:31:23 [node-4] received PING from node-1 (node-1-1781852483580308000-8056278851552067019)
+[clusterpulse] 2026/06/19 12:31:23 [node-4] acknowledging node-1 (node-1-1781852483580308000-8056278851552067019)
+[clusterpulse] 2026/06/19 12:31:23 [router] node-4 -> node-1 ACK (node-1-1781852483580308000-8056278851552067019)
+[clusterpulse] 2026/06/19 12:31:23 [node-1] received ACK from node-4 (node-1-1781852483580308000-8056278851552067019)
+[clusterpulse] 2026/06/19 12:31:23 [node-2] received PING from node-4 (node-4-1781852483580251000-6441080133780064923)
+[clusterpulse] 2026/06/19 12:31:23 [node-2] acknowledging node-4 (node-4-1781852483580251000-6441080133780064923)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:23 [node-5] received ACK from node-2 (node-5-1781852483580197000-8786568730792934056)
+[clusterpulse] 2026/06/19 12:31:23 [node-2] received ACK from node-4 (node-2-1781852483580225000-6285658559115684614)
+[clusterpulse] 2026/06/19 12:31:23 [router] node-2 -> node-4 ACK (node-4-1781852483580251000-6441080133780064923)
+[clusterpulse] 2026/06/19 12:31:23 [node-4] received ACK from node-2 (node-4-1781852483580251000-6441080133780064923)
+[clusterpulse] 2026/06/19 12:31:24 [node-1] probing node-2 (node-1-1781852484330198000-6608233310212031702)
+[clusterpulse] 2026/06/19 12:31:24 [node-5] probing node-1 (node-5-1781852484330234000-2414839819330055052)
+[clusterpulse] 2026/06/19 12:31:24 [node-2] probing node-1 (node-2-1781852484330256000-4579525441976107386)
+[clusterpulse] 2026/06/19 12:31:24 [node-4] probing node-5 (node-4-1781852484330262000-1507024503273802978)
+[clusterpulse] 2026/06/19 12:31:24 [router] node-2 -> node-1 PING (node-2-1781852484330256000-4579525441976107386)
+[clusterpulse] 2026/06/19 12:31:24 [router] node-4 -> node-5 PING (node-4-1781852484330262000-1507024503273802978)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:24 [router] node-1 -> node-2 PING (node-1-1781852484330198000-6608233310212031702)
+merging updates for node  node-2  observed by  node-1
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:24 [node-2] received PING from node-1 (node-1-1781852484330198000-6608233310212031702)
+[clusterpulse] 2026/06/19 12:31:24 [node-2] acknowledging node-1 (node-1-1781852484330198000-6608233310212031702)
+[clusterpulse] 2026/06/19 12:31:24 [router] node-5 -> node-1 PING (node-5-1781852484330234000-2414839819330055052)
+[clusterpulse] 2026/06/19 12:31:24 [node-1] received PING from node-2 (node-2-1781852484330256000-4579525441976107386)
+[clusterpulse] 2026/06/19 12:31:24 [node-5] received PING from node-4 (node-4-1781852484330262000-1507024503273802978)
+[clusterpulse] 2026/06/19 12:31:24 [node-5] acknowledging node-4 (node-4-1781852484330262000-1507024503273802978)
+[clusterpulse] 2026/06/19 12:31:24 [router] node-2 -> node-1 ACK (node-1-1781852484330198000-6608233310212031702)
+[clusterpulse] 2026/06/19 12:31:24 [node-1] acknowledging node-2 (node-2-1781852484330256000-4579525441976107386)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:24 [router] node-5 -> node-4 ACK (node-4-1781852484330262000-1507024503273802978)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:24 [node-1] received PING from node-5 (node-5-1781852484330234000-2414839819330055052)
+[clusterpulse] 2026/06/19 12:31:24 [node-1] acknowledging node-5 (node-5-1781852484330234000-2414839819330055052)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:24 [node-1] received ACK from node-2 (node-1-1781852484330198000-6608233310212031702)
+[clusterpulse] 2026/06/19 12:31:24 [router] node-1 -> node-2 ACK (node-2-1781852484330256000-4579525441976107386)
+[clusterpulse] 2026/06/19 12:31:24 [router] node-1 -> node-5 ACK (node-5-1781852484330234000-2414839819330055052)
+[clusterpulse] 2026/06/19 12:31:24 [node-4] received ACK from node-5 (node-4-1781852484330262000-1507024503273802978)
+[clusterpulse] 2026/06/19 12:31:24 [node-5] received ACK from node-1 (node-5-1781852484330234000-2414839819330055052)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:24 [node-2] received ACK from node-1 (node-2-1781852484330256000-4579525441976107386)
+[clusterpulse] 2026/06/19 12:31:25 [node-5] probing node-2 (node-5-1781852485080517000-6695875525730070978)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] probing node-5 (node-2-1781852485080536000-7174715825460932714)
+[clusterpulse] 2026/06/19 12:31:25 [node-1] probing node-4 (node-1-1781852485080555000-5106404986882372621)
+[clusterpulse] 2026/06/19 12:31:25 [node-4] probing node-5 (node-4-1781852485080556000-6879979759524925424)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-5 -> node-2 PING (node-5-1781852485080517000-6695875525730070978)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:25 [router] node-2 -> node-5 PING (node-2-1781852485080536000-7174715825460932714)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:25 [node-5] received PING from node-2 (node-2-1781852485080536000-7174715825460932714)
+[clusterpulse] 2026/06/19 12:31:25 [node-5] acknowledging node-2 (node-2-1781852485080536000-7174715825460932714)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-5 -> node-2 ACK (node-2-1781852485080536000-7174715825460932714)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-1 -> node-4 PING (node-1-1781852485080555000-5106404986882372621)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:25 [router] node-4 -> node-5 PING (node-4-1781852485080556000-6879979759524925424)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:25 [node-5] received PING from node-4 (node-4-1781852485080556000-6879979759524925424)
+[clusterpulse] 2026/06/19 12:31:25 [node-5] acknowledging node-4 (node-4-1781852485080556000-6879979759524925424)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-5 -> node-4 ACK (node-4-1781852485080556000-6879979759524925424)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] received PING from node-5 (node-5-1781852485080517000-6695875525730070978)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] acknowledging node-5 (node-5-1781852485080517000-6695875525730070978)
+[clusterpulse] 2026/06/19 12:31:25 [node-4] received PING from node-1 (node-1-1781852485080555000-5106404986882372621)
+[clusterpulse] 2026/06/19 12:31:25 [node-4] acknowledging node-1 (node-1-1781852485080555000-5106404986882372621)
+[clusterpulse] 2026/06/19 12:31:25 [node-4] received ACK from node-5 (node-4-1781852485080556000-6879979759524925424)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-4 -> node-1 ACK (node-1-1781852485080555000-5106404986882372621)
+merging updates for node  node-1  observed by  node-4
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:25 [router] node-2 -> node-5 ACK (node-5-1781852485080517000-6695875525730070978)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:25 [node-5] received ACK from node-2 (node-5-1781852485080517000-6695875525730070978)
+[clusterpulse] 2026/06/19 12:31:25 [node-1] received ACK from node-4 (node-1-1781852485080555000-5106404986882372621)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] received ACK from node-5 (node-2-1781852485080536000-7174715825460932714)
+[clusterpulse] 2026/06/19 12:31:25 [node-5] probing node-2 (node-5-1781852485830553000-4729940950758986935)
+[clusterpulse] 2026/06/19 12:31:25 [node-1] probing node-2 (node-1-1781852485830634000-7213745784502658827)
+[clusterpulse] 2026/06/19 12:31:25 [node-4] probing node-2 (node-4-1781852485830580000-2485316761660626318)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] probing node-4 (node-2-1781852485830625000-1750455915761841494)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-4 -> node-2 PING (node-4-1781852485830580000-2485316761660626318)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:25 [router] node-5 -> node-2 PING (node-5-1781852485830553000-4729940950758986935)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-1 -> node-2 PING (node-1-1781852485830634000-7213745784502658827)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-2 -> node-4 PING (node-2-1781852485830625000-1750455915761841494)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:25 [node-2] received PING from node-4 (node-4-1781852485830580000-2485316761660626318)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] acknowledging node-4 (node-4-1781852485830580000-2485316761660626318)
+[clusterpulse] 2026/06/19 12:31:25 [node-4] received PING from node-2 (node-2-1781852485830625000-1750455915761841494)
+[clusterpulse] 2026/06/19 12:31:25 [node-4] acknowledging node-2 (node-2-1781852485830625000-1750455915761841494)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:25 [router] node-4 -> node-2 ACK (node-2-1781852485830625000-1750455915761841494)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-2 -> node-4 ACK (node-4-1781852485830580000-2485316761660626318)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:25 [node-2] received PING from node-5 (node-5-1781852485830553000-4729940950758986935)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] acknowledging node-5 (node-5-1781852485830553000-4729940950758986935)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:25 [node-4] received ACK from node-2 (node-4-1781852485830580000-2485316761660626318)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-2 -> node-5 ACK (node-5-1781852485830553000-4729940950758986935)
+[clusterpulse] 2026/06/19 12:31:25 [node-5] received ACK from node-2 (node-5-1781852485830553000-4729940950758986935)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] received PING from node-1 (node-1-1781852485830634000-7213745784502658827)
+[clusterpulse] 2026/06/19 12:31:25 [node-2] acknowledging node-1 (node-1-1781852485830634000-7213745784502658827)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:25 [node-2] received ACK from node-4 (node-2-1781852485830625000-1750455915761841494)
+[clusterpulse] 2026/06/19 12:31:25 [router] node-2 -> node-1 ACK (node-1-1781852485830634000-7213745784502658827)
+[clusterpulse] 2026/06/19 12:31:25 [node-1] received ACK from node-2 (node-1-1781852485830634000-7213745784502658827)
+[clusterpulse] 2026/06/19 12:31:26 [node-4] probing node-5 (node-4-1781852486580572000-4597755704080799192)
+[clusterpulse] 2026/06/19 12:31:26 [node-2] probing node-5 (node-2-1781852486580606000-1335775775253841353)
+[clusterpulse] 2026/06/19 12:31:26 [node-5] probing node-1 (node-5-1781852486580638000-3555321344977138455)
+[clusterpulse] 2026/06/19 12:31:26 [node-1] probing node-5 (node-1-1781852486580669000-5831717192013808845)
+[clusterpulse] 2026/06/19 12:31:26 [router] node-4 -> node-5 PING (node-4-1781852486580572000-4597755704080799192)
+[clusterpulse] 2026/06/19 12:31:26 [router] node-2 -> node-5 PING (node-2-1781852486580606000-1335775775253841353)
+[clusterpulse] 2026/06/19 12:31:26 [router] node-5 -> node-1 PING (node-5-1781852486580638000-3555321344977138455)
+merging updates for node  node-1  observed by  node-5
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:26 [router] node-1 -> node-5 PING (node-1-1781852486580669000-5831717192013808845)
+[clusterpulse] 2026/06/19 12:31:26 [node-1] received PING from node-5 (node-5-1781852486580638000-3555321344977138455)
+[clusterpulse] 2026/06/19 12:31:26 [node-1] acknowledging node-5 (node-5-1781852486580638000-3555321344977138455)
+[clusterpulse] 2026/06/19 12:31:26 [node-5] received PING from node-4 (node-4-1781852486580572000-4597755704080799192)
+[clusterpulse] 2026/06/19 12:31:26 [node-5] acknowledging node-4 (node-4-1781852486580572000-4597755704080799192)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:26 [router] node-1 -> node-5 ACK (node-5-1781852486580638000-3555321344977138455)
+[clusterpulse] 2026/06/19 12:31:26 [node-5] received PING from node-2 (node-2-1781852486580606000-1335775775253841353)
+[clusterpulse] 2026/06/19 12:31:26 [node-5] acknowledging node-2 (node-2-1781852486580606000-1335775775253841353)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:26 [router] node-5 -> node-4 ACK (node-4-1781852486580572000-4597755704080799192)
+[clusterpulse] 2026/06/19 12:31:26 [router] node-5 -> node-2 ACK (node-2-1781852486580606000-1335775775253841353)
+[clusterpulse] 2026/06/19 12:31:26 [node-2] received ACK from node-5 (node-2-1781852486580606000-1335775775253841353)
+[clusterpulse] 2026/06/19 12:31:26 [node-5] received PING from node-1 (node-1-1781852486580669000-5831717192013808845)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:26 [node-5] acknowledging node-1 (node-1-1781852486580669000-5831717192013808845)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:26 [node-4] received ACK from node-5 (node-4-1781852486580572000-4597755704080799192)
+[clusterpulse] 2026/06/19 12:31:26 [node-5] received ACK from node-1 (node-5-1781852486580638000-3555321344977138455)
+[clusterpulse] 2026/06/19 12:31:26 [router] node-5 -> node-1 ACK (node-1-1781852486580669000-5831717192013808845)
+[clusterpulse] 2026/06/19 12:31:26 [node-1] received ACK from node-5 (node-1-1781852486580669000-5831717192013808845)
+[clusterpulse] 2026/06/19 12:31:27 [node-4] probing node-1 (node-4-1781852487330578000-168960140165875058)
+[clusterpulse] 2026/06/19 12:31:27 [node-1] probing node-2 (node-1-1781852487330628000-4340779996127335369)
+[clusterpulse] 2026/06/19 12:31:27 [node-2] probing node-1 (node-2-1781852487330652000-5963384913242598957)
+[clusterpulse] 2026/06/19 12:31:27 [node-5] probing node-2 (node-5-1781852487330656000-4799996931823657552)
+[clusterpulse] 2026/06/19 12:31:27 [router] node-4 -> node-1 PING (node-4-1781852487330578000-168960140165875058)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:27 [router] node-1 -> node-2 PING (node-1-1781852487330628000-4340779996127335369)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:27 [router] node-2 -> node-1 PING (node-2-1781852487330652000-5963384913242598957)
+[clusterpulse] 2026/06/19 12:31:27 [router] node-5 -> node-2 PING (node-5-1781852487330656000-4799996931823657552)
+[clusterpulse] 2026/06/19 12:31:27 [node-1] received PING from node-4 (node-4-1781852487330578000-168960140165875058)
+[clusterpulse] 2026/06/19 12:31:27 [node-1] acknowledging node-4 (node-4-1781852487330578000-168960140165875058)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:27 [node-2] received PING from node-1 (node-1-1781852487330628000-4340779996127335369)
+[clusterpulse] 2026/06/19 12:31:27 [node-2] acknowledging node-1 (node-1-1781852487330628000-4340779996127335369)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:27 [node-1] received PING from node-2 (node-2-1781852487330652000-5963384913242598957)
+[clusterpulse] 2026/06/19 12:31:27 [node-1] acknowledging node-2 (node-2-1781852487330652000-5963384913242598957)
+[clusterpulse] 2026/06/19 12:31:27 [router] node-1 -> node-4 ACK (node-4-1781852487330578000-168960140165875058)
+[clusterpulse] 2026/06/19 12:31:27 [router] node-1 -> node-2 ACK (node-2-1781852487330652000-5963384913242598957)
+[clusterpulse] 2026/06/19 12:31:27 [router] node-2 -> node-1 ACK (node-1-1781852487330628000-4340779996127335369)
+merging updates for node  node-1  observed by  node-2
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:27 [node-2] received PING from node-5 (node-5-1781852487330656000-4799996931823657552)
+[clusterpulse] 2026/06/19 12:31:27 [node-2] acknowledging node-5 (node-5-1781852487330656000-4799996931823657552)
+[clusterpulse] 2026/06/19 12:31:27 [node-2] received ACK from node-1 (node-2-1781852487330652000-5963384913242598957)
+[clusterpulse] 2026/06/19 12:31:27 [node-1] received ACK from node-2 (node-1-1781852487330628000-4340779996127335369)
+[clusterpulse] 2026/06/19 12:31:27 [node-4] received ACK from node-1 (node-4-1781852487330578000-168960140165875058)
+[clusterpulse] 2026/06/19 12:31:27 [router] node-2 -> node-5 ACK (node-5-1781852487330656000-4799996931823657552)
+[clusterpulse] 2026/06/19 12:31:27 [node-5] received ACK from node-2 (node-5-1781852487330656000-4799996931823657552)
+[clusterpulse] 2026/06/19 12:31:28 [node-4] probing node-2 (node-4-1781852488080582000-475674898328267873)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] probing node-5 (node-2-1781852488080609000-1008534105353993121)
+[clusterpulse] 2026/06/19 12:31:28 [node-5] probing node-1 (node-5-1781852488080627000-5812674041076299244)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-5 -> node-1 PING (node-5-1781852488080627000-5812674041076299244)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] probing node-5 (node-1-1781852488080644000-8494830695020979503)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:28 [router] node-4 -> node-2 PING (node-4-1781852488080582000-475674898328267873)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:28 [router] node-2 -> node-5 PING (node-2-1781852488080609000-1008534105353993121)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:28 [router] node-1 -> node-5 PING (node-1-1781852488080644000-8494830695020979503)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] received PING from node-5 (node-5-1781852488080627000-5812674041076299244)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] acknowledging node-5 (node-5-1781852488080627000-5812674041076299244)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-1 -> node-5 ACK (node-5-1781852488080627000-5812674041076299244)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] received PING from node-4 (node-4-1781852488080582000-475674898328267873)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] acknowledging node-4 (node-4-1781852488080582000-475674898328267873)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-2 -> node-4 ACK (node-4-1781852488080582000-475674898328267873)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:28 [node-5] received PING from node-2 (node-2-1781852488080609000-1008534105353993121)
+[clusterpulse] 2026/06/19 12:31:28 [node-5] acknowledging node-2 (node-2-1781852488080609000-1008534105353993121)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:28 [node-4] received ACK from node-2 (node-4-1781852488080582000-475674898328267873)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-5 -> node-2 ACK (node-2-1781852488080609000-1008534105353993121)
+[clusterpulse] 2026/06/19 12:31:28 [node-5] received PING from node-1 (node-1-1781852488080644000-8494830695020979503)
+[clusterpulse] 2026/06/19 12:31:28 [node-5] acknowledging node-1 (node-1-1781852488080644000-8494830695020979503)
+merging updates for node  node-5  observed by  node-1
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:28 [router] node-5 -> node-1 ACK (node-1-1781852488080644000-8494830695020979503)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] received ACK from node-5 (node-1-1781852488080644000-8494830695020979503)
+[clusterpulse] 2026/06/19 12:31:28 [node-5] received ACK from node-1 (node-5-1781852488080627000-5812674041076299244)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] received ACK from node-5 (node-2-1781852488080609000-1008534105353993121)
+[clusterpulse] 2026/06/19 12:31:28 [node-5] probing node-1 (node-5-1781852488830584000-8046488303693629933)
+[clusterpulse] 2026/06/19 12:31:28 [node-4] probing node-2 (node-4-1781852488830605000-5250585972425086708)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] probing node-1 (node-2-1781852488830622000-5712064032626368314)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] probing node-2 (node-1-1781852488830635000-7877664989187969359)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-5 -> node-1 PING (node-5-1781852488830584000-8046488303693629933)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:28 [router] node-4 -> node-2 PING (node-4-1781852488830605000-5250585972425086708)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:28 [node-2] received PING from node-4 (node-4-1781852488830605000-5250585972425086708)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] acknowledging node-4 (node-4-1781852488830605000-5250585972425086708)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-2 -> node-1 PING (node-2-1781852488830622000-5712064032626368314)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-2 -> node-4 ACK (node-4-1781852488830605000-5250585972425086708)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-1 -> node-2 PING (node-1-1781852488830635000-7877664989187969359)
+merging updates for node  node-2  observed by  node-1
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:28 [node-1] received PING from node-5 (node-5-1781852488830584000-8046488303693629933)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] acknowledging node-5 (node-5-1781852488830584000-8046488303693629933)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:28 [node-2] received PING from node-1 (node-1-1781852488830635000-7877664989187969359)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] acknowledging node-1 (node-1-1781852488830635000-7877664989187969359)
+[clusterpulse] 2026/06/19 12:31:28 [node-4] received ACK from node-2 (node-4-1781852488830605000-5250585972425086708)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-1 -> node-5 ACK (node-5-1781852488830584000-8046488303693629933)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:28 [node-5] received ACK from node-1 (node-5-1781852488830584000-8046488303693629933)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] received PING from node-2 (node-2-1781852488830622000-5712064032626368314)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] acknowledging node-2 (node-2-1781852488830622000-5712064032626368314)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-2 -> node-1 ACK (node-1-1781852488830635000-7877664989187969359)
+[clusterpulse] 2026/06/19 12:31:28 [node-1] received ACK from node-2 (node-1-1781852488830635000-7877664989187969359)
+[clusterpulse] 2026/06/19 12:31:28 [router] node-1 -> node-2 ACK (node-2-1781852488830622000-5712064032626368314)
+[clusterpulse] 2026/06/19 12:31:28 [node-2] received ACK from node-1 (node-2-1781852488830622000-5712064032626368314)
+[clusterpulse] 2026/06/19 12:31:29 [node-2] probing node-4 (node-2-1781852489580194000-1118130134351917582)
+[clusterpulse] 2026/06/19 12:31:29 [node-4] probing node-5 (node-4-1781852489580213000-3357367356066318532)
+[clusterpulse] 2026/06/19 12:31:29 [node-1] probing node-2 (node-1-1781852489580244000-478777983133715894)
+[clusterpulse] 2026/06/19 12:31:29 [node-5] probing node-2 (node-5-1781852489580258000-4650429291372890327)
+[clusterpulse] 2026/06/19 12:31:29 [router] node-2 -> node-4 PING (node-2-1781852489580194000-1118130134351917582)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:29 [router] node-5 -> node-2 PING (node-5-1781852489580258000-4650429291372890327)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:29 [node-4] received PING from node-2 (node-2-1781852489580194000-1118130134351917582)
+[clusterpulse] 2026/06/19 12:31:29 [node-4] acknowledging node-2 (node-2-1781852489580194000-1118130134351917582)
+[clusterpulse] 2026/06/19 12:31:29 [router] node-1 -> node-2 PING (node-1-1781852489580244000-478777983133715894)
+[clusterpulse] 2026/06/19 12:31:29 [router] node-4 -> node-5 PING (node-4-1781852489580213000-3357367356066318532)
+[clusterpulse] 2026/06/19 12:31:29 [router] node-4 -> node-2 ACK (node-2-1781852489580194000-1118130134351917582)
+[clusterpulse] 2026/06/19 12:31:29 [node-2] received PING from node-5 (node-5-1781852489580258000-4650429291372890327)
+[clusterpulse] 2026/06/19 12:31:29 [node-2] acknowledging node-5 (node-5-1781852489580258000-4650429291372890327)
+merging updates for node  node-2  observed by  node-1
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:29 [node-2] received PING from node-1 (node-1-1781852489580244000-478777983133715894)
+[clusterpulse] 2026/06/19 12:31:29 [node-2] acknowledging node-1 (node-1-1781852489580244000-478777983133715894)
+[clusterpulse] 2026/06/19 12:31:29 [router] node-2 -> node-5 ACK (node-5-1781852489580258000-4650429291372890327)
+[clusterpulse] 2026/06/19 12:31:29 [router] node-2 -> node-1 ACK (node-1-1781852489580244000-478777983133715894)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:29 [node-1] received ACK from node-2 (node-1-1781852489580244000-478777983133715894)
+[clusterpulse] 2026/06/19 12:31:29 [node-5] received PING from node-4 (node-4-1781852489580213000-3357367356066318532)
+[clusterpulse] 2026/06/19 12:31:29 [node-5] acknowledging node-4 (node-4-1781852489580213000-3357367356066318532)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:29 [node-2] received ACK from node-4 (node-2-1781852489580194000-1118130134351917582)
+[clusterpulse] 2026/06/19 12:31:29 [node-5] received ACK from node-2 (node-5-1781852489580258000-4650429291372890327)
+[clusterpulse] 2026/06/19 12:31:29 [router] node-5 -> node-4 ACK (node-4-1781852489580213000-3357367356066318532)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:29 [node-4] received ACK from node-5 (node-4-1781852489580213000-3357367356066318532)
+[clusterpulse] 2026/06/19 12:31:30 [node-1] probing node-4 (node-1-1781852490330631000-8646752793940684987)
+[clusterpulse] 2026/06/19 12:31:30 [node-4] probing node-5 (node-4-1781852490330668000-3768734528962295291)
+[clusterpulse] 2026/06/19 12:31:30 [node-5] probing node-4 (node-5-1781852490330689000-1821911880145364031)
+[clusterpulse] 2026/06/19 12:31:30 [node-2] probing node-5 (node-2-1781852490330721000-7734018920803053901)
+[clusterpulse] 2026/06/19 12:31:30 [router] node-1 -> node-4 PING (node-1-1781852490330631000-8646752793940684987)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:30 [router] node-4 -> node-5 PING (node-4-1781852490330668000-3768734528962295291)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:30 [router] node-5 -> node-4 PING (node-5-1781852490330689000-1821911880145364031)
+[clusterpulse] 2026/06/19 12:31:30 [router] node-2 -> node-5 PING (node-2-1781852490330721000-7734018920803053901)
+[clusterpulse] 2026/06/19 12:31:30 [node-4] received PING from node-1 (node-1-1781852490330631000-8646752793940684987)
+[clusterpulse] 2026/06/19 12:31:30 [node-4] acknowledging node-1 (node-1-1781852490330631000-8646752793940684987)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:30 [node-5] received PING from node-4 (node-4-1781852490330668000-3768734528962295291)
+[clusterpulse] 2026/06/19 12:31:30 [node-5] acknowledging node-4 (node-4-1781852490330668000-3768734528962295291)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:30 [node-4] received PING from node-5 (node-5-1781852490330689000-1821911880145364031)
+[clusterpulse] 2026/06/19 12:31:30 [node-4] acknowledging node-5 (node-5-1781852490330689000-1821911880145364031)
+[clusterpulse] 2026/06/19 12:31:30 [router] node-4 -> node-1 ACK (node-1-1781852490330631000-8646752793940684987)
+[clusterpulse] 2026/06/19 12:31:30 [router] node-4 -> node-5 ACK (node-5-1781852490330689000-1821911880145364031)
+[clusterpulse] 2026/06/19 12:31:30 [router] node-5 -> node-4 ACK (node-4-1781852490330668000-3768734528962295291)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:30 [node-4] received ACK from node-5 (node-4-1781852490330668000-3768734528962295291)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:30 [node-5] received PING from node-2 (node-2-1781852490330721000-7734018920803053901)
+[clusterpulse] 2026/06/19 12:31:30 [node-5] acknowledging node-2 (node-2-1781852490330721000-7734018920803053901)
+[clusterpulse] 2026/06/19 12:31:30 [node-1] received ACK from node-4 (node-1-1781852490330631000-8646752793940684987)
+[clusterpulse] 2026/06/19 12:31:30 [node-5] received ACK from node-4 (node-5-1781852490330689000-1821911880145364031)
+[clusterpulse] 2026/06/19 12:31:30 [router] node-5 -> node-2 ACK (node-2-1781852490330721000-7734018920803053901)
+[clusterpulse] 2026/06/19 12:31:30 [node-2] received ACK from node-5 (node-2-1781852490330721000-7734018920803053901)
+[clusterpulse] 2026/06/19 12:31:31 [node-5] probing node-4 (node-5-1781852491080650000-78043001296728659)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] probing node-2 (node-1-1781852491080731000-2104151202431646199)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-5 -> node-4 PING (node-5-1781852491080650000-78043001296728659)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-1 -> node-2 PING (node-1-1781852491080731000-2104151202431646199)
+[clusterpulse] 2026/06/19 12:31:31 [node-2] probing node-1 (node-2-1781852491080691000-760401300273076657)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:31 [node-4] probing node-2 (node-4-1781852491080709000-3550492751911814845)
+[clusterpulse] 2026/06/19 12:31:31 [node-2] received PING from node-1 (node-1-1781852491080731000-2104151202431646199)
+[clusterpulse] 2026/06/19 12:31:31 [node-2] acknowledging node-1 (node-1-1781852491080731000-2104151202431646199)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-2 -> node-1 PING (node-2-1781852491080691000-760401300273076657)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:31 [router] node-2 -> node-1 ACK (node-1-1781852491080731000-2104151202431646199)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-4 -> node-2 PING (node-4-1781852491080709000-3550492751911814845)
+merging updates for node  node-1  observed by  node-2
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:31 [node-4] received PING from node-5 (node-5-1781852491080650000-78043001296728659)
+[clusterpulse] 2026/06/19 12:31:31 [node-4] acknowledging node-5 (node-5-1781852491080650000-78043001296728659)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-4 -> node-5 ACK (node-5-1781852491080650000-78043001296728659)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:31 [node-5] received ACK from node-4 (node-5-1781852491080650000-78043001296728659)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] received PING from node-2 (node-2-1781852491080691000-760401300273076657)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] acknowledging node-2 (node-2-1781852491080691000-760401300273076657)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:31 [node-2] received PING from node-4 (node-4-1781852491080709000-3550492751911814845)
+[clusterpulse] 2026/06/19 12:31:31 [node-2] acknowledging node-4 (node-4-1781852491080709000-3550492751911814845)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-2 -> node-4 ACK (node-4-1781852491080709000-3550492751911814845)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-1 -> node-2 ACK (node-2-1781852491080691000-760401300273076657)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:31 [node-1] received ACK from node-2 (node-1-1781852491080731000-2104151202431646199)
+[clusterpulse] 2026/06/19 12:31:31 [node-4] received ACK from node-2 (node-4-1781852491080709000-3550492751911814845)
+[clusterpulse] 2026/06/19 12:31:31 [node-2] received ACK from node-1 (node-2-1781852491080691000-760401300273076657)
+[clusterpulse] 2026/06/19 12:31:31 [node-4] probing node-1 (node-4-1781852491830209000-5776760236691274902)
+[clusterpulse] 2026/06/19 12:31:31 [node-2] probing node-5 (node-2-1781852491830222000-2322409804123616019)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] probing node-2 (node-1-1781852491830241000-9132108345359644255)
+[clusterpulse] 2026/06/19 12:31:31 [node-5] probing node-1 (node-5-1781852491830255000-6909752738521510717)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-4 -> node-1 PING (node-4-1781852491830209000-5776760236691274902)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:31 [router] node-2 -> node-5 PING (node-2-1781852491830222000-2322409804123616019)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:31 [node-5] received PING from node-2 (node-2-1781852491830222000-2322409804123616019)
+[clusterpulse] 2026/06/19 12:31:31 [node-5] acknowledging node-2 (node-2-1781852491830222000-2322409804123616019)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-1 -> node-2 PING (node-1-1781852491830241000-9132108345359644255)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:31 [router] node-5 -> node-1 PING (node-5-1781852491830255000-6909752738521510717)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-5 -> node-2 ACK (node-2-1781852491830222000-2322409804123616019)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] received PING from node-4 (node-4-1781852491830209000-5776760236691274902)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] acknowledging node-4 (node-4-1781852491830209000-5776760236691274902)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:31 [node-2] received PING from node-1 (node-1-1781852491830241000-9132108345359644255)
+[clusterpulse] 2026/06/19 12:31:31 [node-2] acknowledging node-1 (node-1-1781852491830241000-9132108345359644255)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:31 [router] node-1 -> node-4 ACK (node-4-1781852491830209000-5776760236691274902)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] received PING from node-5 (node-5-1781852491830255000-6909752738521510717)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] acknowledging node-5 (node-5-1781852491830255000-6909752738521510717)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-1 -> node-5 ACK (node-5-1781852491830255000-6909752738521510717)
+[clusterpulse] 2026/06/19 12:31:31 [node-5] received ACK from node-1 (node-5-1781852491830255000-6909752738521510717)
+[clusterpulse] 2026/06/19 12:31:31 [router] node-2 -> node-1 ACK (node-1-1781852491830241000-9132108345359644255)
+merging updates for node  node-1  observed by  node-2
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:31 [node-2] received ACK from node-5 (node-2-1781852491830222000-2322409804123616019)
+[clusterpulse] 2026/06/19 12:31:31 [node-1] received ACK from node-2 (node-1-1781852491830241000-9132108345359644255)
+[clusterpulse] 2026/06/19 12:31:31 [node-4] received ACK from node-1 (node-4-1781852491830209000-5776760236691274902)
+[clusterpulse] 2026/06/19 12:31:32 [node-1] probing node-2 (node-1-1781852492580661000-497823513669486836)
+[clusterpulse] 2026/06/19 12:31:32 [node-5] probing node-4 (node-5-1781852492580651000-8021594081668008736)
+[clusterpulse] 2026/06/19 12:31:32 [node-2] probing node-4 (node-2-1781852492580671000-7952576746302115665)
+[clusterpulse] 2026/06/19 12:31:32 [node-4] probing node-1 (node-4-1781852492580680000-1837899332516673009)
+[clusterpulse] 2026/06/19 12:31:32 [router] node-1 -> node-2 PING (node-1-1781852492580661000-497823513669486836)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:32 [router] node-5 -> node-4 PING (node-5-1781852492580651000-8021594081668008736)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:32 [router] node-2 -> node-4 PING (node-2-1781852492580671000-7952576746302115665)
+[clusterpulse] 2026/06/19 12:31:32 [router] node-4 -> node-1 PING (node-4-1781852492580680000-1837899332516673009)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:32 [node-1] received PING from node-4 (node-4-1781852492580680000-1837899332516673009)
+[clusterpulse] 2026/06/19 12:31:32 [node-1] acknowledging node-4 (node-4-1781852492580680000-1837899332516673009)
+[clusterpulse] 2026/06/19 12:31:32 [router] node-1 -> node-4 ACK (node-4-1781852492580680000-1837899332516673009)
+[clusterpulse] 2026/06/19 12:31:32 [node-2] received PING from node-1 (node-1-1781852492580661000-497823513669486836)
+[clusterpulse] 2026/06/19 12:31:32 [node-2] acknowledging node-1 (node-1-1781852492580661000-497823513669486836)
+[clusterpulse] 2026/06/19 12:31:32 [node-4] received PING from node-5 (node-5-1781852492580651000-8021594081668008736)
+[clusterpulse] 2026/06/19 12:31:32 [node-4] acknowledging node-5 (node-5-1781852492580651000-8021594081668008736)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:32 [router] node-2 -> node-1 ACK (node-1-1781852492580661000-497823513669486836)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:32 [node-1] received ACK from node-2 (node-1-1781852492580661000-497823513669486836)
+[clusterpulse] 2026/06/19 12:31:32 [router] node-4 -> node-5 ACK (node-5-1781852492580651000-8021594081668008736)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:32 [node-4] received PING from node-2 (node-2-1781852492580671000-7952576746302115665)
+[clusterpulse] 2026/06/19 12:31:32 [node-4] acknowledging node-2 (node-2-1781852492580671000-7952576746302115665)
+[clusterpulse] 2026/06/19 12:31:32 [node-5] received ACK from node-4 (node-5-1781852492580651000-8021594081668008736)
+[clusterpulse] 2026/06/19 12:31:32 [router] node-4 -> node-2 ACK (node-2-1781852492580671000-7952576746302115665)
+[clusterpulse] 2026/06/19 12:31:32 [node-2] received ACK from node-4 (node-2-1781852492580671000-7952576746302115665)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:32 [node-4] received ACK from node-1 (node-4-1781852492580680000-1837899332516673009)
+[clusterpulse] 2026/06/19 12:31:33 [node-4] probing node-2 (node-4-1781852493330645000-3029760241735044754)
+[clusterpulse] 2026/06/19 12:31:33 [node-2] probing node-4 (node-2-1781852493330661000-5887820713936076705)
+[clusterpulse] 2026/06/19 12:31:33 [node-1] probing node-2 (node-1-1781852493330689000-6204232515663023620)
+[clusterpulse] 2026/06/19 12:31:33 [node-5] probing node-1 (node-5-1781852493330685000-6359146729519587085)
+[clusterpulse] 2026/06/19 12:31:33 [router] node-4 -> node-2 PING (node-4-1781852493330645000-3029760241735044754)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:33 [router] node-1 -> node-2 PING (node-1-1781852493330689000-6204232515663023620)
+[clusterpulse] 2026/06/19 12:31:33 [node-2] received PING from node-4 (node-4-1781852493330645000-3029760241735044754)
+[clusterpulse] 2026/06/19 12:31:33 [node-2] acknowledging node-4 (node-4-1781852493330645000-3029760241735044754)
+[clusterpulse] 2026/06/19 12:31:33 [router] node-2 -> node-4 PING (node-2-1781852493330661000-5887820713936076705)
+[clusterpulse] 2026/06/19 12:31:33 [router] node-2 -> node-4 ACK (node-4-1781852493330645000-3029760241735044754)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:33 [router] node-5 -> node-1 PING (node-5-1781852493330685000-6359146729519587085)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:33 [node-1] received PING from node-5 (node-5-1781852493330685000-6359146729519587085)
+[clusterpulse] 2026/06/19 12:31:33 [node-4] received PING from node-2 (node-2-1781852493330661000-5887820713936076705)
+[clusterpulse] 2026/06/19 12:31:33 [node-4] acknowledging node-2 (node-2-1781852493330661000-5887820713936076705)
+merging updates for node  node-4  observed by  node-2
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:33 [node-1] acknowledging node-5 (node-5-1781852493330685000-6359146729519587085)
+[clusterpulse] 2026/06/19 12:31:33 [router] node-1 -> node-5 ACK (node-5-1781852493330685000-6359146729519587085)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:33 [node-4] received ACK from node-2 (node-4-1781852493330645000-3029760241735044754)
+[clusterpulse] 2026/06/19 12:31:33 [router] node-4 -> node-2 ACK (node-2-1781852493330661000-5887820713936076705)
+[clusterpulse] 2026/06/19 12:31:33 [node-2] received PING from node-1 (node-1-1781852493330689000-6204232515663023620)
+[clusterpulse] 2026/06/19 12:31:33 [node-2] acknowledging node-1 (node-1-1781852493330689000-6204232515663023620)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:33 [node-2] received ACK from node-4 (node-2-1781852493330661000-5887820713936076705)
+[clusterpulse] 2026/06/19 12:31:33 [node-5] received ACK from node-1 (node-5-1781852493330685000-6359146729519587085)
+[clusterpulse] 2026/06/19 12:31:33 [router] node-2 -> node-1 ACK (node-1-1781852493330689000-6204232515663023620)
+[clusterpulse] 2026/06/19 12:31:33 [node-1] received ACK from node-2 (node-1-1781852493330689000-6204232515663023620)
+[clusterpulse] 2026/06/19 12:31:34 [node-5] probing node-4 (node-5-1781852494080659000-7423528212591950445)
+[clusterpulse] 2026/06/19 12:31:34 [node-2] probing node-4 (node-2-1781852494080691000-5444552673543882093)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] probing node-5 (node-4-1781852494080700000-5100280472731076560)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-2 -> node-4 PING (node-2-1781852494080691000-5444552673543882093)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:34 [node-1] probing node-2 (node-1-1781852494080704000-91785897596408373)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-5 -> node-4 PING (node-5-1781852494080659000-7423528212591950445)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-4 -> node-5 PING (node-4-1781852494080700000-5100280472731076560)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:34 [router] node-1 -> node-2 PING (node-1-1781852494080704000-91785897596408373)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:34 [node-2] received PING from node-1 (node-1-1781852494080704000-91785897596408373)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] received PING from node-2 (node-2-1781852494080691000-5444552673543882093)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] acknowledging node-2 (node-2-1781852494080691000-5444552673543882093)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:34 [node-5] received PING from node-4 (node-4-1781852494080700000-5100280472731076560)
+[clusterpulse] 2026/06/19 12:31:34 [node-5] acknowledging node-4 (node-4-1781852494080700000-5100280472731076560)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-5 -> node-4 ACK (node-4-1781852494080700000-5100280472731076560)
+[clusterpulse] 2026/06/19 12:31:34 [node-2] acknowledging node-1 (node-1-1781852494080704000-91785897596408373)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-2 -> node-1 ACK (node-1-1781852494080704000-91785897596408373)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:34 [node-1] received ACK from node-2 (node-1-1781852494080704000-91785897596408373)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-4 -> node-2 ACK (node-2-1781852494080691000-5444552673543882093)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:34 [node-4] received PING from node-5 (node-5-1781852494080659000-7423528212591950445)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] acknowledging node-5 (node-5-1781852494080659000-7423528212591950445)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:34 [node-4] received ACK from node-5 (node-4-1781852494080700000-5100280472731076560)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-4 -> node-5 ACK (node-5-1781852494080659000-7423528212591950445)
+[clusterpulse] 2026/06/19 12:31:34 [node-5] received ACK from node-4 (node-5-1781852494080659000-7423528212591950445)
+[clusterpulse] 2026/06/19 12:31:34 [node-2] received ACK from node-4 (node-2-1781852494080691000-5444552673543882093)
+[clusterpulse] 2026/06/19 12:31:34 [node-1] probing node-4 (node-1-1781852494830054000-401647992703387264)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] probing node-2 (node-4-1781852494830088000-4507177740053586084)
+[clusterpulse] 2026/06/19 12:31:34 [node-5] probing node-4 (node-5-1781852494830128000-7998644389197929328)
+[clusterpulse] 2026/06/19 12:31:34 [node-2] probing node-5 (node-2-1781852494830130000-7085125548515721848)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-1 -> node-4 PING (node-1-1781852494830054000-401647992703387264)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-4 -> node-2 PING (node-4-1781852494830088000-4507177740053586084)
+merging updates for node  node-2  observed by  node-4
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:34 [node-2] received PING from node-4 (node-4-1781852494830088000-4507177740053586084)
+[clusterpulse] 2026/06/19 12:31:34 [node-2] acknowledging node-4 (node-4-1781852494830088000-4507177740053586084)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-5 -> node-4 PING (node-5-1781852494830128000-7998644389197929328)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-2 -> node-5 PING (node-2-1781852494830130000-7085125548515721848)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-2 -> node-4 ACK (node-4-1781852494830088000-4507177740053586084)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] received PING from node-1 (node-1-1781852494830054000-401647992703387264)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] acknowledging node-1 (node-1-1781852494830054000-401647992703387264)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:34 [node-4] received PING from node-5 (node-5-1781852494830128000-7998644389197929328)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-4 -> node-1 ACK (node-1-1781852494830054000-401647992703387264)
+merging updates for node  node-1  observed by  node-4
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:34 [node-4] acknowledging node-5 (node-5-1781852494830128000-7998644389197929328)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:34 [node-1] received ACK from node-4 (node-1-1781852494830054000-401647992703387264)
+[clusterpulse] 2026/06/19 12:31:34 [node-5] received PING from node-2 (node-2-1781852494830130000-7085125548515721848)
+[clusterpulse] 2026/06/19 12:31:34 [node-5] acknowledging node-2 (node-2-1781852494830130000-7085125548515721848)
+[clusterpulse] 2026/06/19 12:31:34 [node-4] received ACK from node-2 (node-4-1781852494830088000-4507177740053586084)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-4 -> node-5 ACK (node-5-1781852494830128000-7998644389197929328)
+[clusterpulse] 2026/06/19 12:31:34 [node-5] received ACK from node-4 (node-5-1781852494830128000-7998644389197929328)
+[clusterpulse] 2026/06/19 12:31:34 [router] node-5 -> node-2 ACK (node-2-1781852494830130000-7085125548515721848)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:34 [node-2] received ACK from node-5 (node-2-1781852494830130000-7085125548515721848)
+[clusterpulse] 2026/06/19 12:31:35 [node-4] probing node-5 (node-4-1781852495580696000-3713353566488380753)
+[clusterpulse] 2026/06/19 12:31:35 [node-2] probing node-1 (node-2-1781852495580712000-6615749478991299300)
+[clusterpulse] 2026/06/19 12:31:35 [node-5] probing node-2 (node-5-1781852495580730000-7386473105687861527)
+[clusterpulse] 2026/06/19 12:31:35 [node-1] probing node-4 (node-1-1781852495580737000-3538741455667999016)
+[clusterpulse] 2026/06/19 12:31:35 [router] node-4 -> node-5 PING (node-4-1781852495580696000-3713353566488380753)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:35 [router] node-2 -> node-1 PING (node-2-1781852495580712000-6615749478991299300)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:35 [router] node-5 -> node-2 PING (node-5-1781852495580730000-7386473105687861527)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:35 [router] node-1 -> node-4 PING (node-1-1781852495580737000-3538741455667999016)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:35 [node-4] received PING from node-1 (node-1-1781852495580737000-3538741455667999016)
+[clusterpulse] 2026/06/19 12:31:35 [node-4] acknowledging node-1 (node-1-1781852495580737000-3538741455667999016)
+[clusterpulse] 2026/06/19 12:31:35 [router] node-4 -> node-1 ACK (node-1-1781852495580737000-3538741455667999016)
+[clusterpulse] 2026/06/19 12:31:35 [node-5] received PING from node-4 (node-4-1781852495580696000-3713353566488380753)
+[clusterpulse] 2026/06/19 12:31:35 [node-5] acknowledging node-4 (node-4-1781852495580696000-3713353566488380753)
+[clusterpulse] 2026/06/19 12:31:35 [router] node-5 -> node-4 ACK (node-4-1781852495580696000-3713353566488380753)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:35 [node-4] received ACK from node-5 (node-4-1781852495580696000-3713353566488380753)
+[clusterpulse] 2026/06/19 12:31:35 [node-1] received PING from node-2 (node-2-1781852495580712000-6615749478991299300)
+[clusterpulse] 2026/06/19 12:31:35 [node-1] acknowledging node-2 (node-2-1781852495580712000-6615749478991299300)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:35 [node-2] received PING from node-5 (node-5-1781852495580730000-7386473105687861527)
+[clusterpulse] 2026/06/19 12:31:35 [node-2] acknowledging node-5 (node-5-1781852495580730000-7386473105687861527)
+[clusterpulse] 2026/06/19 12:31:35 [router] node-2 -> node-5 ACK (node-5-1781852495580730000-7386473105687861527)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:35 [node-1] received ACK from node-4 (node-1-1781852495580737000-3538741455667999016)
+[clusterpulse] 2026/06/19 12:31:35 [router] node-1 -> node-2 ACK (node-2-1781852495580712000-6615749478991299300)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:35 [node-5] received ACK from node-2 (node-5-1781852495580730000-7386473105687861527)
+[clusterpulse] 2026/06/19 12:31:35 [node-2] received ACK from node-1 (node-2-1781852495580712000-6615749478991299300)
+[clusterpulse] 2026/06/19 12:31:36 [node-5] probing node-4 (node-5-1781852496330269000-7620801700754818050)
+[clusterpulse] 2026/06/19 12:31:36 [node-2] probing node-1 (node-2-1781852496330282000-2050022491766467374)
+[clusterpulse] 2026/06/19 12:31:36 [node-1] probing node-2 (node-1-1781852496330336000-2167252724280170931)
+[clusterpulse] 2026/06/19 12:31:36 [node-4] probing node-5 (node-4-1781852496330351000-4194759183729143633)
+[clusterpulse] 2026/06/19 12:31:36 [router] node-5 -> node-4 PING (node-5-1781852496330269000-7620801700754818050)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:36 [router] node-2 -> node-1 PING (node-2-1781852496330282000-2050022491766467374)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:36 [router] node-1 -> node-2 PING (node-1-1781852496330336000-2167252724280170931)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:36 [router] node-4 -> node-5 PING (node-4-1781852496330351000-4194759183729143633)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:36 [node-4] received PING from node-5 (node-5-1781852496330269000-7620801700754818050)
+[clusterpulse] 2026/06/19 12:31:36 [node-4] acknowledging node-5 (node-5-1781852496330269000-7620801700754818050)
+[clusterpulse] 2026/06/19 12:31:36 [node-1] received PING from node-2 (node-2-1781852496330282000-2050022491766467374)
+[clusterpulse] 2026/06/19 12:31:36 [node-1] acknowledging node-2 (node-2-1781852496330282000-2050022491766467374)
+[clusterpulse] 2026/06/19 12:31:36 [router] node-1 -> node-2 ACK (node-2-1781852496330282000-2050022491766467374)
+[clusterpulse] 2026/06/19 12:31:36 [node-2] received PING from node-1 (node-1-1781852496330336000-2167252724280170931)
+[clusterpulse] 2026/06/19 12:31:36 [node-2] acknowledging node-1 (node-1-1781852496330336000-2167252724280170931)
+[clusterpulse] 2026/06/19 12:31:36 [node-5] received PING from node-4 (node-4-1781852496330351000-4194759183729143633)
+[clusterpulse] 2026/06/19 12:31:36 [node-5] acknowledging node-4 (node-4-1781852496330351000-4194759183729143633)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:36 [router] node-5 -> node-4 ACK (node-4-1781852496330351000-4194759183729143633)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:36 [router] node-4 -> node-5 ACK (node-5-1781852496330269000-7620801700754818050)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:36 [router] node-2 -> node-1 ACK (node-1-1781852496330336000-2167252724280170931)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:36 [node-2] received ACK from node-1 (node-2-1781852496330282000-2050022491766467374)
+[clusterpulse] 2026/06/19 12:31:36 [node-4] received ACK from node-5 (node-4-1781852496330351000-4194759183729143633)
+[clusterpulse] 2026/06/19 12:31:36 [node-5] received ACK from node-4 (node-5-1781852496330269000-7620801700754818050)
+[clusterpulse] 2026/06/19 12:31:36 [node-1] received ACK from node-2 (node-1-1781852496330336000-2167252724280170931)
+[clusterpulse] 2026/06/19 12:31:37 [node-4] probing node-1 (node-4-1781852497080707000-6352858636980186415)
+[clusterpulse] 2026/06/19 12:31:37 [node-2] probing node-5 (node-2-1781852497080723000-8564805727967520203)
+[clusterpulse] 2026/06/19 12:31:37 [node-1] probing node-2 (node-1-1781852497080737000-363748767597306518)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] probing node-4 (node-5-1781852497080754000-4723572077722024598)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-4 -> node-1 PING (node-4-1781852497080707000-6352858636980186415)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:37 [router] node-2 -> node-5 PING (node-2-1781852497080723000-8564805727967520203)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:37 [router] node-1 -> node-2 PING (node-1-1781852497080737000-363748767597306518)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:37 [node-2] received PING from node-1 (node-1-1781852497080737000-363748767597306518)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-5 -> node-4 PING (node-5-1781852497080754000-4723572077722024598)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:37 [node-1] received PING from node-4 (node-4-1781852497080707000-6352858636980186415)
+[clusterpulse] 2026/06/19 12:31:37 [node-1] acknowledging node-4 (node-4-1781852497080707000-6352858636980186415)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] received PING from node-2 (node-2-1781852497080723000-8564805727967520203)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] acknowledging node-2 (node-2-1781852497080723000-8564805727967520203)
+[clusterpulse] 2026/06/19 12:31:37 [node-2] acknowledging node-1 (node-1-1781852497080737000-363748767597306518)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-2 -> node-1 ACK (node-1-1781852497080737000-363748767597306518)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:37 [node-4] received PING from node-5 (node-5-1781852497080754000-4723572077722024598)
+[clusterpulse] 2026/06/19 12:31:37 [node-4] acknowledging node-5 (node-5-1781852497080754000-4723572077722024598)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-4 -> node-5 ACK (node-5-1781852497080754000-4723572077722024598)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:37 [router] node-1 -> node-4 ACK (node-4-1781852497080707000-6352858636980186415)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:37 [node-4] received ACK from node-1 (node-4-1781852497080707000-6352858636980186415)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-5 -> node-2 ACK (node-2-1781852497080723000-8564805727967520203)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:37 [node-2] received ACK from node-5 (node-2-1781852497080723000-8564805727967520203)
+[clusterpulse] 2026/06/19 12:31:37 [node-1] received ACK from node-2 (node-1-1781852497080737000-363748767597306518)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] received ACK from node-4 (node-5-1781852497080754000-4723572077722024598)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] probing node-1 (node-5-1781852497830752000-8279147324380550254)
+[clusterpulse] 2026/06/19 12:31:37 [node-1] probing node-2 (node-1-1781852497830767000-5105374422588191385)
+[clusterpulse] 2026/06/19 12:31:37 [node-2] probing node-5 (node-2-1781852497830783000-2719746497853017272)
+[clusterpulse] 2026/06/19 12:31:37 [node-4] probing node-5 (node-4-1781852497830794000-5527673901798213566)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-2 -> node-5 PING (node-2-1781852497830783000-2719746497853017272)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:37 [router] node-5 -> node-1 PING (node-5-1781852497830752000-8279147324380550254)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:37 [router] node-1 -> node-2 PING (node-1-1781852497830767000-5105374422588191385)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:37 [node-2] received PING from node-1 (node-1-1781852497830767000-5105374422588191385)
+[clusterpulse] 2026/06/19 12:31:37 [node-2] acknowledging node-1 (node-1-1781852497830767000-5105374422588191385)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-2 -> node-1 ACK (node-1-1781852497830767000-5105374422588191385)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-4 -> node-5 PING (node-4-1781852497830794000-5527673901798213566)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] received PING from node-2 (node-2-1781852497830783000-2719746497853017272)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] acknowledging node-2 (node-2-1781852497830783000-2719746497853017272)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:37 [node-5] received PING from node-4 (node-4-1781852497830794000-5527673901798213566)
+[clusterpulse] 2026/06/19 12:31:37 [node-5] acknowledging node-4 (node-4-1781852497830794000-5527673901798213566)
+[clusterpulse] 2026/06/19 12:31:37 [node-1] received PING from node-5 (node-5-1781852497830752000-8279147324380550254)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-5 -> node-2 ACK (node-2-1781852497830783000-2719746497853017272)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-5 -> node-4 ACK (node-4-1781852497830794000-5527673901798213566)
+[clusterpulse] 2026/06/19 12:31:37 [node-4] received ACK from node-5 (node-4-1781852497830794000-5527673901798213566)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:37 [node-1] acknowledging node-5 (node-5-1781852497830752000-8279147324380550254)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:37 [node-1] received ACK from node-2 (node-1-1781852497830767000-5105374422588191385)
+[clusterpulse] 2026/06/19 12:31:37 [node-2] received ACK from node-5 (node-2-1781852497830783000-2719746497853017272)
+[clusterpulse] 2026/06/19 12:31:37 [router] node-1 -> node-5 ACK (node-5-1781852497830752000-8279147324380550254)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:37 [node-5] received ACK from node-1 (node-5-1781852497830752000-8279147324380550254)
+[clusterpulse] 2026/06/19 12:31:38 [node-5] probing node-1 (node-5-1781852498580189000-4999106344076987685)
+[clusterpulse] 2026/06/19 12:31:38 [node-2] probing node-5 (node-2-1781852498580214000-8168195891392434749)
+[clusterpulse] 2026/06/19 12:31:38 [node-1] probing node-2 (node-1-1781852498580229000-2118005648263589247)
+[clusterpulse] 2026/06/19 12:31:38 [router] node-2 -> node-5 PING (node-2-1781852498580214000-8168195891392434749)
+[clusterpulse] 2026/06/19 12:31:38 [node-4] probing node-5 (node-4-1781852498580273000-6832814228498647592)
+[clusterpulse] 2026/06/19 12:31:38 [router] node-5 -> node-1 PING (node-5-1781852498580189000-4999106344076987685)
+merging updates for node  node-1  observed by  node-5
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:38 [router] node-1 -> node-2 PING (node-1-1781852498580229000-2118005648263589247)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:38 [router] node-4 -> node-5 PING (node-4-1781852498580273000-6832814228498647592)
+[clusterpulse] 2026/06/19 12:31:38 [node-1] received PING from node-5 (node-5-1781852498580189000-4999106344076987685)
+[clusterpulse] 2026/06/19 12:31:38 [node-1] acknowledging node-5 (node-5-1781852498580189000-4999106344076987685)
+[clusterpulse] 2026/06/19 12:31:38 [node-5] received PING from node-2 (node-2-1781852498580214000-8168195891392434749)
+[clusterpulse] 2026/06/19 12:31:38 [node-5] acknowledging node-2 (node-2-1781852498580214000-8168195891392434749)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:38 [router] node-1 -> node-5 ACK (node-5-1781852498580189000-4999106344076987685)
+[clusterpulse] 2026/06/19 12:31:38 [node-2] received PING from node-1 (node-1-1781852498580229000-2118005648263589247)
+[clusterpulse] 2026/06/19 12:31:38 [node-2] acknowledging node-1 (node-1-1781852498580229000-2118005648263589247)
+[clusterpulse] 2026/06/19 12:31:38 [router] node-2 -> node-1 ACK (node-1-1781852498580229000-2118005648263589247)
+[clusterpulse] 2026/06/19 12:31:38 [node-5] received PING from node-4 (node-4-1781852498580273000-6832814228498647592)
+[clusterpulse] 2026/06/19 12:31:38 [node-5] acknowledging node-4 (node-4-1781852498580273000-6832814228498647592)
+[clusterpulse] 2026/06/19 12:31:38 [router] node-5 -> node-2 ACK (node-2-1781852498580214000-8168195891392434749)
+[clusterpulse] 2026/06/19 12:31:38 [router] node-5 -> node-4 ACK (node-4-1781852498580273000-6832814228498647592)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:38 [node-4] received ACK from node-5 (node-4-1781852498580273000-6832814228498647592)
+[clusterpulse] 2026/06/19 12:31:38 [node-5] received ACK from node-1 (node-5-1781852498580189000-4999106344076987685)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:38 [node-1] received ACK from node-2 (node-1-1781852498580229000-2118005648263589247)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:38 [node-2] received ACK from node-5 (node-2-1781852498580214000-8168195891392434749)
+[clusterpulse] 2026/06/19 12:31:39 [node-4] probing node-5 (node-4-1781852499330759000-6326163356565077651)
+[clusterpulse] 2026/06/19 12:31:39 [node-2] probing node-5 (node-2-1781852499330773000-3143786668351939695)
+[clusterpulse] 2026/06/19 12:31:39 [node-5] probing node-4 (node-5-1781852499330798000-6801850089564912417)
+[clusterpulse] 2026/06/19 12:31:39 [router] node-2 -> node-5 PING (node-2-1781852499330773000-3143786668351939695)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:39 [node-1] probing node-5 (node-1-1781852499330842000-4517305022164520953)
+[clusterpulse] 2026/06/19 12:31:39 [router] node-4 -> node-5 PING (node-4-1781852499330759000-6326163356565077651)
+[clusterpulse] 2026/06/19 12:31:39 [router] node-5 -> node-4 PING (node-5-1781852499330798000-6801850089564912417)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:39 [node-5] received PING from node-2 (node-2-1781852499330773000-3143786668351939695)
+[clusterpulse] 2026/06/19 12:31:39 [node-5] acknowledging node-2 (node-2-1781852499330773000-3143786668351939695)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:39 [router] node-1 -> node-5 PING (node-1-1781852499330842000-4517305022164520953)
+[clusterpulse] 2026/06/19 12:31:39 [node-4] received PING from node-5 (node-5-1781852499330798000-6801850089564912417)
+[clusterpulse] 2026/06/19 12:31:39 [node-4] acknowledging node-5 (node-5-1781852499330798000-6801850089564912417)
+[clusterpulse] 2026/06/19 12:31:39 [router] node-4 -> node-5 ACK (node-5-1781852499330798000-6801850089564912417)
+[clusterpulse] 2026/06/19 12:31:39 [node-5] received PING from node-4 (node-4-1781852499330759000-6326163356565077651)
+[clusterpulse] 2026/06/19 12:31:39 [node-5] acknowledging node-4 (node-4-1781852499330759000-6326163356565077651)
+[clusterpulse] 2026/06/19 12:31:39 [router] node-5 -> node-2 ACK (node-2-1781852499330773000-3143786668351939695)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:39 [router] node-5 -> node-4 ACK (node-4-1781852499330759000-6326163356565077651)
+[clusterpulse] 2026/06/19 12:31:39 [node-4] received ACK from node-5 (node-4-1781852499330759000-6326163356565077651)
+[clusterpulse] 2026/06/19 12:31:39 [node-5] received PING from node-1 (node-1-1781852499330842000-4517305022164520953)
+[clusterpulse] 2026/06/19 12:31:39 [node-5] acknowledging node-1 (node-1-1781852499330842000-4517305022164520953)
+merging updates for node  node-2  observed by  node-5
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:39 [router] node-5 -> node-1 ACK (node-1-1781852499330842000-4517305022164520953)
+[clusterpulse] 2026/06/19 12:31:39 [node-1] received ACK from node-5 (node-1-1781852499330842000-4517305022164520953)
+[clusterpulse] 2026/06/19 12:31:39 [node-2] received ACK from node-5 (node-2-1781852499330773000-3143786668351939695)
+[clusterpulse] 2026/06/19 12:31:39 [node-5] received ACK from node-4 (node-5-1781852499330798000-6801850089564912417)
+[clusterpulse] 2026/06/19 12:31:40 [node-1] probing node-4 (node-1-1781852500080789000-7000999714131682572)
+[clusterpulse] 2026/06/19 12:31:40 [node-2] probing node-1 (node-2-1781852500080887000-7338403214008096285)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] probing node-2 (node-4-1781852500080924000-6391204051906320870)
+[clusterpulse] 2026/06/19 12:31:40 [node-5] probing node-2 (node-5-1781852500080937000-8835387215234287435)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-1 -> node-4 PING (node-1-1781852500080789000-7000999714131682572)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:40 [router] node-2 -> node-1 PING (node-2-1781852500080887000-7338403214008096285)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:40 [router] node-4 -> node-2 PING (node-4-1781852500080924000-6391204051906320870)
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:40 [router] node-5 -> node-2 PING (node-5-1781852500080937000-8835387215234287435)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] received PING from node-1 (node-1-1781852500080789000-7000999714131682572)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] acknowledging node-1 (node-1-1781852500080789000-7000999714131682572)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-4 -> node-1 ACK (node-1-1781852500080789000-7000999714131682572)
+[clusterpulse] 2026/06/19 12:31:40 [node-1] received PING from node-2 (node-2-1781852500080887000-7338403214008096285)
+[clusterpulse] 2026/06/19 12:31:40 [node-1] acknowledging node-2 (node-2-1781852500080887000-7338403214008096285)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:40 [node-2] received PING from node-4 (node-4-1781852500080924000-6391204051906320870)
+[clusterpulse] 2026/06/19 12:31:40 [node-2] acknowledging node-4 (node-4-1781852500080924000-6391204051906320870)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:40 [router] node-1 -> node-2 ACK (node-2-1781852500080887000-7338403214008096285)
+[clusterpulse] 2026/06/19 12:31:40 [node-1] received ACK from node-4 (node-1-1781852500080789000-7000999714131682572)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-2 -> node-4 ACK (node-4-1781852500080924000-6391204051906320870)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:40 [node-2] received PING from node-5 (node-5-1781852500080937000-8835387215234287435)
+[clusterpulse] 2026/06/19 12:31:40 [node-2] acknowledging node-5 (node-5-1781852500080937000-8835387215234287435)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:40 [node-4] received ACK from node-2 (node-4-1781852500080924000-6391204051906320870)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-2 -> node-5 ACK (node-5-1781852500080937000-8835387215234287435)
+[clusterpulse] 2026/06/19 12:31:40 [node-5] received ACK from node-2 (node-5-1781852500080937000-8835387215234287435)
+[clusterpulse] 2026/06/19 12:31:40 [node-2] received ACK from node-1 (node-2-1781852500080887000-7338403214008096285)
+[clusterpulse] 2026/06/19 12:31:40 [node-5] probing node-4 (node-5-1781852500830246000-4128634670414734662)
+[clusterpulse] 2026/06/19 12:31:40 [node-2] probing node-4 (node-2-1781852500830264000-5781716900846338086)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] probing node-1 (node-4-1781852500830282000-7571988526920448286)
+[clusterpulse] 2026/06/19 12:31:40 [node-1] probing node-2 (node-1-1781852500830294000-4663073411506017807)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-5 -> node-4 PING (node-5-1781852500830246000-4128634670414734662)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:40 [router] node-2 -> node-4 PING (node-2-1781852500830264000-5781716900846338086)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-4 -> node-1 PING (node-4-1781852500830282000-7571988526920448286)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:40 [router] node-1 -> node-2 PING (node-1-1781852500830294000-4663073411506017807)
+merging updates for node  node-2  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:40 [node-2] received PING from node-1 (node-1-1781852500830294000-4663073411506017807)
+[clusterpulse] 2026/06/19 12:31:40 [node-2] acknowledging node-1 (node-1-1781852500830294000-4663073411506017807)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-2 -> node-1 ACK (node-1-1781852500830294000-4663073411506017807)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] received PING from node-5 (node-5-1781852500830246000-4128634670414734662)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] acknowledging node-5 (node-5-1781852500830246000-4128634670414734662)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:40 [node-1] received PING from node-4 (node-4-1781852500830282000-7571988526920448286)
+[clusterpulse] 2026/06/19 12:31:40 [node-1] acknowledging node-4 (node-4-1781852500830282000-7571988526920448286)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:40 [router] node-4 -> node-5 ACK (node-5-1781852500830246000-4128634670414734662)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] received PING from node-2 (node-2-1781852500830264000-5781716900846338086)
+[clusterpulse] 2026/06/19 12:31:40 [node-4] acknowledging node-2 (node-2-1781852500830264000-5781716900846338086)
+[clusterpulse] 2026/06/19 12:31:40 [router] node-4 -> node-2 ACK (node-2-1781852500830264000-5781716900846338086)
+[clusterpulse] 2026/06/19 12:31:40 [node-2] received ACK from node-4 (node-2-1781852500830264000-5781716900846338086)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:40 [router] node-1 -> node-4 ACK (node-4-1781852500830282000-7571988526920448286)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:40 [node-4] received ACK from node-1 (node-4-1781852500830282000-7571988526920448286)
+[clusterpulse] 2026/06/19 12:31:40 [node-1] received ACK from node-2 (node-1-1781852500830294000-4663073411506017807)
+[clusterpulse] 2026/06/19 12:31:40 [node-5] received ACK from node-4 (node-5-1781852500830246000-4128634670414734662)
+[clusterpulse] 2026/06/19 12:31:41 [node-2] probing node-5 (node-2-1781852501580750000-5620247198719910584)
+[clusterpulse] 2026/06/19 12:31:41 [node-5] probing node-2 (node-5-1781852501580768000-500944236663425012)
+[clusterpulse] 2026/06/19 12:31:41 [node-4] probing node-1 (node-4-1781852501580779000-8486312336485297812)
+[clusterpulse] 2026/06/19 12:31:41 [node-1] probing node-5 (node-1-1781852501580786000-5871710880251543912)
+[clusterpulse] 2026/06/19 12:31:41 [router] node-2 -> node-5 PING (node-2-1781852501580750000-5620247198719910584)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:41 [router] node-1 -> node-5 PING (node-1-1781852501580786000-5871710880251543912)
+[clusterpulse] 2026/06/19 12:31:41 [router] node-5 -> node-2 PING (node-5-1781852501580768000-500944236663425012)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:41 [router] node-4 -> node-1 PING (node-4-1781852501580779000-8486312336485297812)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:41 [node-1] received PING from node-4 (node-4-1781852501580779000-8486312336485297812)
+[clusterpulse] 2026/06/19 12:31:41 [node-5] received PING from node-2 (node-2-1781852501580750000-5620247198719910584)
+[clusterpulse] 2026/06/19 12:31:41 [node-5] acknowledging node-2 (node-2-1781852501580750000-5620247198719910584)
+[clusterpulse] 2026/06/19 12:31:41 [node-2] received PING from node-5 (node-5-1781852501580768000-500944236663425012)
+[clusterpulse] 2026/06/19 12:31:41 [node-2] acknowledging node-5 (node-5-1781852501580768000-500944236663425012)
+[clusterpulse] 2026/06/19 12:31:41 [node-1] acknowledging node-4 (node-4-1781852501580779000-8486312336485297812)
+[clusterpulse] 2026/06/19 12:31:41 [router] node-1 -> node-4 ACK (node-4-1781852501580779000-8486312336485297812)
+merging updates for node  node-4  observed by  node-1
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:41 [router] node-5 -> node-2 ACK (node-2-1781852501580750000-5620247198719910584)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:41 [router] node-2 -> node-5 ACK (node-5-1781852501580768000-500944236663425012)
+[clusterpulse] 2026/06/19 12:31:41 [node-4] received ACK from node-1 (node-4-1781852501580779000-8486312336485297812)
+[clusterpulse] 2026/06/19 12:31:41 [node-5] received PING from node-1 (node-1-1781852501580786000-5871710880251543912)
+[clusterpulse] 2026/06/19 12:31:41 [node-5] acknowledging node-1 (node-1-1781852501580786000-5871710880251543912)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:41 [node-2] received ACK from node-5 (node-2-1781852501580750000-5620247198719910584)
+[clusterpulse] 2026/06/19 12:31:41 [node-5] received ACK from node-2 (node-5-1781852501580768000-500944236663425012)
+[clusterpulse] 2026/06/19 12:31:41 [router] node-5 -> node-1 ACK (node-1-1781852501580786000-5871710880251543912)
+[clusterpulse] 2026/06/19 12:31:41 [node-1] received ACK from node-5 (node-1-1781852501580786000-5871710880251543912)
+[clusterpulse] 2026/06/19 12:31:42 [node-5] probing node-2 (node-5-1781852502330779000-8116973865526707784)
+[clusterpulse] 2026/06/19 12:31:42 [node-1] probing node-5 (node-1-1781852502330791000-3155286219652395062)
+[clusterpulse] 2026/06/19 12:31:42 [node-4] probing node-1 (node-4-1781852502330810000-3040190775947350951)
+[clusterpulse] 2026/06/19 12:31:42 [node-2] probing node-5 (node-2-1781852502330806000-4280549382216668052)
+[clusterpulse] 2026/06/19 12:31:42 [router] node-5 -> node-2 PING (node-5-1781852502330779000-8116973865526707784)
+[clusterpulse] 2026/06/19 12:31:42 [router] node-4 -> node-1 PING (node-4-1781852502330810000-3040190775947350951)
+merging updates for node  node-1  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:42 [node-1] received PING from node-4 (node-4-1781852502330810000-3040190775947350951)
+[clusterpulse] 2026/06/19 12:31:42 [node-1] acknowledging node-4 (node-4-1781852502330810000-3040190775947350951)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:42 [node-2] received PING from node-5 (node-5-1781852502330779000-8116973865526707784)
+[clusterpulse] 2026/06/19 12:31:42 [node-2] acknowledging node-5 (node-5-1781852502330779000-8116973865526707784)
+[clusterpulse] 2026/06/19 12:31:42 [router] node-2 -> node-5 PING (node-2-1781852502330806000-4280549382216668052)
+[clusterpulse] 2026/06/19 12:31:42 [router] node-2 -> node-5 ACK (node-5-1781852502330779000-8116973865526707784)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:42 [router] node-1 -> node-5 PING (node-1-1781852502330791000-3155286219652395062)
+[clusterpulse] 2026/06/19 12:31:42 [router] node-1 -> node-4 ACK (node-4-1781852502330810000-3040190775947350951)
+merging updates for node  node-4  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:42 [node-4] received ACK from node-1 (node-4-1781852502330810000-3040190775947350951)
+[clusterpulse] 2026/06/19 12:31:42 [node-5] received PING from node-2 (node-2-1781852502330806000-4280549382216668052)
+[clusterpulse] 2026/06/19 12:31:42 [node-5] acknowledging node-2 (node-2-1781852502330806000-4280549382216668052)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:42 [node-5] received ACK from node-2 (node-5-1781852502330779000-8116973865526707784)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:42 [node-5] received PING from node-1 (node-1-1781852502330791000-3155286219652395062)
+[clusterpulse] 2026/06/19 12:31:42 [node-5] acknowledging node-1 (node-1-1781852502330791000-3155286219652395062)
+[clusterpulse] 2026/06/19 12:31:42 [router] node-5 -> node-2 ACK (node-2-1781852502330806000-4280549382216668052)
+[clusterpulse] 2026/06/19 12:31:42 [router] node-5 -> node-1 ACK (node-1-1781852502330791000-3155286219652395062)
+merging updates for node  node-2  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:42 [node-2] received ACK from node-5 (node-2-1781852502330806000-4280549382216668052)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:42 [node-1] received ACK from node-5 (node-1-1781852502330791000-3155286219652395062)
+[clusterpulse] 2026/06/19 12:31:43 [node-4] probing node-2 (node-4-1781852503080831000-4183958024995917860)
+[clusterpulse] 2026/06/19 12:31:43 [node-2] probing node-1 (node-2-1781852503080870000-4485071555547703942)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] probing node-1 (node-5-1781852503080890000-6764646517338584082)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-5 -> node-1 PING (node-5-1781852503080890000-6764646517338584082)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] probing node-5 (node-1-1781852503080896000-2739732121574907221)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:43 [router] node-4 -> node-2 PING (node-4-1781852503080831000-4183958024995917860)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-2 -> node-1 PING (node-2-1781852503080870000-4485071555547703942)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] received PING from node-5 (node-5-1781852503080890000-6764646517338584082)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] acknowledging node-5 (node-5-1781852503080890000-6764646517338584082)
+merging updates for node  node-1  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:43 [router] node-1 -> node-5 PING (node-1-1781852503080896000-2739732121574907221)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-1 -> node-5 ACK (node-5-1781852503080890000-6764646517338584082)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] received PING from node-2 (node-2-1781852503080870000-4485071555547703942)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] acknowledging node-2 (node-2-1781852503080870000-4485071555547703942)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-1 -> node-2 ACK (node-2-1781852503080870000-4485071555547703942)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:43 [node-5] received PING from node-1 (node-1-1781852503080896000-2739732121574907221)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] acknowledging node-1 (node-1-1781852503080896000-2739732121574907221)
+merging updates for node  node-5  observed by  node-1
+merging updates for node  node-2  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:43 [node-5] received ACK from node-1 (node-5-1781852503080890000-6764646517338584082)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-5 -> node-1 ACK (node-1-1781852503080896000-2739732121574907221)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] received ACK from node-5 (node-1-1781852503080896000-2739732121574907221)
+[clusterpulse] 2026/06/19 12:31:43 [node-2] received PING from node-4 (node-4-1781852503080831000-4183958024995917860)
+[clusterpulse] 2026/06/19 12:31:43 [node-2] acknowledging node-4 (node-4-1781852503080831000-4183958024995917860)
+[clusterpulse] 2026/06/19 12:31:43 [node-2] received ACK from node-1 (node-2-1781852503080870000-4485071555547703942)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-2 -> node-4 ACK (node-4-1781852503080831000-4183958024995917860)
+merging updates for node  node-4  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:43 [node-4] received ACK from node-2 (node-4-1781852503080831000-4183958024995917860)
+[clusterpulse] 2026/06/19 12:31:43 [node-4] probing node-5 (node-4-1781852503830858000-9043677569520428126)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] probing node-1 (node-5-1781852503830904000-7125735562496632315)
+[clusterpulse] 2026/06/19 12:31:43 [node-2] probing node-5 (node-2-1781852503830928000-6048309363393618212)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] probing node-5 (node-1-1781852503830957000-5874326566105251126)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-4 -> node-5 PING (node-4-1781852503830858000-9043677569520428126)
+merging updates for node  node-5  observed by  node-4
+[clusterpulse] 2026/06/19 12:31:43 [router] node-5 -> node-1 PING (node-5-1781852503830904000-7125735562496632315)
+merging updates for node  node-1  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:43 [router] node-2 -> node-5 PING (node-2-1781852503830928000-6048309363393618212)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-1 -> node-5 PING (node-1-1781852503830957000-5874326566105251126)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] received PING from node-4 (node-4-1781852503830858000-9043677569520428126)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] acknowledging node-4 (node-4-1781852503830858000-9043677569520428126)
+merging updates for node  node-5  observed by  node-2
+[clusterpulse] 2026/06/19 12:31:43 [node-1] received PING from node-5 (node-5-1781852503830904000-7125735562496632315)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] acknowledging node-5 (node-5-1781852503830904000-7125735562496632315)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] received PING from node-2 (node-2-1781852503830928000-6048309363393618212)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] acknowledging node-2 (node-2-1781852503830928000-6048309363393618212)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:43 [router] node-5 -> node-4 ACK (node-4-1781852503830858000-9043677569520428126)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-5 -> node-2 ACK (node-2-1781852503830928000-6048309363393618212)
+merging updates for node  node-4  observed by  node-5
+[clusterpulse] 2026/06/19 12:31:43 [node-2] received ACK from node-5 (node-2-1781852503830928000-6048309363393618212)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-1 -> node-5 ACK (node-5-1781852503830904000-7125735562496632315)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] received PING from node-1 (node-1-1781852503830957000-5874326566105251126)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] acknowledging node-1 (node-1-1781852503830957000-5874326566105251126)
+merging updates for node  node-5  observed by  node-1
+[clusterpulse] 2026/06/19 12:31:43 [node-4] received ACK from node-5 (node-4-1781852503830858000-9043677569520428126)
+[clusterpulse] 2026/06/19 12:31:43 [router] node-5 -> node-1 ACK (node-1-1781852503830957000-5874326566105251126)
+[clusterpulse] 2026/06/19 12:31:43 [node-1] received ACK from node-5 (node-1-1781852503830957000-5874326566105251126)
+[clusterpulse] 2026/06/19 12:31:43 [node-5] received ACK from node-1 (node-5-1781852503830904000-7125735562496632315)
+[clusterpulse] 2026/06/19 12:31:44 [node-2] stopped
+[clusterpulse] 2026/06/19 12:31:44 [node-4] probing node-5 (node-4-1781852504580853000-7556181045080547132)
+[clusterpulse] 2026/06/19 12:31:44 [node-4] stopped
+[clusterpulse] 2026/06/19 12:31:44 [node-1] stopped
+[clusterpulse] 2026/06/19 12:31:44 [node-5] stopped
+[clusterpulse] 2026/06/19 12:31:44 [node-3] stopped
+[clusterpulse] 2026/06/19 12:31:44 [membership] [node-1] sees node-3 as failed
+[clusterpulse] 2026/06/19 12:31:44 [membership] [node-2] sees node-3 as failed
+[clusterpulse] 2026/06/19 12:31:44 [membership] [node-3] sees node-3 as alive
+[clusterpulse] 2026/06/19 12:31:44 [membership] [node-4] sees node-3 as failed
+[clusterpulse] 2026/06/19 12:31:44 [membership] [node-5] sees node-3 as failed
+[clusterpulse] 2026/06/19 12:31:44 cluster stopped
+[clusterpulse] 2026/06/19 12:31:44 simulation finished

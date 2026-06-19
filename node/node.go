@@ -14,8 +14,8 @@ import (
 )
 
 const (
-	gossipRetransmits    = 3
-	gossipPiggybackLimit = 4
+	gossipRetransmits    = 2
+	gossipPiggybackLimit = 3
 )
 
 type GossipItem struct {
@@ -319,6 +319,16 @@ func (n *Node) enqueueGossipUpdate(update protocol.Update) {
 	n.gossipMu.Lock()
 	defer n.gossipMu.Unlock()
 
+	for i := range n.gossipQueue {
+		existing := n.gossipQueue[i].Update
+		if existing.NodeID == update.NodeID &&
+			existing.Status == update.Status &&
+			existing.Incarnation == update.Incarnation {
+			n.gossipQueue[i].Update = update
+			n.gossipQueue[i].Retransmit = gossipRetransmits
+			return
+		}
+	}
 	n.gossipQueue = append(n.gossipQueue, GossipItem{
 		Update:     update,
 		Retransmit: gossipRetransmits,
