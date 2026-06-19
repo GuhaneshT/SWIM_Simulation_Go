@@ -12,13 +12,15 @@ import (
 	"clusterpulse/membership"
 	"clusterpulse/protocol"
 )
-type Item struct{
-	NodeID string
-	Retransmits int
-}
 
-type GossipQueue struct{
-	Items[] Item
+const (
+	gossipRetransmits    = 3
+	gossipPiggybackLimit = 4
+)
+
+type GossipItem struct {
+	Update     protocol.Update
+	Retransmit int
 }
 
 type Config struct {
@@ -41,7 +43,8 @@ type Node struct {
 	pendingAcks   map[string]string
 	suspectMu     sync.Mutex
 	suspicions    map[string]struct{}
-	gossipqueue   GossipQueue
+	gossipMu      sync.Mutex
+	gossipQueue   []GossipItem
 }
 
 func New(cfg Config) *Node {
@@ -91,7 +94,7 @@ func New(cfg Config) *Node {
 		table:       membership.NewTable(cfg.ID, cfg.KnownNodes),
 		pendingAcks: make(map[string]string),
 		suspicions:  make(map[string]struct{}),
-		gossipqueue: GossipQueue{Items: make([]Item, 0)},
+		gossipQueue: make([]GossipItem, 0),
 	}
 }
 
@@ -148,7 +151,7 @@ func (n *Node) handleSuspectQuery(ctx context.Context, helperID string, requeste
 		Target:        n.id,
 		Requester:     requesterID,
 		SentAt:        time.Now(),
-		Updates:       n.table.Updates(),
+		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 	}
 	n.send(ctx, msg)
 }
@@ -162,7 +165,7 @@ func (n *Node) probeSuspectedNode(ctx context.Context, suspectID string, request
 		Target:        suspectID,
 		Requester:     requesterID,
 		SentAt:        time.Now(),
-		Updates:       n.table.Updates(),
+		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 	}
 	n.send(ctx, msg)
 }
@@ -173,14 +176,13 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 		return
 	}
 
-	piggybackUpdates := n.table.Updates()
 	msg := protocol.Message{
 		Type:          protocol.MessagePing,
 		From:          n.id,
 		To:            peer,
 		CorrelationID: n.newCorrelationID(),
 		SentAt:        time.Now(),
-		Updates:       piggybackUpdates,
+		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 	}
 	logf(logger, "[%s] probing %s (%s)", n.id, peer, msg.CorrelationID)
 	n.trackPendingAck(msg.CorrelationID, peer)
@@ -223,7 +225,8 @@ func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *
 		logf(logger, "[%s] received ACK from %s (%s)", n.id, msg.From, msg.CorrelationID)
 		n.clearPendingAck(msg.CorrelationID)
 		n.clearSuspicion(msg.From)
-		n.table.MarkAlive(msg.From, msg.SentAt)
+		record := n.table.MarkAlive(msg.From, msg.SentAt)
+		n.enqueueGossip(record)
 	case protocol.MessagePingReq:
 		logf(logger, "[%s] received PING-REQ from %s to ping %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
 		n.probeSuspectedNode(ctx, msg.Target, msg.Requester, msg.CorrelationID)
@@ -295,6 +298,53 @@ func (n *Node) consumeSuspicion(nodeID string) bool {
 	return true
 }
 
+func (n *Node) enqueueGossip(record membership.Record) {
+	n.enqueueGossipUpdate(protocol.Update{
+		NodeID:      record.NodeID,
+		Status:      record.Status,
+		Incarnation: record.Incarnation,
+		ObservedAt:  record.UpdatedAt,
+		ObservedBy:  n.id,
+	})
+}
+
+func (n *Node) enqueueGossipUpdate(update protocol.Update) {
+	if update.NodeID == "" {
+		return
+	}
+	if update.ObservedBy == "" {
+		update.ObservedBy = n.id
+	}
+
+	n.gossipMu.Lock()
+	defer n.gossipMu.Unlock()
+
+	n.gossipQueue = append(n.gossipQueue, GossipItem{
+		Update:     update,
+		Retransmit: gossipRetransmits,
+	})
+}
+
+func (n *Node) nextGossipUpdates(limit int) []protocol.Update {
+	n.gossipMu.Lock()
+	defer n.gossipMu.Unlock()
+
+	updates := make([]protocol.Update, 0, limit)
+	for i := 0; i < len(n.gossipQueue) && len(updates) < limit; {
+		updates = append(updates, n.gossipQueue[i].Update)
+		n.gossipQueue[i].Retransmit--
+
+		if n.gossipQueue[i].Retransmit <= 0 {
+			n.gossipQueue = append(n.gossipQueue[:i], n.gossipQueue[i+1:]...)
+			continue
+		}
+
+		i++
+	}
+
+	return updates
+}
+
 func (n *Node) watchAckTimeout(ctx context.Context, correlationID string, logger *log.Logger) {
 	go func() {
 		timer := time.NewTimer(n.ackTimeout)
@@ -310,7 +360,8 @@ func (n *Node) watchAckTimeout(ctx context.Context, correlationID string, logger
 			}
 
 			logf(logger, "[%s] ACK timeout from %s (%s)", n.id, peer, correlationID)
-			n.table.MarkSuspect(peer, time.Now())
+			record := n.table.MarkSuspect(peer, time.Now())
+			n.enqueueGossip(record)
 			n.trackSuspicion(peer)
 			n.handleSuspect(peer, ctx, logger)
 			n.watchSuspectTimeout(ctx, peer, logger)
@@ -332,8 +383,8 @@ func (n *Node) watchSuspectTimeout(ctx context.Context, nodeID string, logger *l
 			}
 
 			logf(logger, "[%s] suspect timeout for %s; marking failed", n.id, nodeID)
-			n.gossipqueue.Items = append(n.gossipqueue.Items,Item{nodeID,3})
-			n.table.MarkFailed(nodeID, time.Now())
+			record := n.table.MarkFailed(nodeID, time.Now())
+			n.enqueueGossip(record)
 		}
 	}()
 }
@@ -345,7 +396,8 @@ func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *lo
 	}
 	if msg.Target != "" {
 		n.clearSuspicion(msg.Target)
-		n.table.MarkAlive(msg.Target, time.Now())
+		record := n.table.MarkAlive(msg.Target, time.Now())
+		n.enqueueGossip(record)
 	}
 
 	if msg.Requester == n.id {
@@ -361,7 +413,7 @@ func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *lo
 		Target:        msg.Target,
 		Requester:     msg.Requester,
 		SentAt:        time.Now(),
-		Updates:       n.table.Updates(),
+		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 	}
 	n.send(ctx, send_msg)
 
@@ -379,7 +431,7 @@ func (n *Node) handleSuspect(suspectID string, ctx context.Context, logger *log.
 			Target:        suspectID,
 			Requester:     n.id,
 			CorrelationID: n.newCorrelationID(),
-			Updates:       n.table.Updates(),
+			Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 		}
 		n.send(ctx, msg)
 	}
@@ -416,7 +468,9 @@ func (n *Node) handleUpdates(updates []protocol.Update, observedBy string) {
 	}
 	fmt.Println("merging updates for node ", n.id, " observed by ", observedBy)
 	for _, update := range updates {
-		n.table.Merge(update)
+		if n.table.Merge(update) {
+			n.enqueueGossipUpdate(update)
+		}
 	}
 }
 
@@ -427,7 +481,7 @@ func (n *Node) sendAck(ctx context.Context, ping protocol.Message, logger *log.L
 		To:            ping.From,
 		CorrelationID: ping.CorrelationID,
 		SentAt:        time.Now(),
-		Updates:       n.table.Updates(),
+		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 	}
 
 	logf(logger, "[%s] acknowledging %s (%s)", n.id, ping.From, ping.CorrelationID)
