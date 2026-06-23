@@ -11,6 +11,7 @@ import (
 
 	"clusterpulse/membership"
 	"clusterpulse/protocol"
+	"clusterpulse/simlog"
 )
 
 const (
@@ -28,6 +29,7 @@ type Config struct {
 	ProbeInterval time.Duration
 	AckTimeout    time.Duration
 	KnownNodes    []string
+	LogLevel      simlog.Level
 }
 
 type Node struct {
@@ -37,6 +39,7 @@ type Node struct {
 	ackTimeout    time.Duration
 	rng           *rand.Rand
 	table         *membership.Table
+	logLevel      simlog.Level
 	inbox         chan protocol.Message
 	outbox        chan protocol.Message
 	pendingMu     sync.Mutex
@@ -92,6 +95,7 @@ func New(cfg Config) *Node {
 		inbox:       make(chan protocol.Message, bufferSize),
 		outbox:      make(chan protocol.Message, bufferSize),
 		table:       membership.NewTable(cfg.ID, cfg.KnownNodes),
+		logLevel:    cfg.LogLevel,
 		pendingAcks: make(map[string]string),
 		suspicions:  make(map[string]struct{}),
 		gossipQueue: make([]GossipItem, 0),
@@ -122,18 +126,18 @@ func (n *Node) Run(ctx context.Context, logger *log.Logger) {
 	ticker := time.NewTicker(n.probeInterval)
 	defer ticker.Stop()
 
-	logf(logger, "[%s] started", n.id)
+	n.logf(logger, simlog.Info, "node", "event=start node=%s", n.id)
 
 	for {
 		select {
 		case <-ctx.Done():
-			logf(logger, "[%s] stopped", n.id)
+			n.logf(logger, simlog.Info, "node", "event=stop node=%s", n.id)
 			return
 		case <-ticker.C:
 			n.probeRandomPeer(ctx, logger)
 		case msg, ok := <-n.inbox:
 			if !ok {
-				logf(logger, "[%s] inbox closed", n.id)
+				n.logf(logger, simlog.Info, "node", "event=inbox_closed node=%s", n.id)
 				return
 			}
 			n.handleMessage(ctx, msg, logger)
@@ -197,7 +201,7 @@ func (n *Node) probeRandomPeer(ctx context.Context, logger *log.Logger) {
 		SentAt:        time.Now(),
 		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 	}
-	logf(logger, "[%s] probing %s (%s)", n.id, peer, msg.CorrelationID)
+	n.logf(logger, simlog.Debug, "probe", "from=%s to=%s cid=%s", n.id, peer, msg.CorrelationID)
 	n.trackPendingAck(msg.CorrelationID, peer)
 	if !n.send(ctx, msg) {
 		n.clearPendingAck(msg.CorrelationID)
@@ -224,43 +228,43 @@ func (n *Node) randomProbePeer() (string, bool) {
 }
 
 func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *log.Logger) {
-	n.handleUpdates(msg.Updates, msg.From)
+	n.handleUpdates(msg.Updates, msg.From, logger)
 
 	switch msg.Type {
 	case protocol.MessagePing:
 		// sender is alive, mark in table and do nothing . data will get populated when it randomly pings someother node
 
-		logf(logger, "[%s] received PING from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.logMessage(logger, simlog.Debug, "RECEIVE", msg)
 		n.table.MarkAlive(msg.From, msg.SentAt)
 		n.sendAck(ctx, msg, logger)
 
 	case protocol.MessageAck:
-		logf(logger, "[%s] received ACK from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.logMessage(logger, simlog.Debug, "RECEIVE", msg)
 		n.clearPendingAck(msg.CorrelationID)
 		n.clearSuspicion(msg.From)
 		record := n.table.MarkAlive(msg.From, msg.SentAt)
 		n.enqueueGossip(record)
 	case protocol.MessagePingReq:
-		logf(logger, "[%s] received PING-REQ from %s to ping %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
+		n.logMessage(logger, simlog.Debug, "RECEIVE", msg)
 		n.probeSuspectedNode(ctx, msg.Target, msg.Requester, msg.CorrelationID)
 	case protocol.MessageSuspect:
 		// tell them, as you can see i am not dead yet, wakanda forever
-		logf(logger, "[%s] received SUSPECT from %s about %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
+		n.logMessage(logger, simlog.Info, "RECEIVE", msg)
 		if msg.Target == n.id {
 			record := n.table.BumpIncarnation(n.id, time.Now())
 			n.enqueueGossip(record)
-			logf(logger, "[%s] refuting suspicion with incarnation %d", n.id, record.Incarnation)
+			n.logf(logger, simlog.Info, "membership", "observer=%s subject=%s status=alive incarnation=%d reason=refute_suspect", n.id, record.NodeID, record.Incarnation)
 		}
 		n.handleSuspectQuery(ctx, msg.From, msg.Requester, msg.CorrelationID)
 
 	case protocol.MessageAlive:
-		logf(logger, "[%s] received ALIVE from %s (%s)", n.id, msg.From, msg.CorrelationID)
+		n.logMessage(logger, simlog.Info, "RECEIVE", msg)
 
 		n.handleAlive(ctx, msg, logger)
 
 	case protocol.MessageDead:
 		//to be handled
-		logf(logger, "[%s] ignored %s from %s (%s)", n.id, msg.Type, msg.From, msg.CorrelationID)
+		n.logf(logger, simlog.Info, "message", "action=IGNORE type=%s from=%s to=%s cid=%s", msg.Type, msg.From, msg.To, msg.CorrelationID)
 
 	default:
 		// to be done, handle other message types
@@ -387,7 +391,7 @@ func (n *Node) watchAckTimeout(ctx context.Context, correlationID string, logger
 				return
 			}
 
-			logf(logger, "[%s] ACK timeout from %s (%s)", n.id, peer, correlationID)
+			n.logf(logger, simlog.Info, "failure", "event=ack_timeout observer=%s subject=%s cid=%s", n.id, peer, correlationID)
 			record := n.table.MarkSuspect(peer, time.Now())
 			n.enqueueGossip(record)
 			n.trackSuspicion(peer)
@@ -415,7 +419,7 @@ func (n *Node) watchSuspectTimeout(ctx context.Context, nodeID string, logger *l
 				return
 			}
 
-			logf(logger, "[%s] suspect timeout for %s; marking failed", n.id, nodeID)
+			n.logf(logger, simlog.Info, "failure", "event=suspect_timeout observer=%s subject=%s action=mark_failed", n.id, nodeID)
 			record := n.table.MarkFailed(nodeID, time.Now())
 			n.enqueueGossip(record)
 		}
@@ -424,7 +428,7 @@ func (n *Node) watchSuspectTimeout(ctx context.Context, nodeID string, logger *l
 
 func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *log.Logger) {
 	if msg.Requester == "" {
-		logf(logger, "[%s] ALIVE from %s has empty requester (%s)", n.id, msg.From, msg.CorrelationID)
+		n.logf(logger, simlog.Info, "message", "action=DROP type=ALIVE from=%s to=%s reason=empty_requester cid=%s", msg.From, n.id, msg.CorrelationID)
 		return
 	}
 	if msg.Target != "" {
@@ -454,7 +458,7 @@ func (n *Node) handleAlive(ctx context.Context, msg protocol.Message, logger *lo
 func (n *Node) handleSuspect(suspectID string, ctx context.Context, logger *log.Logger) {
 	randomPeers := n.selectRandomPeers(3, suspectID)
 	if randomPeers == nil {
-		logf(logger, "[%s] no peers available to ping %s", n.id, suspectID)
+		n.logf(logger, simlog.Info, "probe", "observer=%s subject=%s event=no_helpers", n.id, suspectID)
 	}
 	for _, peer := range randomPeers {
 		msg := protocol.Message{
@@ -495,13 +499,14 @@ func (n *Node) selectRandomPeers(nPeers int, excludeID string) []string {
 	return peers[:nPeers]
 }
 
-func (n *Node) handleUpdates(updates []protocol.Update, observedBy string) {
+func (n *Node) handleUpdates(updates []protocol.Update, observedBy string, logger *log.Logger) {
 	if len(updates) == 0 {
 		return
 	}
-	fmt.Println("merging updates for node ", n.id, " observed by ", observedBy)
+	n.logf(logger, simlog.Debug, "gossip", "observer=%s from=%s updates=%d", n.id, observedBy, len(updates))
 	for _, update := range updates {
 		if n.table.Merge(update) {
+			n.logf(logger, simlog.Debug, "gossip", "observer=%s subject=%s status=%s incarnation=%d from=%s action=merge", n.id, update.NodeID, update.Status, update.Incarnation, observedBy)
 			if update.Status == protocol.StatusAlive {
 				n.clearSuspicion(update.NodeID)
 			}
@@ -520,7 +525,7 @@ func (n *Node) sendAck(ctx context.Context, ping protocol.Message, logger *log.L
 		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
 	}
 
-	logf(logger, "[%s] acknowledging %s (%s)", n.id, ping.From, ping.CorrelationID)
+	n.logf(logger, simlog.Debug, "message", "action=SEND type=ACK from=%s to=%s cid=%s", n.id, ping.From, ping.CorrelationID)
 	n.send(ctx, ack)
 }
 
@@ -537,10 +542,10 @@ func (n *Node) newCorrelationID() string {
 	return fmt.Sprintf("%s-%d-%d", n.id, time.Now().UnixNano(), n.rng.Int63())
 }
 
-func logf(logger *log.Logger, format string, args ...any) {
-	if logger == nil {
-		return
-	}
+func (n *Node) logMessage(logger *log.Logger, level simlog.Level, action string, msg protocol.Message) {
+	n.logf(logger, level, "message", "action=%s type=%s from=%s to=%s target=%s requester=%s cid=%s", action, msg.Type, msg.From, msg.To, msg.Target, msg.Requester, msg.CorrelationID)
+}
 
-	logger.Printf(format, args...)
+func (n *Node) logf(logger *log.Logger, level simlog.Level, component string, format string, args ...any) {
+	simlog.Logf(logger, n.logLevel, level, component, format, args...)
 }

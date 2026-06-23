@@ -1,0 +1,48 @@
+[clusterpulse] 2026/06/23 13:07:18 [INFO] [cluster] started nodes=5
+[clusterpulse] 2026/06/23 13:07:18 [INFO] [node] event=start node=node-3
+[clusterpulse] 2026/06/23 13:07:18 [INFO] [node] event=start node=node-2
+[clusterpulse] 2026/06/23 13:07:18 [INFO] [node] event=start node=node-5
+[clusterpulse] 2026/06/23 13:07:18 [INFO] [node] event=start node=node-4
+[clusterpulse] 2026/06/23 13:07:18 [INFO] [node] event=start node=node-1
+[clusterpulse] 2026/06/23 13:07:18 [INFO] [scenario] start name=flapping-node target=node-3
+[clusterpulse] 2026/06/23 13:07:21 [INFO] [scenario] fail node=node-3
+[clusterpulse] 2026/06/23 13:07:21 [INFO] [router] DROP type=PING from=node-5 to=node-3 reason=endpoint_failed cid=node-5-1782200241956156000-8987933258930431972
+[clusterpulse] 2026/06/23 13:07:21 [INFO] [router] DROP type=PING from=node-2 to=node-3 reason=endpoint_failed cid=node-2-1782200241956174000-1349414439835943389
+[clusterpulse] 2026/06/23 13:07:21 [INFO] [router] DROP type=PING from=node-3 to=node-4 reason=endpoint_failed cid=node-3-1782200241956183000-4426750469595643708
+[clusterpulse] 2026/06/23 13:07:21 [INFO] [router] DROP type=PING from=node-4 to=node-3 reason=endpoint_failed cid=node-4-1782200241956183000-5840184507794161670
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [failure] event=ack_timeout observer=node-4 subject=node-3 cid=node-4-1782200241956183000-5840184507794161670
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [failure] event=ack_timeout observer=node-5 subject=node-3 cid=node-5-1782200241956156000-8987933258930431972
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-5 to=node-3 reason=endpoint_failed cid=node-4-1782200242307622000-8439429192208680428
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-1 to=node-3 reason=endpoint_failed cid=node-4-1782200242307604000-5291164849456814228
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-1 to=node-3 reason=endpoint_failed cid=node-5-1782200242307726000-3934666323923328121
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [failure] event=ack_timeout observer=node-3 subject=node-4 cid=node-3-1782200241956183000-4426750469595643708
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [failure] event=ack_timeout observer=node-2 subject=node-3 cid=node-2-1782200241956174000-1349414439835943389
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-2 to=node-3 reason=endpoint_failed cid=node-4-1782200242307619000-8211627053680411618
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-2 to=node-3 reason=endpoint_failed cid=node-5-1782200242307723000-1180966269432546758
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-5 to=node-3 reason=endpoint_failed cid=node-2-1782200242308189000-1613100810745193719
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-4 to=node-3 reason=endpoint_failed cid=node-5-1782200242307720000-7254932224158275056
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-4 to=node-3 reason=endpoint_failed cid=node-2-1782200242308181000-7351097375739859829
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=PING-REQ from=node-3 to=node-5 reason=endpoint_failed cid=node-3-1782200242308039000-3547532534265710786
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=PING-REQ from=node-3 to=node-2 reason=endpoint_failed cid=node-3-1782200242308048000-2161438464949161523
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=PING-REQ from=node-3 to=node-1 reason=endpoint_failed cid=node-3-1782200242308051000-3375993962924211053
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [router] DROP type=SUSPECT from=node-1 to=node-3 reason=endpoint_failed cid=node-2-1782200242308186000-9191397484761582928
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [scenario] recover node=node-3
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [scenario] inject type=SUSPECT from=node-1 to=node-3 requester=node-1 cid=manual-1782200242657495000
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [message] action=RECEIVE type=SUSPECT from=node-1 to=node-3 target=node-3 requester=node-1 cid=manual-1782200242657495000
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [membership] observer=node-3 subject=node-3 status=alive incarnation=1 reason=refute_suspect
+[clusterpulse] 2026/06/23 13:07:22 [INFO] [message] action=RECEIVE type=ALIVE from=node-3 to=node-1 target=node-3 requester=node-1 cid=manual-1782200242657495000
+[clusterpulse] 2026/06/23 13:07:23 [INFO] [failure] event=suspect_timeout observer=node-5 subject=node-3 action=mark_failed
+[clusterpulse] 2026/06/23 13:07:23 [INFO] [failure] event=suspect_timeout observer=node-2 subject=node-3 action=mark_failed
+[clusterpulse] 2026/06/23 13:07:23 [INFO] [failure] event=suspect_timeout observer=node-4 subject=node-3 action=mark_failed
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [node] event=stop node=node-2
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [node] event=stop node=node-5
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [node] event=stop node=node-4
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [node] event=stop node=node-1
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [node] event=stop node=node-3
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [membership] observer=node-1 subject=node-3 status=alive
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [membership] observer=node-2 subject=node-3 status=alive
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [membership] observer=node-3 subject=node-3 status=alive
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [membership] observer=node-4 subject=node-3 status=alive
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [membership] observer=node-5 subject=node-3 status=alive
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [cluster] stopped
+[clusterpulse] 2026/06/23 13:07:32 [INFO] [scenario] finish name=flapping-node target=node-3

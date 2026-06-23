@@ -10,6 +10,7 @@ import (
 
 	"clusterpulse/node"
 	"clusterpulse/protocol"
+	"clusterpulse/simlog"
 )
 
 type Config struct {
@@ -19,6 +20,7 @@ type Config struct {
 	BaseLatency   time.Duration
 	LatencyJitter time.Duration
 	DropRate      float64
+	LogLevel      simlog.Level
 }
 
 type Cluster struct {
@@ -30,6 +32,7 @@ type Cluster struct {
 	ctx         context.Context
 	cancel      context.CancelFunc
 	failedNodes map[string]bool
+	logLevel    simlog.Level
 	started     bool
 	stopped     bool
 }
@@ -42,7 +45,6 @@ func New(cfg Config, logger *log.Logger) (*Cluster, error) {
 	if logger == nil {
 		logger = log.New(io.Discard, "", 0)
 	}
-
 	ids := make([]string, cfg.NodeCount)
 
 	for i := 0; i < cfg.NodeCount; i++ {
@@ -57,6 +59,7 @@ func New(cfg Config, logger *log.Logger) (*Cluster, error) {
 			ProbeInterval: cfg.ProbeInterval,
 			AckTimeout:    cfg.AckTimeout,
 			KnownNodes:    ids,
+			LogLevel:      cfg.LogLevel,
 		})
 	}
 
@@ -65,6 +68,7 @@ func New(cfg Config, logger *log.Logger) (*Cluster, error) {
 		nodes:       nodes,
 		log:         logger,
 		failedNodes: failedNodes,
+		logLevel:    cfg.LogLevel,
 	}, nil
 }
 
@@ -99,7 +103,7 @@ func (c *Cluster) Start() error {
 		}()
 	}
 
-	c.log.Printf("cluster started with %d nodes", len(c.nodes))
+	c.logf(simlog.Info, "cluster", "started nodes=%d", len(c.nodes))
 	return nil
 }
 
@@ -120,7 +124,7 @@ func (c *Cluster) Stop() {
 
 	c.wg.Wait()
 	c.logMembershipStatus("node-3")
-	c.log.Printf("cluster stopped")
+	c.logf(simlog.Info, "cluster", "stopped")
 }
 
 func (c *Cluster) logMembershipStatus(nodeID string) {
@@ -128,10 +132,10 @@ func (c *Cluster) logMembershipStatus(nodeID string) {
 		observer := c.nodes[observerID]
 		status, exists := observer.MemberStatus(nodeID)
 		if !exists {
-			c.log.Printf("[membership] [%s] has no record for %s", observerID, nodeID)
+			c.logf(simlog.Info, "membership", "observer=%s subject=%s status=missing", observerID, nodeID)
 			continue
 		}
-		c.log.Printf("[membership] [%s] sees %s as %s", observerID, nodeID, status)
+		c.logf(simlog.Info, "membership", "observer=%s subject=%s status=%s", observerID, nodeID, status)
 	}
 }
 
@@ -152,16 +156,16 @@ func (c *Cluster) routeMessages(ctx context.Context, source *node.Node) {
 func (c *Cluster) deliver(ctx context.Context, msg protocol.Message) {
 
 	if c.isFailed(msg.To) || c.isFailed(msg.From) {
-		c.log.Printf("[router] dropping %s from %s to %s because one endpoint is simulated failed", msg.Type, msg.From, msg.To)
+		c.logf(simlog.Info, "router", "DROP type=%s from=%s to=%s reason=endpoint_failed cid=%s", msg.Type, msg.From, msg.To, msg.CorrelationID)
 		return
 	}
 	target, exists := c.nodes[msg.To]
 	if !exists {
-		c.log.Printf("[router] dropping %s from %s to unknown target %s", msg.Type, msg.From, msg.To)
+		c.logf(simlog.Info, "router", "DROP type=%s from=%s to=%s reason=unknown_target cid=%s", msg.Type, msg.From, msg.To, msg.CorrelationID)
 		return
 	}
 
-	c.log.Printf("[router] %s -> %s %s (%s)", msg.From, msg.To, msg.Type, msg.CorrelationID)
+	c.logf(simlog.Debug, "router", "DELIVER type=%s from=%s to=%s cid=%s", msg.Type, msg.From, msg.To, msg.CorrelationID)
 
 	select {
 	case <-ctx.Done():
@@ -173,14 +177,14 @@ func (c *Cluster) FailNode(nodeID string) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	c.failedNodes[nodeID] = true
-	c.log.Printf("[router] simulating failure for %s", nodeID)
+	c.logf(simlog.Info, "scenario", "fail node=%s", nodeID)
 }
 
 func (c *Cluster) RecoverNode(nodeID string) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 	delete(c.failedNodes, nodeID)
-	c.log.Printf("[router] simulating recovery for %s", nodeID)
+	c.logf(simlog.Info, "scenario", "recover node=%s", nodeID)
 }
 
 func (c *Cluster) InjectSuspect(fromID string, targetID string, requesterID string) error {
@@ -199,7 +203,7 @@ func (c *Cluster) InjectSuspect(fromID string, targetID string, requesterID stri
 		SentAt:        time.Now(),
 	}
 
-	c.log.Printf("[router] injecting SUSPECT from %s to %s", fromID, targetID)
+	c.logf(simlog.Info, "scenario", "inject type=SUSPECT from=%s to=%s requester=%s cid=%s", fromID, targetID, requesterID, msg.CorrelationID)
 	select {
 	case <-c.ctx.Done():
 		return fmt.Errorf("cluster stopped")
@@ -213,4 +217,8 @@ func (c *Cluster) isFailed(nodeID string) bool {
 	defer c.mu.Unlock()
 
 	return c.failedNodes[nodeID]
+}
+
+func (c *Cluster) logf(level simlog.Level, component string, format string, args ...any) {
+	simlog.Logf(c.log, c.logLevel, level, component, format, args...)
 }
