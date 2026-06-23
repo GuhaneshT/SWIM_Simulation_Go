@@ -410,6 +410,11 @@ func (n *Node) watchSuspectTimeout(ctx context.Context, nodeID string, logger *l
 				return
 			}
 
+			current, exists := n.table.Get(nodeID)
+			if exists && current.Status != protocol.StatusSuspect {
+				return
+			}
+
 			logf(logger, "[%s] suspect timeout for %s; marking failed", n.id, nodeID)
 			record := n.table.MarkFailed(nodeID, time.Now())
 			n.enqueueGossip(record)
@@ -497,6 +502,9 @@ func (n *Node) handleUpdates(updates []protocol.Update, observedBy string) {
 	fmt.Println("merging updates for node ", n.id, " observed by ", observedBy)
 	for _, update := range updates {
 		if n.table.Merge(update) {
+			if update.Status == protocol.StatusAlive {
+				n.clearSuspicion(update.NodeID)
+			}
 			n.enqueueGossipUpdate(update)
 		}
 	}

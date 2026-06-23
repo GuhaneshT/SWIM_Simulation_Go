@@ -22,22 +22,23 @@ type Config struct {
 }
 
 type Cluster struct {
-	mu      sync.Mutex
-	wg      sync.WaitGroup
-	log     *log.Logger
-	ids     []string
-	nodes   map[string]*node.Node
-	ctx     context.Context
-	cancel  context.CancelFunc
-	started bool
-	stopped bool
+	mu          sync.Mutex
+	wg          sync.WaitGroup
+	log         *log.Logger
+	ids         []string
+	nodes       map[string]*node.Node
+	ctx         context.Context
+	cancel      context.CancelFunc
+	failedNodes map[string]bool
+	started     bool
+	stopped     bool
 }
 
 func New(cfg Config, logger *log.Logger) (*Cluster, error) {
 	if cfg.NodeCount <= 0 {
 		return nil, fmt.Errorf("NodeCount must be greater than 0")
 	}
-
+	failedNodes := make(map[string]bool, cfg.NodeCount)
 	if logger == nil {
 		logger = log.New(io.Discard, "", 0)
 	}
@@ -60,9 +61,10 @@ func New(cfg Config, logger *log.Logger) (*Cluster, error) {
 	}
 
 	return &Cluster{
-		ids:   ids,
-		nodes: nodes,
-		log:   logger,
+		ids:         ids,
+		nodes:       nodes,
+		log:         logger,
+		failedNodes: failedNodes,
 	}, nil
 }
 
@@ -148,8 +150,9 @@ func (c *Cluster) routeMessages(ctx context.Context, source *node.Node) {
 }
 
 func (c *Cluster) deliver(ctx context.Context, msg protocol.Message) {
-	if msg.To == "node-3" || msg.From == "node-3" {
-		c.log.Printf("[router] dropping %s from %s to %s because node-3 is simulated dead", msg.Type, msg.From, msg.To)
+
+	if c.isFailed(msg.To) || c.isFailed(msg.From) {
+		c.log.Printf("[router] dropping %s from %s to %s because one endpoint is simulated failed", msg.Type, msg.From, msg.To)
 		return
 	}
 	target, exists := c.nodes[msg.To]
@@ -164,4 +167,50 @@ func (c *Cluster) deliver(ctx context.Context, msg protocol.Message) {
 	case <-ctx.Done():
 	case target.Inbox() <- msg:
 	}
+}
+
+func (c *Cluster) FailNode(nodeID string) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.failedNodes[nodeID] = true
+	c.log.Printf("[router] simulating failure for %s", nodeID)
+}
+
+func (c *Cluster) RecoverNode(nodeID string) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	delete(c.failedNodes, nodeID)
+	c.log.Printf("[router] simulating recovery for %s", nodeID)
+}
+
+func (c *Cluster) InjectSuspect(fromID string, targetID string, requesterID string) error {
+	target, exists := c.nodes[targetID]
+	if !exists {
+		return fmt.Errorf("unknown target %s", targetID)
+	}
+
+	msg := protocol.Message{
+		Type:          protocol.MessageSuspect,
+		From:          fromID,
+		To:            targetID,
+		Target:        targetID,
+		Requester:     requesterID,
+		CorrelationID: fmt.Sprintf("manual-%d", time.Now().UnixNano()),
+		SentAt:        time.Now(),
+	}
+
+	c.log.Printf("[router] injecting SUSPECT from %s to %s", fromID, targetID)
+	select {
+	case <-c.ctx.Done():
+		return fmt.Errorf("cluster stopped")
+	case target.Inbox() <- msg:
+		return nil
+	}
+}
+
+func (c *Cluster) isFailed(nodeID string) bool {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+
+	return c.failedNodes[nodeID]
 }

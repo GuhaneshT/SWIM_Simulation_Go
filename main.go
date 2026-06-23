@@ -29,7 +29,16 @@ func main() {
 		log.Fatal(err)
 	}
 
-	time.Sleep(30 * time.Second)
+	time.Sleep(3 * time.Second)
+	c.FailNode("node-3")
+
+	time.Sleep(700 * time.Millisecond)
+	c.RecoverNode("node-3")
+	if err := c.InjectSuspect("node-1", "node-3", "node-1"); err != nil {
+		log.Fatal(err)
+	}
+
+	time.Sleep(10 * time.Second)
 	c.Stop()
 
 	logger.Println("simulation finished")
