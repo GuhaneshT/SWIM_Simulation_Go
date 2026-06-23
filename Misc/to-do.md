@@ -4,7 +4,7 @@
 - done
 
 ## Incarnation Hnadling - flapping nodes
-- to be implemented
+- done
 
 ## Failed Node Handling
 
@@ -12,4 +12,4 @@
 
 ## Verification
 
-- to be implemented
+- done - table test

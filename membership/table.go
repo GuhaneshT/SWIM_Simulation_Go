@@ -71,6 +71,24 @@ func (t *Table) MarkAlive(nodeID string, observedAt time.Time) Record {
 	return t.setStatus(nodeID, protocol.StatusAlive, observedAt)
 
 }
+
+func (t *Table) BumpIncarnation(nodeID string, observedAt time.Time) Record {
+	t.mu.Lock()
+	defer t.mu.Unlock()
+
+	record, exists := t.entries[nodeID]
+	if !exists {
+		record = Record{NodeID: nodeID}
+	}
+
+	record.Incarnation++
+	record.Status = protocol.StatusAlive
+	record.UpdatedAt = observedAt
+	t.entries[nodeID] = record
+
+	return record
+}
+
 func (t *Table) MarkSuspect(nodeID string, observedAt time.Time) Record {
 	return t.setStatus(nodeID, protocol.StatusSuspect, observedAt)
 }

@@ -142,6 +142,19 @@ func (n *Node) Run(ctx context.Context, logger *log.Logger) {
 }
 
 func (n *Node) handleSuspectQuery(ctx context.Context, helperID string, requesterID string, correlationID string) {
+	record, exists := n.table.Get(n.id)
+	if !exists {
+		return
+	}
+
+	updates := []protocol.Update{{
+		NodeID:      record.NodeID,
+		Status:      record.Status,
+		Incarnation: record.Incarnation,
+		ObservedAt:  record.UpdatedAt,
+		ObservedBy:  n.id,
+	}}
+	updates = append(updates, n.nextGossipUpdates(gossipPiggybackLimit-1)...)
 
 	msg := protocol.Message{
 		Type:          protocol.MessageAlive,
@@ -151,7 +164,7 @@ func (n *Node) handleSuspectQuery(ctx context.Context, helperID string, requeste
 		Target:        n.id,
 		Requester:     requesterID,
 		SentAt:        time.Now(),
-		Updates:       n.nextGossipUpdates(gossipPiggybackLimit),
+		Updates:       updates,
 	}
 	n.send(ctx, msg)
 }
@@ -231,8 +244,13 @@ func (n *Node) handleMessage(ctx context.Context, msg protocol.Message, logger *
 		logf(logger, "[%s] received PING-REQ from %s to ping %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
 		n.probeSuspectedNode(ctx, msg.Target, msg.Requester, msg.CorrelationID)
 	case protocol.MessageSuspect:
-		logf(logger, "[%s] received SUSPECT from %s about %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
 		// tell them, as you can see i am not dead yet, wakanda forever
+		logf(logger, "[%s] received SUSPECT from %s about %s (%s)", n.id, msg.From, msg.Target, msg.CorrelationID)
+		if msg.Target == n.id {
+			record := n.table.BumpIncarnation(n.id, time.Now())
+			n.enqueueGossip(record)
+			logf(logger, "[%s] refuting suspicion with incarnation %d", n.id, record.Incarnation)
+		}
 		n.handleSuspectQuery(ctx, msg.From, msg.Requester, msg.CorrelationID)
 
 	case protocol.MessageAlive:
