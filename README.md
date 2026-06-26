@@ -1,210 +1,197 @@
 # ClusterPulse
 
-ClusterPulse is a work-in-progress implementation of a SWIM-style membership and failure-detection protocol in Go.
+ClusterPulse is an educational SWIM-style membership and failure-detection simulation written in Go.
 
-The project simulates a cluster of nodes that periodically probe each other, exchange membership information, and eventually detect unhealthy or unreachable nodes. The goal is to understand and build the core mechanics behind distributed membership systems used in large-scale infrastructure.
+It runs an in-memory cluster of nodes. Each node periodically probes peers, exchanges membership updates, suspects missing peers, asks helpers to perform indirect checks, and eventually marks unreachable nodes as failed.
 
 > Status: Work in Progress
 
-## Overview
 
-ClusterPulse models a small distributed cluster where every node maintains its own view of the cluster membership table. Nodes communicate through protocol messages such as `PING`, `ACK`, `PING-REQ`, `SUSPECT`, `ALIVE`, and `DEAD`.
+## Protocol Flow
 
-The current implementation focuses on the basic heartbeat and membership propagation flow, with failure-detection and suspicion handling being actively developed.
+### Direct Probe
 
-## Why This Exists
-
-Distributed systems need a reliable way to answer a simple but important question:
-
-> Which nodes are currently alive?
-
-In real-world systems, this is difficult because networks are unreliable, messages can be delayed, and nodes can crash or recover. ClusterPulse is an attempt to build and understand this problem from the ground up.
-
-The project is inspired by the SWIM protocol, which combines randomized probing, indirect checks, and gossip-based membership dissemination.
-
-## Features
-
-- Simulated cluster of multiple nodes
-- Periodic randomized peer probing
-- `PING` / `ACK` based liveness checks
-- Membership table maintained per node
-- Piggybacked membership updates
-- Message routing between simulated nodes
-- Initial support for suspicion and alive-confirmation flow
-- Work-in-progress support for dead-node detection
-
-## Current Protocol Flow
-
-### Basic Liveness Check
-
-1. A node randomly selects a peer.
-2. It sends a `PING` message.
-3. The peer replies with an `ACK`.
-4. The sender marks the peer as alive in its membership table.
+1. A node chooses a random eligible peer.
+2. It sends a `PING` with piggybacked membership updates.
+3. The peer merges those updates and replies with an `ACK`.
+4. The sender clears the pending ACK, marks the peer `alive`, and gossips that observation.
 
 ```text
-node-1 -- PING --> node-3
-node-1 <-- ACK --- node-3
+node-1 -- PING + updates --> node-3
+node-1 <-- ACK + updates ---- node-3
 ```
 
-### Suspect / Alive Flow
+### Timeout, Suspicion, and Indirect Probe
 
-The suspicion flow is currently under development.
-
-The intended flow is:
-
-1. A node suspects that a peer may be unreachable.
-2. It asks a few other peers to indirectly check the suspected node.
-3. Those peers probe the suspected node.
-4. If the suspected node responds, an `ALIVE` message is forwarded back.
-5. The original node clears suspicion and marks the target alive.
+1. If an ACK does not arrive before `-ack-timeout`, the observer marks the peer `suspect`.
+2. The observer sends `PING-REQ` messages to up to three helper peers.
+3. Each helper sends a `SUSPECT` message to the target.
+4. If the target is reachable, it bumps its incarnation, marks itself `alive`, and sends `ALIVE` back through the helper.
+5. If no alive confirmation clears the suspicion before the suspect timeout, the observer marks the target `failed`.
 
 ```text
-node-1 suspects node-4
+node-1 -- PING ------------> node-4
+node-1 -- timeout ---------> mark node-4 suspect
+node-1 -- PING-REQ -------> node-2
+node-2 -- SUSPECT --------> node-4
+node-4 -- ALIVE ----------> node-2
+node-2 -- ALIVE ----------> node-1
+```
 
-node-1 -- PING-REQ --> node-2
-node-2 -- SUSPECT ---> node-4
-node-4 -- ALIVE -----> node-2
-node-2 -- ALIVE -----> node-1
+![Suspect flow](Misc/SuspectFlow.png)
+
+### Piggyback Gossip Flow
+
+Membership changes are placed in each node's gossip queue and attached to outgoing protocol messages. Peers merge the received updates into their local membership table, then re-enqueue merged updates for limited retransmission.
+
+![Piggyback gossip flow](Misc/Piggybackflow.png)
+
+### Membership Merge Rule
+
+Every membership update contains:
+
+- node ID
+- status
+- incarnation
+- observation timestamp
+- observer ID
+
+Newer incarnations win. When two updates have the same incarnation, the higher-ranked status wins:
+
+```text
+alive < suspect < failed < left
 ```
 
 ## Project Structure
 
 ```text
 .
-├── main.go
+├── main.go                  # CLI flags and scenario runner
+├── cluster
+│   └── cluster.go           # cluster lifecycle, in-memory router, failure injection
 ├── membership
-│   └── table.go
+│   ├── table.go             # per-node membership table and merge logic
+│   └── table_test.go        # membership merge tests
 ├── node
-│   └── node.go
-└── protocol
-    └── protocol.go
+│   └── node.go              # node runtime, probing, ACK/suspect timers, gossip
+├── protocol
+│   └── message.go           # message types, statuses, and update payloads
+├── simlog
+│   └── log.go               # leveled simulation logging
+├── Logs                     # sample run logs
+└── Misc
+    ├── Piggybackflow.png    # piggyback gossip flow diagram
+    ├── SuspectFlow.png      # suspect and indirect probe flow diagram
+    └── to-do.md
 ```
-
-### `node`
-
-Contains the node runtime logic:
-
-- node startup and event loop
-- randomized peer probing
-- message handling
-- ACK responses
-- suspect and alive handling
-
-### `membership`
-
-Contains the membership table implementation:
-
-- alive/suspect/failed/left status tracking
-- update merging
-- incarnation-based conflict resolution
-
-### `protocol`
-
-Contains protocol-level message and status definitions.
 
 ## Getting Started
 
 ### Prerequisites
 
-You need Go installed.
+- Go 1.23 or newer
 
-Check if Go is available:
+Check your local version:
 
 ```bash
 go version
 ```
 
-If Go is not installed on macOS, install it using Homebrew:
-
-```bash
-brew install go
-```
-
 ### Run the Simulation
 
-From the project root:
+From this directory:
 
 ```bash
-go run main.go
+go run .
 ```
 
-You should see logs similar to:
+Run a healthy cluster:
 
-```text
-[clusterpulse] cluster started with 5 nodes
-[clusterpulse] [node-1] started
-[clusterpulse] [node-2] started
-[clusterpulse] [node-1] probing node-3
-[clusterpulse] [node-3] received PING from node-1
-[clusterpulse] [node-3] acknowledging node-1
-[clusterpulse] [node-1] received ACK from node-3
+```bash
+go run . -scenario healthy -duration 10s
 ```
+
+Run a dead-node scenario:
+
+```bash
+go run . -scenario dead-node -target node-3 -duration 10s
+```
+
+Run the default flapping-node scenario with debug logs:
+
+```bash
+go run . -scenario flapping-node -target node-3 -duration 10s -debug
+```
+
+### CLI Flags
+
+| Flag | Default | Description |
+| --- | --- | --- |
+| `-nodes` | `5` | Number of simulated nodes. |
+| `-target` | `node-3` | Node used by failure/recovery scenarios. |
+| `-scenario` | `flapping-node` | Scenario to run: `healthy`, `dead-node`, or `flapping-node`. |
+| `-duration` | `10s` | Time to keep the simulation running after scenario actions. |
+| `-probe-interval` | `750ms` | Interval between random peer probes per node. |
+| `-ack-timeout` | `350ms` | Time to wait for an ACK before suspecting a peer. |
+| `-debug` | `false` | Enable debug-level message, probe, router, and gossip logs. |
+
+## Testing
+
+Run the test suite:
+
+```bash
+go test ./...
+```
+
+The current tests focus on membership-table merge behavior and incarnation handling.
 
 ## Example Output
 
 ```text
-[clusterpulse] [node-1] probing node-3
-[clusterpulse] [router] node-1 -> node-3 PING
-[clusterpulse] [node-3] received PING from node-1
-[clusterpulse] [node-3] acknowledging node-1
-[clusterpulse] [router] node-3 -> node-1 ACK
-[clusterpulse] [node-1] received ACK from node-3
+[clusterpulse] 2026/06/26 12:00:00 [INFO] [cluster] started nodes=5
+[clusterpulse] 2026/06/26 12:00:00 [INFO] [node] event=start node=node-1
+[clusterpulse] 2026/06/26 12:00:03 [INFO] [scenario] fail node=node-3
+[clusterpulse] 2026/06/26 12:00:04 [INFO] [failure] event=ack_timeout observer=node-1 subject=node-3 cid=node-1-...
+[clusterpulse] 2026/06/26 12:00:05 [INFO] [failure] event=suspect_timeout observer=node-1 subject=node-3 action=mark_failed
 ```
 
-## Membership States
+## Current Capabilities
 
-A node can currently have one of the following statuses:
-
-```text
-ALIVE
-SUSPECT
-FAILED
-LEFT
-```
-
-These states are maintained in each node's local membership table and exchanged through protocol updates.
-
-## Work in Progress
-
-This project is actively being built.
-
-Current areas under development:
-
-- ACK timeout handling
-- triggering suspicion when a peer does not respond
-- indirect probing through `PING-REQ`
-- forwarding `ALIVE` confirmations
-- final `DEAD` / `FAILED` marking
-- stronger membership merge semantics
-- better test coverage
-- deterministic simulation scenarios
-- failure injection in the router
+- In-memory cluster of configurable size
+- Per-node goroutine event loops
+- Randomized direct peer probing
+- `PING` / `ACK` liveness checks
+- ACK timeout tracking
+- Suspect tracking and suspect timeout handling
+- Indirect checks with `PING-REQ`, `SUSPECT`, and `ALIVE`
+- Per-node membership tables
+- Incarnation-based membership merge semantics
+- Piggybacked gossip updates with retransmit limits
+- Scenario-level node failure and recovery simulation
+- Info/debug logs for protocol tracing
 
 ## Known Limitations
 
-- Failure detection is not fully complete yet.
-- The current happy-path simulation mostly validates `PING` / `ACK`.
-- Suspicion and recovery flows need more testing.
-- Correlation IDs currently encode the initiator ID in a string format.
-- If node IDs contain `-`, correlation ID parsing can become ambiguous.
-- The simulation currently runs in-memory and does not use real network transport.
+- The router only models failed endpoints today; configured latency, jitter, and drop-rate fields are not yet applied.
+- `DEAD` and `CONFIRM` message types are defined but not fully implemented.
+- The simulation uses in-memory channels rather than real network transport.
+- Suspicion timeout is fixed at `3 * ack-timeout`.
+- Final shutdown logs membership status for `node-3` specifically.
+- Integration tests for full cluster behavior are still missing.
 
 ## Roadmap
 
-- Add timeout-based suspicion
-- Add router-level packet dropping for failure simulation
-- Add indirect probe retries
-- Add dead-node confirmation flow
-- Add unit tests for membership table merging
-- Add integration tests for cluster behavior
-- Add CLI flags for node count and simulation duration
-- Improve logs for easier protocol tracing
+- Apply router latency, jitter, and probabilistic packet drops
+- Add deterministic integration tests for healthy, failed, and recovery scenarios
+- Implement the final dead-node confirmation flow
+- Add CLI flags for router failure-injection settings
+- Make shutdown membership summaries configurable
+- Improve observability around gossip queue state and retransmits
 
 ## Contributors
 
 - Guhanesh T
-- Ayush Kumar Rai 
+- Ayush Kumar Rai
 
 ## License
 
